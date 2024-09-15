@@ -1,33 +1,110 @@
 @import "./../../../styles.scss";
 
 .header-main {
-    @include flexCenter;
-    width: 100%;      
-    position: absolute;
-    background-color: gray;
+  @include flexCenter;
+  width: 100%;
+  position: absolute;
 }
 
 .header-content {
-    @include flexCenter;
-    @include max-width;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    justify-content: space-between;
+  @include flexCenter;
+  @include max-width;
+  padding-top: 32px;
+  padding-bottom: 32px;
+  justify-content: space-between;
 }
 
-.header-container-left-side {
-    display: flex;
-    gap: 32px;
+.header-content-left {
+  display: flex;
+  gap: 32px;
 }
 
-.about-me {
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    span {
-        font-size: 20px;
-        font-family: "Fira Code";
-        color: #ffffff;
-        cursor: pointer;
-    }
+.switch-button-language {
+  @include flexCenter;
+  display: flex;
+  background-color: transparent;
+  gap: 10px;
+  border: 1px solid #3dcfb6;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.switch-button-language:hover {
+  border: 1px solid #ffffff;
+}
+
+.button-link {
+  font-family: "Fira Code";
+  background-color: #3dcfb6;
+  padding: 0 12px;
+  border-radius: 50px;
+  font-size: 16px;
+  color: #ffffff;
+}
+
+.about-me-de {
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  span {
+    font-size: 20px;
+    font-family: "Fira Code";
+    color: #ffffff;
+    cursor: pointer;
+  }
+}
+
+.logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.initials {
+  @include flexCenter;
+  right: 180px;
+  top: 20px;
+  font-size: 60px;
+  font-family: sans-serif;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.letter-N {
+  @include flexCenter;
+  margin-right: -7px;
+  color: rgba(61, 207, 182);
+  font-size: 61px;
+}
+
+.letter-M {
+  @include flexCenter;
+  margin-bottom: 2px;
+  font-size: 64px;
+  transform: rotate(90deg);
+  color: rgba(61, 207, 182, 0.8);
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+}
+
+.logo:hover .initials {
+  color: transparent;
+}
+
+.logo:hover .letter-N,
+.logo:hover .letter-M {
+  transition: 500ms;
+  color: transparent;
+  -webkit-text-stroke: 1px #5cd1b9;
+}
+
+.logo:hover .name {
+  transition: 500ms;
+  color: transparent;
+  -webkit-text-stroke: 1px #5cd1b9;
 }
