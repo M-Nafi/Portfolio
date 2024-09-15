@@ -39,12 +39,16 @@ button {
   font-family: "Fira Code";
   background-color: transparent;
   cursor: pointer;
+  &:hover {
+    border: 1px solid #3dcfb6;    
+    color: #3dcfb6;
+  }
 }
 
 .contact-me {
   display: flex;
-  gap: 48px;
-}
+  gap: 48px;  
+} 
 
 .scroll-down-left-main {
   @include flexCenter;
@@ -80,11 +84,12 @@ button {
   gap: 25px;
   img {
     height: 32px;
-  } a {
+  }
+  a {
     color: #ffffff;
     text-decoration: none;
     transform: rotate(180deg);
-    writing-mode: vertical-lr;    
+    writing-mode: vertical-lr;
     font-family: "Karla";
     font-size: 20px;
   }
@@ -98,9 +103,63 @@ button {
 }
 
 .separator-right {
-  background-color: #ffffff;  
+  background-color: #ffffff;
 }
 
 .separator-left {
   background-color: #3dcfb6;
+}
+
+.marquee-slider {
+  @include flexCenter;
+  position: absolute;
+  overflow: hidden;
+  white-space: nowrap;
+  bottom: -350px;
+  height: 50px;
+  rotate: -4deg;
+  width: 100vw;
+  background-color: rgba(85, 85, 85, 0.5);
+  backdrop-filter: blur(0.3);
+}
+
+.marquee-content {
+  @include flexCenter;
+  font-size: 20px;
+  margin-right: 20px;
+  animation: marquee 15s linear infinite;
+  z-index: 5;
+}
+
+.marquee-content span {
+  margin: 0 24px;
+  color: #3dcfb6;
+  font-family: "Karla";
+  font-size: 21px;
+}
+
+@keyframes marquee {
+  0% {
+    transform: translateX(0%);
+  }
+
+  100% {
+    transform: translateX(-25%);
+  }
+}
+
+.scroll-down-left img {
+  animation: bounce 2s infinite;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateY(0);
+  }
+  40% {
+    transform: translateY(-15px);
+  }
+  60% {
+    transform: translateY(-5px);
+  }
 }
