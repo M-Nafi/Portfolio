@@ -16,15 +16,10 @@
   display: flex;
   .picture {
     position: absolute;
-    padding-left: 30px;
-    padding-top: 15px;
+    padding-left: 30px;    
   }
-  img {
-    width: 568px;
-    height: 568px;
-    border-radius: 30px;
-    // filter: grayscale(90%);
-    // opacity: 0.25;
+  .picture1 {
+    padding-top: 20px;
   }
 }
 

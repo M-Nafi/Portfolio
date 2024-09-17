@@ -84,7 +84,10 @@ button {
   gap: 25px;
   img {
     height: 32px;
-  }
+    &:hover {
+      cursor: pointer;        
+    }
+  } 
   a {
     color: #ffffff;
     text-decoration: none;
@@ -92,6 +95,9 @@ button {
     writing-mode: vertical-lr;
     font-family: "Karla";
     font-size: 20px;
+    &:hover {
+      color: #3dcfb6;
+    }
   }
 }
 

@@ -1,0 +1,44 @@
+<div class="skill-set-main">
+  <div class="skill-set-content">
+    <div class="skill-set-left">
+      <div>
+        <span>Technologies</span>
+      </div>
+      <div class="skill-set-description">
+        <h1>Skill Set</h1>
+        <div>
+          <p class="my-skills">
+            My journey has involved working on diverse projects, employing a
+            range of frontend technologies and concepts. I am open to embracing
+            new technologies and methodologies to Continously enhance my skills
+            and stay ahead in the ever-evolving landscape of web development.
+          </p>
+        </div>
+        <div class="skill-set-two-color-question">
+          <div class="question">
+            <div class="first">You need</div>
+            <div class="second">another skill?</div>
+          </div>
+          <div>
+            <p class="third">
+              Feel free to contact me. I look forward to expanding on my
+              previous knowledge.
+            </p>
+          </div>
+        </div>
+
+        <div>
+          <button>Let`s Talk</button>
+        </div>
+      </div>
+    </div>
+
+    <div class="skill-set-right">
+        <div *ngFor="let skill of skills" class="skill-icons">
+            <img [src]="skill.src">
+            <p>{{ skill.label }}</p>
+        </div>
+    </div>
+
+  </div>
+</div>
