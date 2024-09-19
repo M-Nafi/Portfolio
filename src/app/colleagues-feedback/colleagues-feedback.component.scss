@@ -1,16 +1,50 @@
 @import "./../../styles.scss";
 
 .colleagues-feedback-main {
-  @include flexCenter;
   width: 100%;
   background-color: #1c1c1c;
 }
 
 .colleagues-feedback-content {
+  @include flexCenter;
+  flex-direction: column;
   span {
+    margin-top: 70px;
     font-family: "Fira Code";
     font-weight: 700;
     font-size: 32px;
     color: #3dcfb6;
   }
+}
+
+.feedback-slider-main {
+  display: flex;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  gap: 44px;
+}
+
+.feedback-slider {
+  display: flex;
+  max-width: 632px;
+  padding: 48px 40px 48px 40px;
+  border: 1px solid #3dcfb6;
+  background-color: rgba(61, 207, 182, 0.1);
+  border-radius: 32px;
+  font-family: "Karla";
+  font-size: 20px;
+  color: white;
+  .arrows {
+    width: 40px;
+    height: 40px;
+  }
+  .slider-ellipse {
+    width: 8px;
+    height: 8px;
+  }
+}
+
+.slider-control {
+  @include flexCenter;
+  gap: 20px;
 }
