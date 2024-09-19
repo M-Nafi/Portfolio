@@ -1,0 +1,16 @@
+@import "./../../styles.scss";
+
+.colleagues-feedback-main {
+  @include flexCenter;
+  width: 100%;
+  background-color: #1c1c1c;
+}
+
+.colleagues-feedback-content {
+  span {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 32px;
+    color: #3dcfb6;
+  }
+}
