@@ -1,29 +1,30 @@
-<div class="colleagues-feedback-main">
-  
-  <div class="colleagues-feedback-content">
-    <span>What my colleagues say about me</span>
-
-    <div class="feedback-slider-main">
-      <!-- <img src="./../../assets/img/double-quotes-comments.png"> -->
-      <div class="feedback-slider" *ngFor="let feedback of feedback"
-        (click)="onFeedbackClick(feedback)"> {{ feedback.text }}
-      </div>
+<div class="colleagues-feedback-main">  
+    
+    <div class="colleagues-feedback-content">
+      <span>What my colleagues say about me</span>
     </div>
 
-    <div class="slider-control">
-      <img class="arrows" src="./../../assets/img/slider-arrow-left.png">
-      <img class="slider-ellipse" src="./../../assets/img/ellipse-white.png">
-      <img class="slider-ellipse" src="./../../assets/img/ellipse-green.png">
-      <img class="slider-ellipse" src="./../../assets/img/ellipse-white.png">
-      <img class="arrows" src="./../../assets/img/slider-arrow-right.png">
-    </div>
+    <div class="feedback-slider-main">      
+       
+          <div class="card-container">
+            <div class="carusel-style" *ngFor="let comment of visibleCards; let i = index" [class.active]="i === 1">
+              <div class="carousel-container">
+                <p class="title">{{ comment.description }}</p>
+                <p>{{ comment.name }}</p>
+              </div>
+            </div>
+          </div>
+       
+       
+        <div class="slide-arrows">
+          <img class="arrows" src="./../../assets/img/slider-arrow-left.png" (click)="prevCard()">
+            <img class="dots" src="./../../assets/img/ellipse-white.png">
+              <img class="dots" src="./../../assets/img/ellipse-green.png">
+            <img class="dots" src="./../../assets/img/ellipse-white.png">         
+          <img class="arrows" src="./../../assets/img/slider-arrow-right.png" (click)="nextCard()">
+        </div>
 
-
-  </div>
-
-
-
-
-
+      
+    </div> 
 
 </div>

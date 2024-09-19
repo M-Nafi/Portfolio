@@ -3,21 +3,20 @@
 .work-together-main {
   @include flexCenter;
   width: 100%;
-  background-color: #1c1c1c;
-  max-height: 550px;
+  background-color: #1c1c1c;  
 }
 
 .work-together-content {
   @include max-width;
   display: flex;
   justify-content: space-between;
+  margin-top: 200px;
 }
 
 .work-togehter-left-content {
   display: flex;
   flex-direction: column;
-  max-width: 568px;
-  max-height: 337px;
+  max-width: 50%;  
   gap: 40px;
 }
 
@@ -54,8 +53,7 @@
 .work-togehter-right-content {
   display: flex;
   flex-direction: column;
-  max-width: 616px;
-  max-width: 550px;
+  width: 50%;  
   gap: 40px;
 }
 
@@ -78,16 +76,39 @@
   }
 }
 
+.form-bottom-line {
+  border-bottom: 1px solid rgba(61, 207, 182, 0.3);
+}
+
 .work-together-priv-policy {
-  display: flex;
-  gap: 8px;
+  @include flexCenter;
+  flex-direction: column;
+  gap: 32px;
   img {
     width: 20px;
     height: 20px;
+    padding-right: 5px;
   }
   span {
     font-family: "Karla";
-    font-size: 15px;
+    font-size: 12px;
     color: white;
+  }
+  button {
+    @include flexCenter;
+    width: 139px;
+    height: 48px;
+    font-family: "Karla";
+    font-size: 16px;
+    color: white;
+    border: 1px solid white;
+    border-radius: 100px;
+    background-color: transparent;
+    padding: 0px 24px 0px 24px;
+    cursor: pointer;
+  }
+  .privacy-content {
+    display: flex;
+    align-items: center;
   }
 }
