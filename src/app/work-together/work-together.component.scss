@@ -1,0 +1,93 @@
+@import "./../../styles.scss";
+
+.work-together-main {
+  @include flexCenter;
+  width: 100%;
+  background-color: #1c1c1c;
+  max-height: 550px;
+}
+
+.work-together-content {
+  @include max-width;
+  display: flex;
+  justify-content: space-between;
+}
+
+.work-togehter-left-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 568px;
+  max-height: 337px;
+  gap: 40px;
+}
+
+.work-together-left-top {
+  max-height: 176px;
+  span {
+    font-family: "Karla";
+    font-size: 24px;
+    color: #3dcfb6;
+  }
+  h1 {
+    margin-top: 0;
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 64px;
+    color: #3dcfb6;
+  }
+}
+
+.work-together-left-bottom {
+  span {
+    font-family: "Fira Code";
+    font-weight: 700;
+    font-size: 24px;
+    color: #3dcfb6;
+  }
+  p {
+    font-family: "Karla";
+    color: white;
+    font-size: 16px;
+  }
+}
+
+.work-togehter-right-content {
+  display: flex;
+  flex-direction: column;
+  max-width: 616px;
+  max-width: 550px;
+  gap: 40px;
+}
+
+.work-together-form {
+  display: flex;
+  padding: 32px;
+  gap: 10px;
+  flex-direction: column;
+  border-top: 1px solid #3dcfb6;
+  span {
+    font-family: "Fira Code";
+    color: #3dcfb6;
+    font-size: 24px;
+  }
+  input {
+    background-color: transparent;
+    border: none;
+    font-family: "Karla";
+    font-size: 18px;
+  }
+}
+
+.work-together-priv-policy {
+  display: flex;
+  gap: 8px;
+  img {
+    width: 20px;
+    height: 20px;
+  }
+  span {
+    font-family: "Karla";
+    font-size: 15px;
+    color: white;
+  }
+}
