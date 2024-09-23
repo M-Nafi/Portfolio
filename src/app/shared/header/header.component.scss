@@ -45,14 +45,28 @@
 .about-me-de {
   display: flex;
   align-items: center;
-  gap: 32px;
+  gap: 32px;  
   span {
     font-size: 20px;
     font-family: "Fira Code";
     color: #ffffff;
     cursor: pointer;
+    position: relative;    
+    &::after {
+      content: "•";
+      position: absolute;
+      bottom: -20px; 
+      left: 50%; 
+      transform: translateX(-50%);
+      visibility: hidden;
+      color: #3dcfb6;
+    }    
+    &:hover::after {
+      visibility: visible;
+    }
   }
 }
+
 
 .logo {
   gap: 10px;
@@ -107,5 +121,5 @@
 .logo:hover .name {
   transition: 500ms;
   color: transparent;
-  -webkit-text-stroke: 1px #93d6c9;
+  -webkit-text-stroke: 1px #ffffff;
 }
