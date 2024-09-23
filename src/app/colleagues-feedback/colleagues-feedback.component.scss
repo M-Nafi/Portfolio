@@ -13,8 +13,7 @@
   @include max-width;
   margin-top: 150px;
   margin-bottom: 32px;
-  span {
-    
+  span {    
     font-family: "Fira Code";
     font-weight: 700;
     font-size: 32px;
@@ -29,22 +28,24 @@
 }
 
 .card-container {
-  display: flex;   
-  transition: transform 0.5s ease-in-out;  
+  display: flex;     
+  position: relative;
+  transition: transform 0.5s ease-in-out;
+  overflow: hidden; /* Wichtig für das Sliden */
 }
 
 .carusel-style {
   width: 632px;  
   display: flex; 
   text-align: center;
-  opacity: 0.5;  
-  transform: scale(0.9); 
+  opacity: 0.5;    
+  transform: translateX(0) scale(0.9); 
   transition: transform 1s ease-in-out;
 }
 
 .carusel-style.active {
   opacity: 1; 
-  transform: scale(1);
+  transform: translateX(0) scale(1);
 }
 
 .carousel-container {

@@ -1,0 +1,113 @@
+@import "./../../../styles.scss";
+
+.footer-main {
+  @include flexCenter;
+  width: 100%;
+  background-color: #1c1c1c;
+}
+
+.footer-contents {
+  display: flex;
+  @include max-width;
+  justify-content: space-between;
+  margin-top: 128px;
+  margin-bottom: 64px;
+}
+
+.logo {
+  gap: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.initials {
+  @include flexCenter;
+  right: 180px;
+  top: 20px;
+  font-size: 60px;
+  font-family: sans-serif;
+  flex-direction: row;
+  font-weight: bold;
+}
+
+.letter-N {
+  @include flexCenter;
+  margin-right: -7px;
+  color: rgba(61, 207, 182);
+  font-size: 61px;
+}
+
+.letter-M {
+  @include flexCenter;
+  margin-bottom: 2px;
+  font-size: 64px;
+  transform: rotate(90deg);
+  color: rgba(61, 207, 182, 0.8);
+}
+
+.name {
+  font-size: 24px;
+  font-weight: bold;
+  font-family: sans-serif;
+  color: white;
+  letter-spacing: 1px;
+}
+
+.logo:hover .initials {
+  color: transparent;
+}
+
+.logo:hover .letter-N,
+.logo:hover .letter-M {
+  transition: 500ms;
+  color: transparent;
+  -webkit-text-stroke: 1px #5cd1b9;
+}
+
+.logo:hover .name {
+  transition: 500ms;
+  color: transparent;
+  -webkit-text-stroke: 1px #ffffff;
+  //   -webkit-text-stroke: 1px #93d6c9;
+}
+
+.footer-left-bottom {
+  gap: 8px;
+  display: flex;
+  flex-direction: column;
+  span {
+    font-family: "Karla";
+    font-size: 16px;
+    color: white;
+  }
+}
+
+.footer-content-center {
+  @include flexCenter;
+  font-family: "Fira Code";
+  font-size: 18px;
+  color: #3dcfb6;
+}
+
+.footer-content-right {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  span {
+    font-family: "Karla";
+    font-size: 16px;
+    color: white;
+    &::before {
+      content: "•";
+      margin-right: 5px;
+      visibility: hidden;
+    }
+    &:hover::before {
+      visibility: visible;
+      color: #3dcfb6;
+    }
+    &:hover {
+      color: #3dcfb6;
+    }
+  }
+}
