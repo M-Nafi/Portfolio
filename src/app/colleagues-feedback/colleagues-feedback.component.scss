@@ -22,35 +22,61 @@
 }
 
 .feedback-slider-main {
+  @include max-width;
+  width: 100vw;
   display: flex;
   flex-direction: column; 
   align-items: center; 
 }
 
 .card-container {
-  display: flex;     
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  overflow: hidden;
   position: relative;
-  transition: transform 0.5s ease-in-out;
-  overflow: hidden; /* Wichtig für das Sliden */
+}
+
+.card-container::after {
+  content: '';
+  position: absolute;
+  left: 0; right: 0;
+  top: 0; bottom: 0;
+  background-image:
+    linear-gradient(to right, #1c1c1c, rgba(0,128,128,0) 80px),
+    linear-gradient(to left , #1c1c1c, rgba(0,128,128,0) 80px);
 }
 
 .carusel-style {
-  width: 632px;  
-  display: flex; 
+  min-width: 33.33%; 
+  display: flex;
+  justify-content: center;
   text-align: center;
-  opacity: 0.5;    
-  transform: translateX(0) scale(0.9); 
-  transition: transform 1s ease-in-out;
+  transition: opacity 0.5s ease, transform 0.5s ease; // Animation für Transition
+  opacity: 0; 
+  transform: translateX(33.33%); // Sicherstellen, dass sie außerhalb des Bildschirms starten
 }
 
 .carusel-style.active {
   opacity: 1; 
-  transform: translateX(0) scale(1);
+  transform: translateX(0); // Normal position
 }
+
+.carusel-style.previous {
+  opacity: 0.5; 
+  transform: translateX(-33.33%); // Links verschieben
+}
+
+.carusel-style.next {
+  opacity: 0.5; 
+  transform: translateX(33.33%); // Rechts verschieben
+}
+
 
 .carousel-container {
   display: flex;
-  flex-direction: column; 
+  flex-direction: column;
+  justify-content: center;
   width: 100%;
   background-color: rgba(61, 207, 182, 0.1);
   border: 1px solid #3dcfb6;
@@ -58,12 +84,12 @@
   padding: 32px 16px;
   font-family: "Karla";
   color: white;
-  .title {    
-    font-size: 20px;    
-    p {      
-    font-size: 18px;
+  .title {
+    font-size: 20px;
+    p {
+      font-size: 18px;
     }
-  } 
+  }
 }
 
 .slide-arrows {
@@ -74,11 +100,47 @@
     width: 32px;
     height: 32px;
     cursor: pointer;
-  }
-  .dots {
-    width: 8px;
-    height: 8px;
-  }  
+  } 
 }
 
+// ab hier muss das bearbeitet werden !!!
+.dots-container {
+  display: flex;
+  justify-content: center;
+  margin: 10px 0;
+}
 
+.dot {
+  width: 8px;
+  height: 8px;
+  background-color: white; 
+  border-radius: 50%;
+  margin: 0 5px;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #3dcfb6; 
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateX(33.33%);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    opacity: 1;
+    transform: translateX(0);
+  }
+  to {
+    opacity: 0;
+    transform: translateX(-33.33%);
+  }
+}

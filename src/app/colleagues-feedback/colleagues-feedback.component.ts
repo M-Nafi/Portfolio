@@ -10,14 +10,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ColleaguesFeedbackComponent implements OnInit {
   comments = [
-    { description: 'Great team player!', name: 'John Doe' },
-    { description: 'Very reliable and committed.', name: 'Jane Smith' },
-    { description: 'Always helpful and positive.', name: 'Mark Johnson' },
-    { description: 'Excellent problem-solving skills.', name: 'Emma Brown' }
+    { 
+      description: 'Great team player!', 
+      name: 'John Doe'
+    },
+    { 
+      description: 'Very reliable and committed.', 
+      name: 'Jane Smith' 
+    },
+    { 
+      description: 'Always helpful and positive.', 
+      name: 'Mark Johnson' 
+    }
   ];
   
   visibleCards: any[] = [];
-  currentIndex: number = 0;
+  currentIndex: number = 0;  
   totalCards: number;
 
   constructor() {
@@ -25,31 +33,33 @@ export class ColleaguesFeedbackComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    // this.currentIndex = 0; 
+    // this.currentIndex = Math.floor(this.totalCards / 2);
     this.updateVisibleCards();
   }
 
-  // Karten updaten
   updateVisibleCards(): void {
+    let previousIndex = this.getPreviousIndex();
+    let nextIndex = this.getNextIndex();
+    
     this.visibleCards = [
-      this.comments[this.getPreviousIndex()],
-      this.comments[this.currentIndex],
-      this.comments[this.getNextIndex()]
+      { ...this.comments[previousIndex], class: 'previous', anim: 'slideOut' },
+      { ...this.comments[this.currentIndex], class: 'active', anim: 'slideIn' },
+      { ...this.comments[nextIndex], class: 'next', anim: 'slideIn' }
     ];
   }
+  
 
-  // Vorherige Karte
   prevCard(): void {
     this.currentIndex = this.getPreviousIndex();
     this.updateVisibleCards();
   }
 
-  // Nächste Karte
   nextCard(): void {
     this.currentIndex = this.getNextIndex();
     this.updateVisibleCards();
   }
 
-  // Hilfsmethoden, um den nächsten und vorherigen Index im Kreis zu berechnen
   getNextIndex(): number {
     return (this.currentIndex + 1) % this.totalCards;
   }
@@ -58,4 +68,3 @@ export class ColleaguesFeedbackComponent implements OnInit {
     return (this.currentIndex - 1 + this.totalCards) % this.totalCards;
   }
 }
-
