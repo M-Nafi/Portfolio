@@ -1,6 +1,6 @@
 @import "./../../styles.scss";
 
-.featured-projects-main {
+section {
   @include flexCenter;
   width: 100%;
   background-color: #1c1c1c;

@@ -1,6 +1,6 @@
 @import "./../../../styles.scss";
 
-.header-main {
+section {
   @include flexCenter;
   width: 100%;
   position: absolute;
@@ -14,59 +14,77 @@
   justify-content: space-between;
 }
 
-.header-content-left {
+nav {
   display: flex;
+  align-items: center;
   gap: 32px;
 }
 
-.switch-button-language {
+button {
   @include flexCenter;
-  display: flex;
-  background-color: transparent;
-  gap: 10px;
-  border: 1px solid #3dcfb6;
-  border-radius: 50px;
-  cursor: pointer;
-}
-
-.switch-button-language:hover {
-  border: 1px solid #ffffff;
-}
-
-.button-link {
+  width: 84px;
+  height: 28px;
   font-family: "Fira Code";
-  background-color: #3dcfb6;
-  padding: 0 12px;
-  border-radius: 50px;
   font-size: 16px;
-  color: #ffffff;
+  font-weight: 700;
+  background-color: transparent; 
+  border: 1px solid #3dcfb6;
+  border-radius: 100px;
+  cursor: pointer;
+  &:hover {
+    border: 1px solid #ffffff;
+  }
 }
 
-.about-me-de {
+span {
+  @include flexCenter;
+  height: 28px;
+  gap: 10px;
+  &.active {
+    width: 44px;
+    color: whitesmoke;
+    background-color: #3dcfb6;
+    padding-left: 12px;
+    padding-right: 12px;
+    border-radius: 100px;
+  }
+  &.inactive {
+    width: 40px;
+    color: rgba(61, 207, 182, 0.5);
+    padding-left: 8px;
+    padding-right: 12px;
+  }
+}
+
+
+.about-me {
   display: flex;
   align-items: center;
-  gap: 32px;  
-  span {
+  gap: 32px;
+  a {
     font-size: 20px;
     font-family: "Fira Code";
     color: #ffffff;
     cursor: pointer;
-    position: relative;    
+    position: relative;
+    text-decoration: none;
+    &:hover {
+      color: #3dcfb6;
+    }
     &::after {
       content: "•";
       position: absolute;
-      bottom: -20px; 
-      left: 50%; 
+      bottom: -20px;
+      left: 50%;
       transform: translateX(-50%);
       visibility: hidden;
       color: #3dcfb6;
-    }    
+    }
     &:hover::after {
       visibility: visible;
     }
   }
 }
-
 
 .logo {
   gap: 10px;

@@ -14,5 +14,5 @@ export class WelcomeAreaComponent {
     'Open to work',
     'Based in Bremen',    
     'Available for remote work',
-  ];
+  ];  
 }

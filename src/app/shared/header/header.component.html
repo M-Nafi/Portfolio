@@ -1,23 +1,19 @@
-<div class="header-main">
-
+<section>
   <div class="header-content">
-
-    <div class="header-content-left">
+    <nav>
       <div class="language-change">
-        
-        <button class="switch-button-language">
-          <span href="" class="button-link">EN</span>
-          <span href="" class="button-link">DE</span>
-        </button>    
+        <button (click)="switchLanguage()">
+          <span [ngClass]="{active: currentLanguage === 'EN', inactive: currentLanguage === 'DE'}">EN</span>
+          <span [ngClass]="{active: currentLanguage === 'DE', inactive: currentLanguage === 'EN'}">DE</span>
+        </button>
+      </div>
 
+      <div class="about-me">
+        <a href="#aboutMe">{{ aboutMe }}</a>
+        <a href="#mySkills">{{ skills }}</a>
+        <a href="#myProjects">{{ projects }}</a>
       </div>
-      
-      <div class="about-me-de">
-        <span>About me</span>
-        <span>Skills</span>
-        <span>Projects</span>
-      </div>
-    </div>
+    </nav>
 
     <div class="header-content-right">
       <div class="logo">
@@ -26,13 +22,10 @@
           <span class="letter-M">M</span>
         </div>
         <div class="name">
-          Nafi <br>
+          Nafi <br />
           Müftüoglu
         </div>
-      </div> 
-        
+      </div>
     </div>
-    
   </div>
-
-</div>
+</section>

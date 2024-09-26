@@ -61,7 +61,7 @@ export class ColleaguesFeedbackComponent {
   }  
 
   animateSlide(direction: string) {
-    const cardContainer = this.cardContainerRef.nativeElement; // Zugriff auf das DOM-Element
+    let cardContainer = this.cardContainerRef.nativeElement; 
 
     if (direction === 'next') {
       cardContainer.style.transform = 'translateX(-33.33%)';
