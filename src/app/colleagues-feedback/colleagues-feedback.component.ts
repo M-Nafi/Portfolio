@@ -1,70 +1,81 @@
 import { CommonModule } from '@angular/common';
-import { Component, OnInit } from '@angular/core';
+import { Component, ViewChild, ElementRef } from '@angular/core';
 
 @Component({
   selector: 'app-colleagues-feedback',
   standalone: true,
   imports: [CommonModule],
   templateUrl: './colleagues-feedback.component.html',
-  styleUrl: './colleagues-feedback.component.scss',
+  styleUrls: ['./colleagues-feedback.component.scss'],
 })
-export class ColleaguesFeedbackComponent implements OnInit {
-  comments = [
-    { 
-      description: 'Great team player!', 
-      name: 'John Doe'
+export class ColleaguesFeedbackComponent {
+  @ViewChild('cardContainer') cardContainerRef!: ElementRef;
+  comments: { name: string; description: string }[] = [
+    {
+      description: 'Great team player!',
+      name: 'John Doe',
     },
-    { 
-      description: 'Very reliable and committed.', 
-      name: 'Jane Smith' 
+    {
+      description: 'Very reliable and committed.',
+      name: 'Jane Smith',
     },
-    { 
-      description: 'Always helpful and positive.', 
-      name: 'Mark Johnson' 
-    }
+    {
+      description: 'Always helpful and positive.',
+      name: 'Mark Johnson',
+    },
   ];
-  
-  visibleCards: any[] = [];
-  currentIndex: number = 0;  
-  totalCards: number;
+
+  currentIndex = 0;
+  visibleCards: any = [];
 
   constructor() {
-    this.totalCards = this.comments.length;
-  }
-
-  ngOnInit(): void {
-    // this.currentIndex = 0; 
-    // this.currentIndex = Math.floor(this.totalCards / 2);
     this.updateVisibleCards();
   }
 
-  updateVisibleCards(): void {
-    let previousIndex = this.getPreviousIndex();
-    let nextIndex = this.getNextIndex();
-    
-    this.visibleCards = [
-      { ...this.comments[previousIndex], class: 'previous', anim: 'slideOut' },
-      { ...this.comments[this.currentIndex], class: 'active', anim: 'slideIn' },
-      { ...this.comments[nextIndex], class: 'next', anim: 'slideIn' }
-    ];
+  updateVisibleCards() {
+    this.visibleCards = this.comments.slice(
+      this.currentIndex,
+      this.currentIndex + 3
+    );
+    if (this.visibleCards.length < 3) {
+      this.visibleCards = this.visibleCards.concat(
+        this.comments.slice(0, 3 - this.visibleCards.length)
+      );
+    }
+  }
+
+  nextCard() {
+    this.animateSlide('next');
+    this.currentIndex = (this.currentIndex + 1) % this.comments.length;
+    setTimeout(() => {
+      this.updateVisibleCards();
+    }, 500);
   }
   
+  prevCard() {
+    this.animateSlide('prev');
+    this.currentIndex = (this.currentIndex - 1 + this.comments.length) % this.comments.length;
+    setTimeout(() => {
+      this.updateVisibleCards();
+    }, 500);
+  }  
 
-  prevCard(): void {
-    this.currentIndex = this.getPreviousIndex();
-    this.updateVisibleCards();
-  }
+  animateSlide(direction: string) {
+    const cardContainer = this.cardContainerRef.nativeElement; // Zugriff auf das DOM-Element
 
-  nextCard(): void {
-    this.currentIndex = this.getNextIndex();
-    this.updateVisibleCards();
-  }
+    if (direction === 'next') {
+      cardContainer.style.transform = 'translateX(-33.33%)';
+    } else if (direction === 'prev') {
+      cardContainer.style.transform = 'translateX(33.33%)';
+    }
 
-  getNextIndex(): number {
-    return (this.currentIndex + 1) % this.totalCards;
-  }
+    setTimeout(() => {
+      cardContainer.style.transition = 'none';
+      cardContainer.style.transform = 'translateX(0)';
 
-  getPreviousIndex(): number {
-    return (this.currentIndex - 1 + this.totalCards) % this.totalCards;
+      setTimeout(() => {
+        cardContainer.style.transition = 'transform 0.5s ease-in-out';
+      }, 50);
+    }, 500);
   }
 }

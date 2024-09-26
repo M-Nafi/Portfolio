@@ -9,11 +9,11 @@
 }
 
 .colleagues-feedback-content {
-  @include flexCenter; 
+  @include flexCenter;
   @include max-width;
   margin-top: 150px;
   margin-bottom: 32px;
-  span {    
+  span {
     font-family: "Fira Code";
     font-weight: 700;
     font-size: 32px;
@@ -22,73 +22,87 @@
 }
 
 .feedback-slider-main {
+  @include flexCenter;
   @include max-width;
-  width: 100vw;
-  display: flex;
-  flex-direction: column; 
-  align-items: center; 
+  width: 100%;
+  position: relative;
+  overflow: hidden;
 }
 
 .card-container {
   display: flex;
   justify-content: center;
-  width: 100%;
-  overflow: hidden;
+  padding-top: 16px;
+  transition: transform 0.5s ease-in-out;
   position: relative;
+  &::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-image: 
+      linear-gradient(to right, #1c1c1c, rgba(0, 128, 128, 0) 350px),
+      linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 350px);
+  }
 }
 
-.card-container::after {
-  content: '';
+.double-quotes-comments {
+  @include max-width;
   position: absolute;
-  left: 0; right: 0;
-  top: 0; bottom: 0;
-  background-image:
-    linear-gradient(to right, #1c1c1c, rgba(0,128,128,0) 80px),
-    linear-gradient(to left , #1c1c1c, rgba(0,128,128,0) 80px);
+  top: 0;
+  left: 473px;
+  z-index: 1;
+  img {
+    width: 70px;
+    height: 45px;
+  }
 }
 
-.carusel-style {
-  min-width: 33.33%; 
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  transition: opacity 0.5s ease, transform 0.5s ease; // Animation für Transition
-  opacity: 0; 
-  transform: translateX(33.33%); // Sicherstellen, dass sie außerhalb des Bildschirms starten
+.carousel-style {
+  @include flexCenter;
+  min-width: 33.33%;
+  width: 500px;
+  opacity: 0.5;
+  transform: scale(0.9);
+  transition: transform 0.5s ease-in-out, opacity 0.5s ease-in-out;
+  &.active {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
-
-.carusel-style.active {
-  opacity: 1; 
-  transform: translateX(0); // Normal position
-}
-
-.carusel-style.previous {
-  opacity: 0.5; 
-  transform: translateX(-33.33%); // Links verschieben
-}
-
-.carusel-style.next {
-  opacity: 0.5; 
-  transform: translateX(33.33%); // Rechts verschieben
-}
-
 
 .carousel-container {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: space-between;
   width: 100%;
   background-color: rgba(61, 207, 182, 0.1);
   border: 1px solid #3dcfb6;
   border-radius: 32px;
-  padding: 32px 16px;
+  padding: 32px;
   font-family: "Karla";
   color: white;
+  gap: 40px;
   .title {
     font-size: 20px;
+    margin: 0;
     p {
       font-size: 18px;
     }
+  }
+}
+
+.author {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  .seperator {
+    width: 70%;
+    height: 1px;
+    background-color: white;
+    padding-left: 16px;
   }
 }
 
@@ -99,11 +113,36 @@
   .arrows {
     width: 32px;
     height: 32px;
-    cursor: pointer;
-  } 
+    cursor: pointer;   
+  }
 }
 
-// ab hier muss das bearbeitet werden !!!
+@keyframes swing-left {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(-10px); }
+  100% { transform: translateX(0); }
+}
+
+@keyframes swing-right {
+  0% { transform: translateX(0); }
+  50% { transform: translateX(10px); }
+  100% { transform: translateX(0); }
+}
+
+.arrows {
+  transition: transform 0.3s ease;
+}
+
+.left-arrow:hover {
+  content: url('./../../assets/img/slider-arrow-left-hover.png');
+  animation: swing-left 0.8s infinite; 
+}
+
+.right-arrow:hover {
+  content: url('./../../assets/img/slider-arrow-right-hover.png');
+  animation: swing-right 0.8s infinite; 
+}
+
 .dots-container {
   display: flex;
   justify-content: center;
@@ -113,34 +152,11 @@
 .dot {
   width: 8px;
   height: 8px;
-  background-color: white; 
+  background-color: white;
   border-radius: 50%;
   margin: 0 5px;
   cursor: pointer;
-}
-
-.dot.active {
-  background-color: #3dcfb6; 
-}
-
-@keyframes slideIn {
-  from {
-    opacity: 0;
-    transform: translateX(33.33%);
-  }
-  to {
-    opacity: 1;
-    transform: translateX(0);
-  }
-}
-
-@keyframes slideOut {
-  from {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  to {
-    opacity: 0;
-    transform: translateX(-33.33%);
+  &.active {
+    background-color: #3dcfb6;
   }
 }
