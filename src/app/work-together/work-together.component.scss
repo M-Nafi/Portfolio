@@ -3,7 +3,7 @@
 .work-together-main {
   @include flexCenter;
   width: 100%;
-  background-color: #1c1c1c;  
+  background-color: #1c1c1c;
 }
 
 .work-together-content {
@@ -16,7 +16,7 @@
 .work-togehter-left-content {
   display: flex;
   flex-direction: column;
-  max-width: 50%;  
+  max-width: 50%;
   gap: 40px;
 }
 
@@ -53,7 +53,7 @@
 .work-togehter-right-content {
   display: flex;
   flex-direction: column;
-  width: 50%;  
+  width: 50%;
   gap: 40px;
 }
 
@@ -70,10 +70,23 @@
   }
   input {
     background-color: transparent;
-    border: none;
     font-family: "Karla";
     font-size: 18px;
+    color: whitesmoke;
+    border: none;
+    outline: none;
+    &:focus {
+      border: none;
+      outline: none;
+      caret-color: #3dcfb6;
+    }
   }
+}
+
+.hello {
+  display: flex;
+  justify-content: center;
+  width: 100%;
 }
 
 .form-bottom-line {
@@ -83,17 +96,14 @@
 .work-together-priv-policy {
   @include flexCenter;
   flex-direction: column;
+  align-items: flex-start;
   gap: 32px;
   img {
     width: 20px;
     height: 20px;
     padding-right: 5px;
   }
-  span {
-    font-family: "Karla";
-    font-size: 12px;
-    color: white;
-  }
+ 
   button {
     @include flexCenter;
     width: 139px;
@@ -106,9 +116,82 @@
     background-color: transparent;
     padding: 0px 24px 0px 24px;
     cursor: pointer;
+    &:hover {
+      border: 1px solid #3dcfb6;
+    }
   }
   .privacy-content {
     display: flex;
-    align-items: center;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 16px;
+  }
+  .priv-policy {
+    text-decoration: none;
+    color: #3dcfb6;
+  }
+  .accept-policy {
+    font-family: "Karla";
+    font-size: 14px;
+    color: #EC7B7B;
   }
 }
+
+*,
+*:before,
+*:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+.form-group {
+  display: block;
+  margin-bottom: 15px;
+}
+
+.form-group input {
+  display: none; 
+  cursor: pointer;
+}
+
+.form-group .read-policy, label {
+  display: flex;
+  position: relative;
+  font-family: "Karla";
+  font-size: 14px;
+  color: white;
+  align-items: center;
+}
+
+.form-group label:before {  
+  border-radius: 3px;
+  content: "";
+  background-color: transparent;
+  border: 2px solid #3dcfb6;
+  width: 20px; 
+  height: 20px;   
+  padding: 0; 
+  display: inline-block;
+  position: relative;
+  vertical-align: middle;
+  cursor: pointer;
+  margin-right: 5px;
+}
+
+.form-group input:checked + label:after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 2px; 
+  left: 7px; 
+  width: 6px;
+  height: 12px; 
+  border: solid #3dcfb6;  
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+

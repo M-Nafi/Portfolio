@@ -90,7 +90,7 @@ section {
   0% {   
     animation-timing-function: ease-in;
     opacity: 0;
-    transform: translateX(48px);
+    transform: translateX(200px); 
   }
 
   24% {
@@ -100,25 +100,25 @@ section {
   40% {
     opacity: 0.4;
     animation-timing-function: ease-in;
-    transform: translateX(26px);
+    transform: translateX(100px); 
   }
 
   65% {
     opacity: 0.6;
     animation-timing-function: ease-in;
-    transform: translateX(13px);
+    transform: translateX(50px); 
   }
 
   82% {
     opacity: 0.8;
     animation-timing-function: ease-in;
-    transform: translateX(6.5px);
+    transform: translateX(15px);
   }
 
   93% {
     opacity: 1;
     animation-timing-function: ease-in;
-    transform: translateX(4px);
+    transform: translateX(5px);
   }
 
   25%, 55%, 75%, 87%, 98% {

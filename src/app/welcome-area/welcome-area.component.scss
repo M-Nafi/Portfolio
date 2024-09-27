@@ -45,7 +45,7 @@
   cursor: pointer;   
   &:hover {
     border: 1px solid #3dcfb6;
-    span {
+    span {      
       animation: slideOutAndIn 1.5s linear; 
       color: #3dcfb6;
     }
