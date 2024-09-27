@@ -8,7 +8,8 @@ section {
 }
 
 .featured-projects-contend {
-    @include max-width;
+  @include max-width;
+  display: flex;
 }
 
 .featured-projects-content-left {
@@ -40,7 +41,7 @@ section {
 }
 
 .my-projects-first-container {
-    border-top: 1px solid;
+  border-top: 1px solid;
 }
 
 .my-projects {
@@ -53,8 +54,7 @@ section {
   &:hover {
     background-color: rgba(43, 145, 127, 0.75);
     cursor: pointer;
-    ;
-}
+  }
   h3 {
     margin: 0;
     font-family: "Fira Code";
@@ -73,6 +73,74 @@ section {
 }
 
 .featured-projects-content-right {
-    display: flex;
-    max-width: 560px;
+  display: flex;
+  padding-top: 115px;
+  width: 560px;
 }
+
+.feat-project-images {
+  width: 250px;
+  height: 200px;
+  padding-left: 16px;
+  border-radius: 16px;
+  animation: myAnim 2s ease 0s 1 normal forwards;
+}
+
+@keyframes myAnim {
+  0% {   
+    animation-timing-function: ease-in;
+    opacity: 0;
+    transform: translateX(48px);
+  }
+
+  24% {
+    opacity: 0.2;
+  }
+
+  40% {
+    opacity: 0.4;
+    animation-timing-function: ease-in;
+    transform: translateX(26px);
+  }
+
+  65% {
+    opacity: 0.6;
+    animation-timing-function: ease-in;
+    transform: translateX(13px);
+  }
+
+  82% {
+    opacity: 0.8;
+    animation-timing-function: ease-in;
+    transform: translateX(6.5px);
+  }
+
+  93% {
+    opacity: 1;
+    animation-timing-function: ease-in;
+    transform: translateX(4px);
+  }
+
+  25%, 55%, 75%, 87%, 98% {
+    animation-timing-function: ease-out;
+    transform: translateX(0px);
+  }
+
+  100% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+    transform: translateX(0px);
+  }
+}
+
+.second {
+  display: flex;
+  padding-top: 115px;
+}
+
+.third {
+  display: flex;
+  padding-top: 230px;
+  position: absolute;  
+}
+
