@@ -10,91 +10,99 @@
             my skills in action.
           </p>
         </div>
-
-        <div class="my-projects-main">
-          <div class="my-projects my-projects-first-container" (mouseenter)="showImage('join')" (mouseleave)="hideImage()">
-            <h3>Join</h3>
+      </div>
+      <div class="my-projects-main">
+        <!-- join project -->
+        <div class="my-projects my-projects-first-container"
+            (click)="showProjectDetails(projects[0])"
+              (mouseenter)="showImage('join')"
+                (mouseleave)="hideImage()">
+              <h3>Join</h3>
             <div class="my-project-types">
               Javascript<span> |</span> HTML<span> |</span> CSS
             </div>
-          </div>
+        </div>
 
-          <div class="introducing-projects d-none">
-            <div class="introducing-left">
-                <div>
-                  <h1>01</h1>
-                  <h2>Join</h2>
-                </div>
-                <div>
-                  <h3>What is in this project about?</h3>
-                  <span>Task manager inspired by the Kanban System. Create and 
-                  organize tasks using drag and drop function, assign users
-                  and categories.
-                  </span>
-                <div class="introducing-icons">
-                  <div class="itroducing-icons-container">
-                    <img src="./../../assets/img/css-icon-colored.png">
-                    <p>CSS</p>
-                  </div>
-                  <div class="itroducing-icons-container">
-                    <img src="./../../assets/img/html-icon-colored.png">
-                    <p>HTML</p>
-                  </div>
-                  <div class="itroducing-icons-container">
-                    <img src="./../../assets/img/javascript-icon-colored.png">
-                    <p>Javascript</p>
-                  </div>
-                </div>
-              </div>
-              <div class="link-button-continer">
-                <div class="link-buttons">GitHub
-                  <img class="arrow-outward" src="./../../assets/img/arrow-outward.png">
-                </div>
-                <div class="link-buttons">Live Test
-                  <img class="arrow-outward" src="./../../assets/img/arrow-outward.png">
-                </div>
-              </div>
-            </div>
-            <div class="introducing-right">
-              <div class="closing-icon"               
-                (mouseout)="changeImage('./../../assets/img/close-icon-white.png')"
-                (mouseover)="changeImage('./../../assets/img/close-icon-colored.png')">
-                <img [src]="imageSource">
-              </div>
-              <div class="introducing-project-image">
-                <img src="./../../assets/img/Photo.png">
-              </div>
-              <div class="next-project-container">
-                <span>Next project</span>
-                <img src="./../../assets/img/arrow-forward.png">
-              </div>
-            </div>
-          </div>
-
-          <div class="my-projects" (mouseenter)="showImage('pollo')" (mouseleave)="hideImage()">
-            <h3>El Pollo Loco</h3>
+        <!-- el pollo loco project -->
+        <div class="my-projects"
+          (click)="showProjectDetails(projects[1])"
+            (mouseenter)="showImage('pollo')"
+              (mouseleave)="hideImage()">
+              <h3>El Pollo Loco</h3>
             <div class="my-project-types">
               Javascript<span> |</span> HTML<span> |</span> CSS
             </div>
-          </div>  
+        </div>
 
-          <div class="my-projects" (mouseenter)="showImage('portfolio')" (mouseleave)="hideImage()">
-            <h3>Portfolio</h3>
-            <div class="my-project-types">
-              Angular<span> |</span> Javascript<span> |</span> HTML<span> |</span> CSS
+        <!-- portfolio project -->
+        <div class="my-projects"
+            (click)="showProjectDetails(projects[2])"
+              (mouseenter)="showImage('portfolio')"
+              (mouseleave)="hideImage()">
+                <h3>Portfolio</h3>
+              <div class="my-project-types">
+                Angular<span> |</span> Javascript<span> |</span> HTML<span> |</span> CSS
+              </div>
+        </div>
+
+        <!-- overlay for background -->
+        <div class="overlay"
+          [ngClass]="{ 'd-none': !isProjectVisible }"
+          (click)="hideProjectDetails($event)">
+        </div>
+
+        <!-- introducing projects (project details) -->
+        <div class="introducing-projects"
+          [ngClass]="{ 'd-none': !isProjectVisible }" *ngIf="selectedProject">
+          <div class="introducing-left">
+            <div>
+              <h1>{{ selectedProject.number }}</h1>
+              <h2>{{ selectedProject.title }}</h2>
+            </div>
+            <div>
+              <h3>{{ selectedProject.subtitle }}</h3>
+              <span>{{ selectedProject.description }}</span>
+              <div class="introducing-icons"
+                *ngFor="let technology of selectedProject.technologies">
+                <img [src]="technology.iconUrl" alt="{{ technology.name }}"/>
+              </div>
+            </div>
+            <div class="link-button-continer">
+              <div class="link-buttons">GitHub
+                <img class="arrow-outward"
+                  src="./../../assets/img/arrow-outward.png"/>
+              </div>
+              <div class="link-buttons">Live Test
+                <img class="arrow-outward"
+                  src="./../../assets/img/arrow-outward.png"/>
+              </div>
             </div>
           </div>
-
+          <div class="introducing-right">
+            <div (click)="hideProjectDetails($event)"
+              class="closing-icon" 
+              (mouseout)=" changeImage('./../../assets/img/close-icon-white.png')"
+              (mouseover)="changeImage('./../../assets/img/close-icon-colored.png')">
+              <img [src]="imageSource"/>
+            </div>
+            <div class="introducing-project-image">
+              <img [src]="selectedProject.imageUrl"/>
+            </div>
+            <div class="next-project-container" (click)="nextProject()">
+              <span>Next project</span>
+              <img src="./../../assets/img/arrow-forward.png"/>
+            </div>
+          </div>
         </div>
       </div>
     </div>
-
     <div class="featured-projects-content-right">
-      <img *ngIf="activeImage == 'join'" src="./../../assets/img/Photo.png" class="feat-project-images">
-      <img *ngIf="activeImage == 'pollo'" src="./../../assets/img/Photo.png" class="feat-project-images second">
-      <img *ngIf="activeImage == 'portfolio'" src="./../../assets/img/Photo.png" class="feat-project-images third">
+      <img class="feat-project-images" *ngIf="activeImage == 'join'"
+        src="./../../assets/img/Photo.png"/>
+      <img class="feat-project-images second" *ngIf="activeImage == 'pollo'"
+        src="./../../assets/img/Photo.png"/>
+      <img class="feat-project-images third" *ngIf="activeImage == 'portfolio'"
+        src="./../../assets/img/Photo.png"/>
     </div>
-
   </div>
-  
 </section>
