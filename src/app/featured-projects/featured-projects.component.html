@@ -12,7 +12,8 @@
         </div>
       </div>
       <div class="my-projects-main">
-        <!-- join project -->
+
+        <!-- join -->
         <div class="my-projects my-projects-first-container"
             (click)="showProjectDetails(projects[0])"
               (mouseenter)="showImage('join')"
@@ -23,7 +24,7 @@
             </div>
         </div>
 
-        <!-- el pollo loco project -->
+        <!-- el pollo loco -->
         <div class="my-projects"
           (click)="showProjectDetails(projects[1])"
             (mouseenter)="showImage('pollo')"
@@ -34,12 +35,12 @@
             </div>
         </div>
 
-        <!-- portfolio project -->
+        <!-- portfolio -->
         <div class="my-projects"
             (click)="showProjectDetails(projects[2])"
               (mouseenter)="showImage('portfolio')"
               (mouseleave)="hideImage()">
-                <h3>Portfolio</h3>
+                <h3>DABubble</h3>
               <div class="my-project-types">
                 Angular<span> |</span> Javascript<span> |</span> HTML<span> |</span> CSS
               </div>
@@ -62,10 +63,13 @@
             <div>
               <h3>{{ selectedProject.subtitle }}</h3>
               <span>{{ selectedProject.description }}</span>
-              <div class="introducing-icons"
-                *ngFor="let technology of selectedProject.technologies">
-                <img [src]="technology.iconUrl" alt="{{ technology.name }}"/>
+              <div class="introducing-icons" *ngIf="selectedProject && selectedProject.technologies">
+                <div class="introducing-icons-container" *ngFor="let technology of selectedProject.technologies">
+                  <img [src]="technology.iconUrl" alt="{{ technology.name }}" />
+                  <span>{{ technology.name }}</span> 
+                </div>
               </div>
+              
             </div>
             <div class="link-button-continer">
               <div class="link-buttons">GitHub

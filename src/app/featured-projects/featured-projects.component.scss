@@ -156,7 +156,7 @@ section {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9; 
+  z-index: 9;
 }
 
 .introducing-projects {
@@ -170,19 +170,19 @@ section {
   background-image: url("./../../assets/img/background-main.png");
   background-repeat: no-repeat;
   background-size: cover;
-  max-width: 1248px;
+  width: 70%;
   max-height: 656px;
   border-radius: 30px;
   border: 1px solid #3dcfb6;
-  padding: 48px 32px;  
+  padding: 32px 32px;
 }
 
 .introducing-left {
   display: flex;
-  flex-direction: column;  
+  flex-direction: column;
   max-width: 480px;
   h1 {
-    margin-bottom: 0;
+    margin: 0;
     font-family: "Karla";
     font-size: 45px;
   }
@@ -205,30 +205,31 @@ section {
 
 .introducing-icons {
   display: flex;
+  flex-direction: row;
   align-items: center;
   gap: 16px;
-  padding-top: 16px;
+  padding-top: 32px;
   .introducing-icons-container {
     display: flex;
     align-items: center;
-    gap: 4px;
-    img {
-      width: 24px;
-      height: 24px;
-    }
-    p {
-      color: white;
-      font-family: "Karla";
-      font-size: 16px;
-    }
+    gap: 10px;
+  }
+  img {
+    width: 24px;
+    height: 24px;
+  }
+  p {
+    color: white;
+    font-family: "Karla";
+    font-size: 16px;
   }
 }
 
 .link-button-continer {
   display: flex;
   gap: 32px;
-  padding-top: 16px;
-  padding-bottom: 32px;
+  padding-top: 32px;
+  padding-bottom: 16px;
 }
 
 .link-buttons {
@@ -271,15 +272,15 @@ section {
   gap: 20px;
 }
 
-.closing-icon { 
-  cursor: pointer;  
+.closing-icon {
+  cursor: pointer;
 }
 
 .introducing-project-image {
   display: flex;
   img {
-    width: 300px;
-    height: 250px;
+    width: 360px;
+    height: 260px;
   }
 }
 
@@ -291,4 +292,19 @@ section {
   font-size: 18px;
   gap: 10px;
   cursor: pointer;
+  &:hover img {
+    animation: swing-right 0.8s infinite;
+  }
+}
+
+@keyframes swing-right {
+  0% {
+    transform: translate(0, 0);
+  }
+  50% {
+    transform: translate(10px);
+  }
+  100% {
+    transform: translate(0, 0);
+  }
 }
