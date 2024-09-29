@@ -19,7 +19,7 @@
             </div>
           </div>
 
-          <div class="introducing-projects">
+          <div class="introducing-projects d-none">
             <div class="introducing-left">
                 <div>
                   <h1>01</h1>
@@ -48,11 +48,25 @@
               </div>
               <div class="link-button-continer">
                 <div class="link-buttons">GitHub
-                  <img src="./../../assets/img/arrow-outward.png">
+                  <img class="arrow-outward" src="./../../assets/img/arrow-outward.png">
                 </div>
                 <div class="link-buttons">Live Test
-                  <img src="./../../assets/img/arrow-outward.png">
+                  <img class="arrow-outward" src="./../../assets/img/arrow-outward.png">
                 </div>
+              </div>
+            </div>
+            <div class="introducing-right">
+              <div class="closing-icon"               
+                (mouseout)="changeImage('./../../assets/img/close-icon-white.png')"
+                (mouseover)="changeImage('./../../assets/img/close-icon-colored.png')">
+                <img [src]="imageSource">
+              </div>
+              <div class="introducing-project-image">
+                <img src="./../../assets/img/Photo.png">
+              </div>
+              <div class="next-project-container">
+                <span>Next project</span>
+                <img src="./../../assets/img/arrow-forward.png">
               </div>
             </div>
           </div>
