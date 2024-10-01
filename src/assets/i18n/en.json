@@ -2,6 +2,11 @@
   "aboutMe": "About me",
   "skills": "Skills",
   "projects": "Projects",
-   "checkMyWork": "Check my work",
-   "contactMe": "Contact me"
+  "frontendDeveloper": "Frontend Developer",
+  "checkMyWork": "Check my work",
+  "contactMe": "Contact me",
+  "Frontend Developer": "Frontend Developer",
+  "Open to work": "Open to work",
+  "Based in Bremen": "Based in Bremen",
+  "Available for remote work": "Available for remote work"
 }

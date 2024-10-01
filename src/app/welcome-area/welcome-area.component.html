@@ -1,7 +1,7 @@
 <div class="introducing-main">
   <!-- Name und über mich     -->
   <div class="introducing">
-    <h2>Frontend Developer</h2>
+    <h2>{{ 'frontendDeveloper' | translate }}</h2>
     <h1>Nafi Müftüoglu</h1>
     <div class="contact-me">
       
@@ -37,13 +37,14 @@
 
     <div class="marquee-slider">
       <div class="marquee-content">
-        @for(number of [1, 2, 3, 4, 5]; track number){ 
-          @for (item of items ; track items){
+        <ng-container *ngFor="let number of [1, 2, 3, 4, 5]">
+          <ng-container *ngFor="let item of items">
             <span>•</span>
-            <span>{{ item }}</span>
-          } 
-        }
+            <span>{{ item | translate }}</span>
+          </ng-container>
+        </ng-container>
       </div>
     </div>
+    
   </div>
 </div>
