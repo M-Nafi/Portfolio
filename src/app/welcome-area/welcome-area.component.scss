@@ -35,46 +35,53 @@
   font-size: 18px;
   padding-left: 24px;
   padding-right: 24px;
-  height: 48px;  
+  height: 48px;
   border-radius: 100px;
   color: white;
   background-color: transparent;
-  border: 1px solid white;   
+  border: 1px solid white;
   overflow: hidden;
   transition: border 0.5s ease;
-  cursor: pointer;   
+  cursor: pointer;
   &:hover {
     border: 1px solid #3dcfb6;
-    span {      
-      animation: slideOutAndIn 1.5s linear; 
+    span {
+      animation: slideOutAndIn 1.5s linear;
       color: #3dcfb6;
     }
   }
   span {
-    display: inline-block;  
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    display: inline-block;
   }
 }
 
 @keyframes slideOutAndIn {
   0% {
-    transform: translateX(0); 
-    opacity: 1; 
+    transform: translateX(0);
+    opacity: 1;
   }
-  50% {
-    transform: translateX(-100%); 
+  25% {
+    transform: translateX(-30%);
     opacity: 0;
   }
+  50% {
+    opacity: 0;
+    transform: translateX(50%);
+  }
+  75% {
+    opacity: 1;
+    transform: translateX(0);
+  }
   100% {
-    transform: translateX(100%); 
-    opacity: 1; 
+    transform: translateX(0);
+    opacity: 1;
   }
 }
 
 .contact-me {
   display: flex;
-  gap: 48px;  
-} 
+  gap: 48px;
+}
 
 .scroll-down-left-main {
   @include flexCenter;
@@ -111,9 +118,9 @@
   img {
     height: 32px;
     &:hover {
-      cursor: pointer;        
+      cursor: pointer;
     }
-  } 
+  }
   a {
     color: #ffffff;
     text-decoration: none;
@@ -150,10 +157,9 @@
   bottom: -350px;
   height: 50px;
   rotate: -4deg;
-  width: 100vw;
-  // background-color: rgba(85, 85, 85, 0.5);
+  width: 100vw;  
   background-color: rgba(61, 207, 182, 0.1);
-  backdrop-filter: blur(0.3);  
+  backdrop-filter: blur(0.3);
 }
 
 .marquee-content {
@@ -168,7 +174,7 @@
   margin: 0 24px;
   color: #3dcfb6;
   font-family: "Karla";
-  font-size: 25px; 
+  font-size: 25px;
 }
 
 @keyframes marquee {
@@ -190,10 +196,9 @@
     transform: translateY(0);
   }
   50% {
-    transform: translateY(-10px); 
+    transform: translateY(-10px);
   }
   100% {
     transform: translateY(0);
   }
 }
-

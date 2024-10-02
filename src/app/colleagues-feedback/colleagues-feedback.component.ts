@@ -77,5 +77,5 @@ export class ColleaguesFeedbackComponent {
         cardContainer.style.transition = 'transform 0.5s ease-in-out';
       }, 50);
     }, 500);
-  }
+  }  
 }

@@ -60,8 +60,9 @@
               <h2>{{ selectedProject.title }}</h2>
             </div>
             <div>
-              <h3>{{ selectedProject.subtitle }}</h3>
-              <span>{{ selectedProject.description }}</span>
+              <h3>{{ 'myProjects.' + selectedProject.number + '.subtitle' | translate }}</h3>
+              <span>{{ 'myProjects.' + selectedProject.number + '.description' | translate }}</span>
+
               <div class="introducing-icons" *ngIf="selectedProject && selectedProject.technologies">
                 <div class="introducing-icons-container" *ngFor="let technology of selectedProject.technologies">
                   <img [src]="technology.iconUrl" alt="{{ technology.name }}" />
@@ -92,7 +93,7 @@
               <img [src]="selectedProject.imageUrl"/>
             </div>
             <div class="next-project-container" (click)="nextProject()">
-              <span>Next project</span>
+              <span>{{ 'nextProject' | translate }}</span>
               <img src="./../../assets/img/arrow-forward.png"/>
             </div>
           </div>
