@@ -2,11 +2,17 @@
   "aboutMe": "Über mich",
   "skills": "Fähigkeiten",
   "projects": "Projekte",
-  "frontendDeveloper": "Frontend Entwickler",
+
   "checkMyWork": "Meine Projekte ansehen",
   "contactMe": "Kontaktieren Sie mich",
-  "Frontend Developer": "Frontend-Entwickler",
-  "Open to work": "Offen für neue Stellen",
-  "Based in Bremen": "Ansässig in Bremen",
-  "Available for remote work": "Verfügbar für Remote-Arbeit"
+  "frontendDeveloper": "Frontend Entwickler",
+  "openToWork": "Offen für neue Stellen",
+  "basedInBremen": "Ansässig in Bremen",
+  "availableForRemoteWork": "Verfügbar für Remote-Arbeit",
+
+  "whoIAm": "Wer ich bin",
+  "aboutMeDescription": "Hallo, ich bin ein deutschsprachiger Frontend-Entwickler mit Sitz in Bremen. Motiviert von den grenzenlosen Möglichkeiten in der IT, freue ich mich darauf, visuell ansprechende und intuitive Websites und Anwendungen zu gestalten.",
+  "aboutMeDescriptionOne": "Flexibel in Bezug auf Arbeitsumgebungen kann ich sowohl vor Ort in Bremen als auch remote effektiv arbeiten.",
+  "aboutMeDescriptionTwo": "Ich bin aufgeschlossen und immer auf der Suche nach persönlichen Herausforderungen, um mein Wissen und meine Fähigkeiten ständig zu verbessern.",
+  "aboutMeDescriptionThree": "In meinem Beruf geht es beim Programmieren nicht nur darum, Code zu schreiben; es ist eine kreative Form des Problemlösens. Ich bin stolz auf meine Fähigkeit, komplexe technische Herausforderungen in einfache, benutzerfreundliche Lösungen zu verwandeln. Auf diese Weise helfe ich Ihnen, ihre Ziele zu erreichen und ihre Visionen zum Leben zu erwecken."
 }

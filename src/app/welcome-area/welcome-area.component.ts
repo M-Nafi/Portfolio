@@ -11,9 +11,9 @@ import { TranslateModule } from '@ngx-translate/core';
 })
 export class WelcomeAreaComponent {
   items = [
-    'Frontend Developer',
-    'Open to work',
-    'Based in Bremen',    
-    'Available for remote work',
+    'frontendDeveloper',
+    'openToWork',
+    'basedInBremen',    
+    'availableForRemoteWork',
   ];  
 }
