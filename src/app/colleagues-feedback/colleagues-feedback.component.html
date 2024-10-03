@@ -1,6 +1,6 @@
   <div class="colleagues-feedback-main">
     <div class="colleagues-feedback-content">
-      <span>What my colleagues say about me</span>
+      <span>{{ 'colleaguesOpinion' | translate }}</span>
     </div>
     <div class="feedback-slider-main">
       <div #cardContainer class="card-container">
@@ -8,16 +8,16 @@
           <img src="./../../assets/img/double-quotes-comments.png">
         </div>
         <div class="carousel-style"
-          *ngFor="let comment of visibleCards; let i = index"
-          [class.active]="i === 1">
-          <div class="carousel-container">
-            <p class="title">{{ comment.description }}</p>
-            <div class="author">
-              <div class="seperator"></div>
-              <p>{{ comment.name }}</p>
-            </div>
+        *ngFor="let comment of visibleCards; let i = index"
+        [class.active]="i === 1">
+        <div class="carousel-container">
+          <p class="title">{{ 'comments.comment' + ((currentIndex + i) % comments.length + 1) | translate }}</p>
+          <div class="author">
+            <div class="seperator"></div>
+            <p>{{ comment.name }}</p>
           </div>
         </div>
+      </div>
       </div>
     </div>
   

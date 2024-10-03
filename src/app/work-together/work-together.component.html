@@ -2,51 +2,54 @@
   <div class="work-together-content">
     <div class="work-togehter-left-content">
       <div class="work-together-left-top">
-        <span class="contact">Contact me</span>
-        <h1>Let`s work together</h1>
+        <span class="contact">{{ 'contactMe' | translate }}</span>
+        <h1>{{ 'workTogether' | translate }}</h1>
       </div>
       <div class="work-together-left-bottom">
-        <span>Got a problem to solve?</span>
+        <span>{{ 'gotProblemToSolve' | translate }}</span>
         <p>
-          Contact me through this form, I am interested in hearing from you,
-          knowing your ideas and contributing to your projects with my work.
+          {{ 'writeMe' | translate }}
         </p>
-        <p>Need a Frontend developer? Let`s talk!</p>
+        <p>{{ 'needDeveloper' | translate }}</p>
       </div>
     </div>
 
     <div class="work-togehter-right-content">
       <div>
         <div class="work-together-form">
-          <span>What`s your name?</span>
-          <input type="text" placeholder="Your name goes here" />
+          <span>{{ 'yourName' | translate }}</span>
+          <input type="text" placeholder="{{ 'placeholder1' | translate }}" />
         </div>
         <div class="work-together-form">
-          <span>What`s your email?</span>
-          <input type="text" placeholder="youremail@email.com" />
+          <span>{{ 'yourMail' | translate }}</span>
+          <input type="text" placeholder="{{ 'placeholder2' | translate }}" />
         </div>
         <div class="work-together-form form-bottom-line">
-          <span>How can I help you?</span>
-          <input type="text" placeholder="Hello Nafi, I am interested in..." />
+          <span>{{ 'helpYou' | translate }}</span>
+          <input type="text" placeholder="{{ 'placeholder3' | translate }}" />
         </div>
       </div>
       <div class="work-together-priv-policy">
         <div class="privacy-content">
 
-          
             <form>
               <div class="form-group">
                 <input type="checkbox" id="html">
-                <label for="html"><span>
-                  I've read the <a href="" class="priv-policy">privacy policy</a> and agree to the processing of my data
-                  as outlined.</span></label>
+                <label for="html">
+                  <span>{{ 'readThe' | translate }} 
+                    <a href="" class="priv-policy">{{ 'privPol' | translate }}                       
+                    </a> {{ 'processing' | translate }}
+                  </span>
+                </label>
               </div> 
-              <span class="accept-policy d-none">Please accept the privacy policy</span>          
+              <span class="accept-policy d-none">{{ 'acceptPol' | translate }}</span>          
             </form>        
           
         </div>
-        <div class="hello">
-          <button>Say Hello ;-)</button>
+        <div class="hello">          
+            <button>
+              <p class="send-mail">{{ 'sayHello' | translate }}</p>
+            </button>         
         </div>
       </div>
     </div>

@@ -40,5 +40,32 @@
       "description": "This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization."
     }
   },
-   "nextProject": "Next project"
+  "nextProject": "Next project",
+
+  "colleaguesOpinion": "What my colleagues say about me",
+  "comments": {
+    "comment1": "Great team player!",
+    "comment2": "Very reliable and committed.",
+    "comment3": "Always helpful and positive."
+  },
+
+  "workTogether": "Let`s work together",
+  "gotProblemToSolve": "Got a problem to solve?",
+  "writeMe": "Contact me through this form, I am interested in hearing from you, knowing your ideas and contributing to your projects with my work.",
+  "needDeveloper": "Need a Frontend developer? Let`s talk!",
+  "yourName": "What`s your name?",
+  "placeholder1": "Your name goes here",
+  "yourMail": "What`s your email?",
+  "placeholder2": "youremail@email.com",
+  "helpYou": "How can I help you?",
+  "placeholder3": "Hello Nafi, I am interested in...",
+  "readThe": "I've read the",
+  "privPol": "privacy policy",
+  "processing": "and agree to the processing of my data as outlined.",
+  "acceptPol": "Please accept the privacy policy",
+  "sayHello": "Say Hello ;-)",
+
+  "webDeveloper": "Web Developer",
+  "location": "Bremen Germany",
+  "legalNotice": "Legal Notice"
 }

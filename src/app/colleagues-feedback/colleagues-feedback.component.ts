@@ -1,10 +1,11 @@
 import { CommonModule } from '@angular/common';
 import { Component, ViewChild, ElementRef } from '@angular/core';
+import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-colleagues-feedback',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, TranslateModule],
   templateUrl: './colleagues-feedback.component.html',
   styleUrls: ['./colleagues-feedback.component.scss'],
 })
@@ -32,50 +33,42 @@ export class ColleaguesFeedbackComponent {
     this.updateVisibleCards();
   }
 
-  updateVisibleCards() {
-    this.visibleCards = this.comments.slice(
-      this.currentIndex,
-      this.currentIndex + 3
-    );
-    if (this.visibleCards.length < 3) {
-      this.visibleCards = this.visibleCards.concat(
-        this.comments.slice(0, 3 - this.visibleCards.length)
-      );
-    }
+  animateSlide(direction: string) {
+    let cardContainer = this.cardContainerRef.nativeElement;        
+    let shiftAmount = direction === 'next' ? '33.33%' : '-33.33%';  
+    
+    cardContainer.style.transition = 'none';    
+    cardContainer.style.transform = `translateX(${shiftAmount})`;      
+    
+    setTimeout(() => {      
+      cardContainer.style.transition = 'transform 0.5s ease-in-out';
+      cardContainer.style.transform = 'translateX(0)';      
+      if (direction === 'next') {
+        this.currentIndex = (this.currentIndex + 1) % this.comments.length;
+      } else {
+        this.currentIndex = (this.currentIndex - 1 + this.comments.length) % this.comments.length;
+      }           
+    }, 50);
+    this.updateVisibleCards();
   }
-
+  
+  updateVisibleCards() {
+    let nextIndex = (this.currentIndex + 1) % this.comments.length;
+    let prevIndex = (this.currentIndex - 1 + this.comments.length) % this.comments.length;  
+   
+    this.visibleCards = [
+      this.comments[prevIndex],  
+      this.comments[this.currentIndex], 
+      this.comments[nextIndex]    
+    ];
+  }
+  
+  
   nextCard() {
     this.animateSlide('next');
-    this.currentIndex = (this.currentIndex + 1) % this.comments.length;
-    setTimeout(() => {
-      this.updateVisibleCards();
-    }, 500);
   }
   
   prevCard() {
     this.animateSlide('prev');
-    this.currentIndex = (this.currentIndex - 1 + this.comments.length) % this.comments.length;
-    setTimeout(() => {
-      this.updateVisibleCards();
-    }, 500);
-  }  
-
-  animateSlide(direction: string) {
-    let cardContainer = this.cardContainerRef.nativeElement; 
-
-    if (direction === 'next') {
-      cardContainer.style.transform = 'translateX(-33.33%)';
-    } else if (direction === 'prev') {
-      cardContainer.style.transform = 'translateX(33.33%)';
-    }
-
-    setTimeout(() => {
-      cardContainer.style.transition = 'none';
-      cardContainer.style.transform = 'translateX(0)';
-
-      setTimeout(() => {
-        cardContainer.style.transition = 'transform 0.5s ease-in-out';
-      }, 50);
-    }, 500);
-  }  
+  }
 }

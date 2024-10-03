@@ -30,9 +30,11 @@ button {
   background-color: transparent; 
   border: 1px solid #3dcfb6;
   border-radius: 100px;
+  transition: border 0.3s ease;
   cursor: pointer;
   &:hover {
     border: 1px solid #ffffff;
+    transition: color 0.3s ease;
   }
 }
 
@@ -127,17 +129,20 @@ span {
 
 .logo:hover .initials {
   color: transparent;
+  transition: color 0.3s ease;
 }
 
 .logo:hover .letter-N,
 .logo:hover .letter-M {
   transition: 500ms;
   color: transparent;
+  transition: color 0.3s ease;
   -webkit-text-stroke: 1px #5cd1b9;
 }
 
 .logo:hover .name {
   transition: 500ms;
   color: transparent;
+  transition: color 0.3s ease;
   -webkit-text-stroke: 1px #ffffff;
 }

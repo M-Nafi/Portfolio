@@ -85,7 +85,7 @@ button {
   margin-top: 20px;
   padding: 10px 15px;
   overflow: hidden;
-  transition: border 0.5s ease;  
+  transition: border 0.3s ease;  
   &:hover {
     border: 1px solid #3dcfb6;
     span {
@@ -98,7 +98,7 @@ button {
     font-family: "Karla";
     font-size: 18px;   
     display: inline-block;
-    transition: transform 0.6s ease-in-out, opacity 0.6s ease-in-out;
+    transition: color 0.3s ease;
   }
 }
 

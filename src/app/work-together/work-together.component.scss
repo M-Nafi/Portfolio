@@ -103,37 +103,71 @@
     height: 20px;
     padding-right: 5px;
   }
- 
+
   button {
     @include flexCenter;
-    width: 139px;
     height: 48px;
-    font-family: "Karla";
-    font-size: 16px;
-    color: white;
     border: 1px solid white;
     border-radius: 100px;
     background-color: transparent;
-    padding: 0px 24px 0px 24px;
+    padding: 0 24px;
     cursor: pointer;
+    transition: border 0.3s ease;
     &:hover {
-      border: 1px solid #3dcfb6;
+      border-color: #3dcfb6;
+    }
+    .send-mail {
+      font-family: "Karla";
+      font-size: 16px;
+      color: whitesmoke;
+      text-decoration: none;
+      transition: color 0.3s ease;
+      &:hover {
+        color: #3dcfb6;
+        animation: slideOutAndIn 1.5s linear;
+      }
     }
   }
+
+  @keyframes slideOutAndIn {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    25% {
+      transform: translateX(-30%);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0;
+      transform: translateX(30%);
+    }
+    75% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
   .privacy-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 16px;
   }
+
   .priv-policy {
     text-decoration: none;
     color: #3dcfb6;
   }
+
   .accept-policy {
     font-family: "Karla";
     font-size: 14px;
-    color: #EC7B7B;
+    color: #ec7b7b;
   }
 }
 
@@ -153,11 +187,12 @@
 }
 
 .form-group input {
-  display: none; 
+  display: none;
   cursor: pointer;
 }
 
-.form-group .read-policy, label {
+.form-group .read-policy,
+label {
   display: flex;
   position: relative;
   font-family: "Karla";
@@ -166,14 +201,14 @@
   align-items: center;
 }
 
-.form-group label:before {  
+.form-group label:before {
   border-radius: 3px;
   content: "";
   background-color: transparent;
   border: 2px solid #3dcfb6;
-  width: 20px; 
-  height: 20px;   
-  padding: 0; 
+  width: 20px;
+  height: 20px;
+  padding: 0;
   display: inline-block;
   position: relative;
   vertical-align: middle;
@@ -185,13 +220,11 @@
   content: "";
   display: block;
   position: absolute;
-  top: 2px; 
-  left: 7px; 
+  top: 2px;
+  left: 7px;
   width: 6px;
-  height: 12px; 
-  border: solid #3dcfb6;  
+  height: 12px;
+  border: solid #3dcfb6;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);
 }
-
-

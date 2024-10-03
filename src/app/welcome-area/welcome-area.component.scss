@@ -41,12 +41,13 @@
   background-color: transparent;
   border: 1px solid white;
   overflow: hidden;
-  transition: border 0.5s ease;
+  transition: border 0.3s ease;
   cursor: pointer;
   &:hover {
     border: 1px solid #3dcfb6;
     span {
       animation: slideOutAndIn 1.5s linear;
+      transition: color 0.3s ease;
       color: #3dcfb6;
     }
   }
