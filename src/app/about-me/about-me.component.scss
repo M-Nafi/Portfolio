@@ -5,27 +5,29 @@
   background-color: #1c1c1c;
   padding-top: 48px;
   padding-bottom: 48px;
- 
 }
 
 .about-me-content {
   @include max-width;
   display: flex;
   justify-content: space-between;
-  @media (max-width: 1440px) {
+  gap: 90px;
+  @media (max-width: 1024px) {
     flex-direction: column;
     align-items: center;
+    gap: 0;
   }
 }
 
 .about-me-content-left {
   display: flex;
+  position: relative;
   .picture {
     position: absolute;
-    padding-left: 30px;    
-  }
-  .picture1 {
-    padding-top: 20px;
+    padding-left: 30px;
+    @media (max-width: 650px) {
+      padding-left: 16px;
+    }
   }
 }
 
@@ -45,6 +47,10 @@
     color: #3dcfb6;
     font-size: 24px;
   }
+  @media (max-width: 1024px) {
+  top: 50px;
+  max-width: 568px;
+  }  
 }
 
 .about-me-description {
@@ -65,9 +71,23 @@
     font-family: "Karla";
     font-size: 18px;
   }
+  @media (max-width: 1440px) {
+    padding: 25px;
+    h1 {
+      margin-bottom: 16px;
+      font-size: 50px;      
+    }
+  }
+  @media (max-width: 1250px) {
+    padding: 20px;
+    h1 {
+      margin-bottom: 10px;
+      font-size: 40px;      
+    }
+  }  
 }
 
-.about-me-description-first-bottom, 
+.about-me-description-first-bottom,
 .about-me-description-second-bottom,
 .about-me-description-third-bottom {
   display: flex;
