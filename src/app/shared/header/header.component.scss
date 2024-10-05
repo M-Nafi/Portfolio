@@ -4,6 +4,45 @@ section {
   @include flexCenter;
   width: 100%;
   position: absolute;
+  overflow-x: hidden;
+
+  @media (max-width: 1460px) {
+    font-size: 0.58em;
+  }
+
+  @media (max-width: 1280px) {
+    font-size: 0.5em;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 0.425em;
+    .initials {
+      gap: 2px;
+    }
+    .letter-M {
+      font-size: 52px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    font-size: 0.4em;
+    .initials {
+      gap: 2px;
+    }
+    .letter-M {
+      font-size: 41px;
+    }
+  }
+
+  @media (max-width: 650px) {
+    nav,
+    .name {
+      display: none;
+    }
+    .menu-icon {
+      display: flex;
+    }
+  }
 }
 
 .header-content {
@@ -12,12 +51,29 @@ section {
   padding-top: 32px;
   padding-bottom: 32px;
   justify-content: space-between;
+
+  @media (max-width: 1024px) {
+    align-items: center;
+  }
+
+  @media (max-width: 900px) {    
+    padding-bottom: 16px;
+  }
 }
 
 nav {
   display: flex;
   align-items: center;
   gap: 32px;
+
+  @media (max-width: 1024px) {
+    flex-wrap: wrap;
+    gap: 16px;
+  }
+
+  @media (max-width: 900px) {
+    gap: 12px;
+  }
 }
 
 button {
@@ -27,14 +83,20 @@ button {
   font-family: "Fira Code";
   font-size: 16px;
   font-weight: 700;
-  background-color: transparent; 
+  background-color: transparent;
   border: 1px solid #3dcfb6;
   border-radius: 100px;
   transition: border 0.3s ease;
   cursor: pointer;
+
   &:hover {
     border: 1px solid #ffffff;
     transition: color 0.3s ease;
+  }
+
+  @media (max-width: 900px) {
+    width: 70px;
+    height: 24px;   
   }
 }
 
@@ -42,6 +104,7 @@ span {
   @include flexCenter;
   height: 28px;
   gap: 10px;
+
   &.active {
     width: 44px;
     color: whitesmoke;
@@ -50,19 +113,28 @@ span {
     padding-right: 12px;
     border-radius: 100px;
   }
+
   &.inactive {
     width: 40px;
     color: rgba(61, 207, 182, 0.5);
     padding-left: 8px;
     padding-right: 12px;
   }
-}
 
+  @media (max-width: 900px) {
+    height: 24px;
+    &.active,
+    &.inactive {
+      width: 36px;
+    }
+  }
+}
 
 .about-me {
   display: flex;
   align-items: center;
   gap: 32px;
+
   a {
     font-size: 20px;
     font-family: "Fira Code";
@@ -70,9 +142,11 @@ span {
     cursor: pointer;
     position: relative;
     text-decoration: none;
+
     &:hover {
       color: #3dcfb6;
     }
+
     &::after {
       content: "•";
       position: absolute;
@@ -82,9 +156,11 @@ span {
       visibility: hidden;
       color: #3dcfb6;
     }
+
     &:hover::after {
       visibility: visible;
     }
+ 
   }
 }
 
@@ -92,6 +168,10 @@ span {
   gap: 10px;
   display: flex;
   align-items: center;
+
+  @media (max-width: 900px) {
+    gap: 8px;
+  }
 }
 
 .initials {
@@ -102,6 +182,16 @@ span {
   font-family: sans-serif;
   flex-direction: row;
   font-weight: bold;
+
+  @media (max-width: 1024px) {
+    font-size: 50px;
+    right: 140px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+    right: 100px;
+  }
 }
 
 .letter-N {
@@ -109,6 +199,14 @@ span {
   margin-right: -7px;
   color: rgba(61, 207, 182);
   font-size: 61px;
+
+  @media (max-width: 1024px) {
+    font-size: 50px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 40px;
+  }
 }
 
 .letter-M {
@@ -117,6 +215,14 @@ span {
   font-size: 64px;
   transform: rotate(90deg);
   color: rgba(61, 207, 182, 0.8);
+
+  @media (max-width: 1024px) {
+    font-size: 54px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 44px;
+  }
 }
 
 .name {
@@ -125,24 +231,66 @@ span {
   font-family: sans-serif;
   color: white;
   letter-spacing: 1px;
+
+  @media (max-width: 1024px) {
+    font-size: 20px;
+  }
+
+  @media (max-width: 900px) {
+    font-size: 18px;
+  }
 }
 
-.logo:hover .initials {
-  color: transparent;
-  transition: color 0.3s ease;
-}
-
+.logo:hover .initials,
 .logo:hover .letter-N,
-.logo:hover .letter-M {
-  transition: 500ms;
-  color: transparent;
-  transition: color 0.3s ease;
-  -webkit-text-stroke: 1px #5cd1b9;
-}
-
+.logo:hover .letter-M,
 .logo:hover .name {
   transition: 500ms;
   color: transparent;
   transition: color 0.3s ease;
   -webkit-text-stroke: 1px #ffffff;
+
+  @media (max-width: 900px) {
+    -webkit-text-stroke: 1px #3dcfb6;
+  }
+}
+
+.menu-icon {
+  flex-direction: column;
+  align-items: end;
+  img {
+    width: 48px;
+    height: 48px;
+  }
+}
+
+.mobile-nav {
+  @include flexCenter;
+  background-image: url("./../../../assets/img/background-main.png");
+  background-size: cover;
+  border: 1px solid #3dcfb6;
+  border-radius: 30px;
+  position: fixed;
+  z-index: 1;
+  top: 82px;
+  right: 31px;
+  width: 220px;
+  height: 250px;
+  flex-direction: column-reverse;
+  gap: 32px;
+  padding: 20px 35px;  
+  .about-me {
+    flex-direction: column;
+    font-size: 18px !important;
+  }
+}
+
+.mobile-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 1;
 }

@@ -27,7 +27,7 @@ export class ColleaguesFeedbackComponent {
   ];
 
   currentIndex = 0;
-  visibleCards: any = [];
+  visibleCards: { name: string; description: string }[] = [];
 
   constructor() {
     this.updateVisibleCards();
@@ -71,4 +71,4 @@ export class ColleaguesFeedbackComponent {
   prevCard() {
     this.animateSlide('prev');
   }
-}
+} 

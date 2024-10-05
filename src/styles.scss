@@ -33,6 +33,10 @@ body {
   display: none !important;
 }
 
+.d-none-normal {
+  display: none;
+}
+
 @mixin flexCenter {
   display: flex;
   justify-content: center;
@@ -42,6 +46,8 @@ body {
 @mixin max-width {
   max-width: 1440px;
   width: 100%;
+  margin-left: 32px;
+  margin-right: 32px;
 }
 
 /* fira-code-regular - latin */

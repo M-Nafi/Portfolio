@@ -84,8 +84,7 @@
 }
 
 .hello {
-  display: flex;
-  justify-content: center;
+  display: flex; justify-content: center;
   width: 100%;
 }
 
@@ -113,6 +112,7 @@
     padding: 0 24px;
     cursor: pointer;
     transition: border 0.3s ease;
+    overflow: hidden;
     &:hover {
       border-color: #3dcfb6;
     }

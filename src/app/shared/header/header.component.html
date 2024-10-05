@@ -27,5 +27,30 @@
         </div>
       </div>
     </div>
+
+    <div class="mobile-overlay"
+    [ngClass]="{ 'd-none-normal': !isMobileNavVisible }"
+    (click)="hideMobileNav($event)">
+  </div>
+
+    <div class="menu-icon d-none-normal">
+      <img (click)="switchMenuIcon()" [src]="currentResponsiveMenuIcon">
+    </div>
+
+    <div class="mobile-nav" [ngClass]="{'d-none': !isMobileNavVisible}">        
+      <div class="language-change">
+        <button (click)="switchLanguage()">
+          <span [ngClass]="{active: currentLanguage === 'EN', inactive: currentLanguage === 'DE'}">EN</span>
+          <span [ngClass]="{active: currentLanguage === 'DE', inactive: currentLanguage === 'EN'}">DE</span>
+        </button>
+      </div>
+
+      <div class="about-me">
+        <a href="#aboutMe" (click)="closeMobileNav()">{{ 'aboutMe' | translate }}</a>
+        <a href="#mySkills" (click)="closeMobileNav()">{{ 'skills' | translate }}</a>
+        <a href="#myProjects" (click)="closeMobileNav()">{{ 'projects' | translate }}</a>
+      </div>
+    </div>    
+
   </div>
 </section>

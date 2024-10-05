@@ -36,7 +36,7 @@ export class FeaturedProjectsComponent {
   }
 
   hideProjectDetails(event: Event) {
-    event.stopPropagation();
+    event.stopPropagation(); 
     this.isProjectVisible = false;
   }
 
