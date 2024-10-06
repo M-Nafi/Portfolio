@@ -1,5 +1,9 @@
 @import "./../../styles.scss";
 
+body {
+  overflow-x: hidden !important;
+}
+
 section {
   @include flexCenter;
   background-image: url(./../../assets/img/background-main.png);

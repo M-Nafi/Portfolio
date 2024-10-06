@@ -1,21 +1,16 @@
 @import "./../../../styles.scss";
 
+body {
+  overflow-x: hidden !important;
+}
+
 section {
   @include flexCenter;
   width: 100%;
   position: absolute;
   overflow-x: hidden;
-
-  @media (max-width: 1460px) {
-    font-size: 0.58em;
-  }
-
-  @media (max-width: 1280px) {
-    font-size: 0.5em;
-  }
-
-  @media (max-width: 1024px) {
-    font-size: 0.425em;
+  
+  @media (max-width: 1024px) {   
     .initials {
       gap: 2px;
     }
@@ -23,7 +18,6 @@ section {
       font-size: 52px;
     }
   }
-
   @media (max-width: 900px) {
     font-size: 0.4em;
     .initials {
@@ -33,7 +27,6 @@ section {
       font-size: 41px;
     }
   }
-
   @media (max-width: 650px) {
     nav,
     .name {
@@ -65,12 +58,10 @@ nav {
   display: flex;
   align-items: center;
   gap: 32px;
-
   @media (max-width: 1024px) {
     flex-wrap: wrap;
     gap: 16px;
   }
-
   @media (max-width: 900px) {
     gap: 12px;
   }
@@ -88,16 +79,10 @@ button {
   border-radius: 100px;
   transition: border 0.3s ease;
   cursor: pointer;
-
   &:hover {
     border: 1px solid #ffffff;
     transition: color 0.3s ease;
-  }
-
-  @media (max-width: 900px) {
-    width: 70px;
-    height: 24px;   
-  }
+  }  
 }
 
 span {
@@ -272,9 +257,10 @@ span {
   border-radius: 30px;
   position: fixed;
   z-index: 1;
-  top: 82px;
-  right: 31px;
-  width: 220px;
+  top: 82px;  
+  right: 0px;  
+  // transform: translateX(0);
+  width: 180px;
   height: 250px;
   flex-direction: column-reverse;
   gap: 32px;
@@ -282,7 +268,7 @@ span {
   .about-me {
     flex-direction: column;
     font-size: 18px !important;
-  }
+  } 
 }
 
 .mobile-overlay {

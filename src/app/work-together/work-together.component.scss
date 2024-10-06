@@ -1,5 +1,9 @@
 @import "./../../styles.scss";
 
+body {
+  overflow-x: hidden !important;
+}
+
 .work-together-main {
   @include flexCenter;
   width: 100%;
@@ -13,6 +17,9 @@
   margin-top: 200px;
   @media (max-width: 1024px) {
     flex-direction: column;
+  }
+  @media (max-width: 500px) {
+    margin-top: 120px;
   }
 }
 
@@ -41,7 +48,18 @@
     font-size: 64px;
     color: #3dcfb6;
     @media (max-width: 800px) {
-      font-size: 58px;
+      font-size: 54px;
+      padding-bottom: 16px;
+    }
+    @media (max-width: 615px) { 
+      font-size: 50px;     
+      padding-bottom: 16px;
+    }
+    @media (max-width: 570px) {
+      font-size: 40px;
+    }
+    @media (max-width: 500px) {
+      font-size: 30px;
     }
   }
 }
@@ -52,11 +70,19 @@
     font-weight: 700;
     font-size: 24px;
     color: #3dcfb6;
+    @media (max-width: 500px) {
+      font-size: 20px;
+    }
   }
   p {
     font-family: "Karla";
     color: white;
     font-size: 16px;
+  }
+  @media (max-width: 500px) {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
   }
 }
 
@@ -80,6 +106,9 @@
     font-family: "Fira Code";
     color: #3dcfb6;
     font-size: 24px;
+    @media (max-width: 500px) {
+      font-size: 20px;
+    }
   }
   input {
     background-color: transparent;

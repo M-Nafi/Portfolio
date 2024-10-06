@@ -23,7 +23,7 @@ export class HeaderComponent {
     this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
     this.translate.use(this.currentLanguage.toLowerCase());
     this.currentResponsiveMenuIcon = './../../../assets/img/menu-icon.png'; 
-    this.isMobileNavVisible = false;
+    this.isMobileNavVisible = false;  
   } 
 
   switchMenuIcon() {

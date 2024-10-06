@@ -1,5 +1,9 @@
 @import "./../../styles.scss";
 
+body {
+  overflow-x: hidden !important;
+}
+
 .skill-set-main {
   @include flexCenter;
   background-image: url("./../../assets/img/skill-set-background.png");
@@ -56,12 +60,16 @@
       font-size: 40px;
       margin-bottom: 0;
     }
+    @media (max-width: 400px) {
+      font-size: 33px;
+    }
   }
   p {
     color: whitesmoke;
     font-family: "Karla";
     font-size: 18px;
   }
+  
 }
 
 .skill-set-two-color-question {
@@ -89,6 +97,9 @@
 .question {
   display: flex;
   gap: 12px;
+  @media (max-width: 400px) {
+    flex-direction: column;
+  }
 }
 
 button {
@@ -164,9 +175,14 @@ button {
     height: 64px;
   }
   @media (max-width: 1024px) {
-    padding-top: 32px;
-    max-width: none;
+    padding-top: 32px; 
+    max-width: 60%;  
     gap: 42px;
+  }
+  @media (max-width: 800px) {
+     
+    max-width: 80%;  
+    
   }
 }
 
