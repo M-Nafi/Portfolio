@@ -11,13 +11,20 @@
   display: flex;
   justify-content: space-between;
   margin-top: 200px;
+  @media (max-width: 1024px) {
+    flex-direction: column;
+  }
 }
 
 .work-togehter-left-content {
   display: flex;
   flex-direction: column;
-  max-width: 50%;
+  max-width: 45%;
   gap: 40px;
+  @media (max-width: 1024px) {
+    max-width: none;
+    padding-bottom: 64px;
+  }
 }
 
 .work-together-left-top {
@@ -33,6 +40,9 @@
     font-weight: 700;
     font-size: 64px;
     color: #3dcfb6;
+    @media (max-width: 800px) {
+      font-size: 58px;
+    }
   }
 }
 
@@ -55,6 +65,9 @@
   flex-direction: column;
   width: 50%;
   gap: 40px;
+  @media (max-width: 1024px) {
+    width: auto;
+  }
 }
 
 .work-together-form {
@@ -182,8 +195,15 @@
 }
 
 .form-group {
-  display: block;
+  display: flex;
   margin-bottom: 15px;
+  height: 30px;
+  align-items: center;
+  span {
+    font-family: "Karla";
+    font-size: 14px;
+    color: white;
+  }
 }
 
 .form-group input {
@@ -194,11 +214,8 @@
 .form-group .read-policy,
 label {
   display: flex;
-  position: relative;
-  font-family: "Karla";
-  font-size: 14px;
-  color: white;
-  align-items: center;
+  position: relative; 
+  align-items: center; 
 }
 
 .form-group label:before {
@@ -213,18 +230,17 @@ label {
   position: relative;
   vertical-align: middle;
   cursor: pointer;
-  margin-right: 5px;
+  margin-right: 16px;
 }
 
 .form-group input:checked + label:after {
-  content: "";
-  display: block;
+  content: "";  
   position: absolute;
-  top: 2px;
+  top: 3px;
   left: 7px;
   width: 6px;
   height: 12px;
   border: solid #3dcfb6;
   border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+  transform: rotate(45deg);  
 }
