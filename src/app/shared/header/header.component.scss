@@ -9,7 +9,7 @@ section {
   width: 100%;
   position: absolute;
   overflow-x: hidden;
-  
+  z-index: 1;
   @media (max-width: 1024px) {   
     .initials {
       gap: 2px;

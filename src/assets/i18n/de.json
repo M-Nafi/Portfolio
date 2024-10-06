@@ -65,7 +65,11 @@
   "acceptPol": "Bitte akzeptieren Sie die Datenschutzbestimmungen",
   "sayHello": "Sagen Sie Hallo ;-)",
 
-   "webDeveloper": "Web Entwickler",
-   "location": "Bremen Deutschland",
-    "legalNotice": "Rechtlicher Hinweis"
+  "webDeveloper": "Web Entwickler",
+  "location": "Bremen Deutschland",
+  "legalNotice": "Rechtshinweis",
+
+  "imprint": "Impressum",
+  "contact": "Kontakt",
+  "phone": "Telefon"
 }

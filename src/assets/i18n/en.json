@@ -67,5 +67,9 @@
 
   "webDeveloper": "Web Developer",
   "location": "Bremen Germany",
-  "legalNotice": "Legal Notice"
+  "legalNotice": "Legal Notice",
+
+  "imprint": "Legal Notice",
+  "contact": "Contact",
+   "phone": "Phone"
 }

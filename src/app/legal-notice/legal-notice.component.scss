@@ -1,0 +1,75 @@
+@import "./../../styles.scss";
+
+section {
+  background-color: #1c1c1c;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 194px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url("./../../assets/img/background-main.png");
+  background-size: cover;
+  overflow-y: hidden !important;
+  @media (max-width: 400px) {
+    padding-top: 112px;
+  }
+}
+
+.imprint-content {
+  @include max-width;
+  @include flexCenter;
+  gap: 16px;
+  flex-direction: column;
+  img {
+    padding-left: 8px;
+    border-radius: 50px;
+    border: 1px solid #3dcfb6;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+}
+
+.imprint {
+  color: whitesmoke;
+  text-align: center;
+  border: 1px solid #3dcfb6;
+  border-radius: 5px;
+  padding: 8px 16px;
+  h1 {
+    margin-top: 8px;
+    font-family: "Fira Code";
+    font-size: 45px;
+  }
+  h2 {
+    margin-top: 8px;
+    font-family: "Fira Code";
+    font-size: 40px;
+  }
+  h3 {
+    font-family: "Karla";
+    font-size: 20px;
+  }
+  @media (max-width: 400px) {
+    h1 {
+      font-size: 30px;
+    }
+    h2 {
+      font-size: 20px;
+    }
+    h3 {
+      font-size: 16px;
+    }
+  }
+  .mail {
+    color: #3dcfb6;
+  }
+}
