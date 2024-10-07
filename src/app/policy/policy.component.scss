@@ -1,0 +1,59 @@
+@import "./../../styles.scss";
+
+section {
+  background-color: #1c1c1c;
+  width: 100vw;
+  max-width: 100%;
+  padding-top: 194px;
+  min-height: 60vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  background-image: url("./../../assets/img/background-main.png");
+  background-size: cover;
+  overflow-y: hidden !important;
+  color: whitesmoke;
+  @media (max-width: 400px) {
+    padding-top: 112px;
+  }
+}
+
+.privacy-policy-content {
+  @include max-width;
+  @include flexCenter;
+  flex-direction: column;
+  text-align: center;
+  img {
+    padding-left: 8px;
+    border-radius: 50px;
+    border: 1px solid #3dcfb6;
+    cursor: pointer;
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+  a {
+    color: whitesmoke;
+    text-decoration: none;
+  }
+  h1, h2, h3 {
+    color: #3dcfb6;
+  }
+  h1, h2 {
+    font-family: "Fira Code";
+  }
+  h3, span {
+    font-family: "Karla";
+  }
+}
+
+
+.imprint {
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 32px;
+  .mail {
+    color: #3dcfb6;    
+  }
+}
