@@ -7,9 +7,7 @@
       <div class="skill-set-description">
         <h1>{{ 'skillSet' | translate }}</h1>
         <div>
-          <p class="my-skills">
-            {{ 'mySkills' | translate }}
-          </p>
+          <p class="my-skills">{{ 'mySkills' | translate }}</p>
         </div>
         <div class="skill-set-two-color-question">
           <div class="question">
@@ -17,9 +15,7 @@
             <div class="second">{{ 'anotherSkill' | translate }}</div>
           </div>
           <div>
-            <p class="third">
-              {{ 'feelFree' | translate }}
-            </p>
+            <p class="third">{{ 'feelFree' | translate }}</p>
           </div>
         </div>
 
@@ -33,8 +29,15 @@
 
     <div class="skill-set-right">
         <div *ngFor="let skill of skills" class="skill-icons">
+          <div class="skill-set-icons">  
             <img [src]="skill.src">
             <p>{{ skill.label }}</p>
+          </div>
+        </div>        
+        <div class="growth-mindset">
+          <img class="growth-mindset-img d-none-normal" src="./../../assets/img/growth-mindset-hover.png">
+          <img src="assets/img/11-growthmindset-icon.png">
+          <p>Growth Mindset</p>
         </div>
     </div>
 

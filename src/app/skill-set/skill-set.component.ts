@@ -21,8 +21,7 @@ export class SkillSetComponent {
     { src: 'assets/img/7-firebase-icon.png', label: 'Firebase' },
     { src: 'assets/img/8-git-icon.png', label: 'Git' },
     { src: 'assets/img/9-restapi-icon.png', label: 'REST API' },
-    { src: 'assets/img/10-scrum-icon.png', label: 'Scrum' },
-    { src: 'assets/img/11-growthmindset-icon.png', label: 'Growth Mindset' }
+    { src: 'assets/img/10-scrum-icon.png', label: 'Scrum' }   
   ];
 
 }
