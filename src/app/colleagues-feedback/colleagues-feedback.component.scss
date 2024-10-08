@@ -26,12 +26,12 @@ body {
       font-size: 24px;
     }
     @media (max-width: 500px) {
-      font-size: 18px;          
+      font-size: 18px;
     }
   }
   @media (max-width: 500px) {
     text-align: center;
-    width: auto;          
+    width: auto;
   }
 }
 
@@ -57,14 +57,12 @@ body {
     top: 0;
     bottom: 0;
     background-image: 
-      linear-gradient(to right,#1c1c1c,rgba(0, 128, 128, 0) 350px),
-      linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 350px);
+    linear-gradient(to right,#1c1c1c,rgba(0, 128, 128, 0) 350px),
+    linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 350px);
     @media (max-width: 550px) {
-      // left: 15px;
-      // right: 15px;
       background-image: 
-      linear-gradient(to right,#1c1c1c,rgba(0, 128, 128, 0) 150px),
-      linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 150px);
+        linear-gradient(to right,#1c1c1c,rgba(0, 128, 128, 0) 150px),
+        linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 150px);
     }
   }
 }
@@ -154,7 +152,7 @@ body {
       gap: 45px;
     }
   }
-  @media (max-width: 550px) {   
+  @media (max-width: 550px) {
     gap: 45px;
   }
 }
