@@ -61,8 +61,8 @@ body {
     linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 350px);
     @media (max-width: 550px) {
       background-image: 
-        linear-gradient(to right,#1c1c1c,rgba(0, 128, 128, 0) 150px),
-        linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 150px);
+        linear-gradient(to right,#1c1c1c,rgba(0, 128, 128, 0) 0px),
+        linear-gradient(to left, #1c1c1c, rgba(0, 128, 128, 0) 0px);
     }
   }
 }

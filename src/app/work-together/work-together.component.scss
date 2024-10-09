@@ -14,7 +14,7 @@ body {
   @include max-width;
   display: flex;
   justify-content: space-between;
-  margin-top: 200px;
+  margin-top: 100px;
   @media (max-width: 1024px) {
     flex-direction: column;
   }

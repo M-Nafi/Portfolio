@@ -59,7 +59,7 @@ export class FeaturedProjectsComponent {
         { iconUrl: '../../assets/img/html-icon-colored.png', name: 'HTML' },
         { iconUrl: '../../assets/img/css-icon-colored.png', name: 'CSS' }
       ],
-      imageUrl: '../../assets/img/Photo.png'
+      imageUrl: '../../assets/img/join-img.png'
     },
     {
       number: '02',
@@ -74,7 +74,7 @@ export class FeaturedProjectsComponent {
         { iconUrl: '../../assets/img/css-icon-colored.png', name: 'CSS' },
         { iconUrl: '../../assets/img/javascript-icon-colored.png', name: 'Javascript' }
       ],
-      imageUrl: '../../assets/img/Photo.png'    
+      imageUrl: '../../assets/img/epl-img.png'    
     },
     {
       number: '03',
@@ -87,9 +87,10 @@ export class FeaturedProjectsComponent {
       [
         { iconUrl: '../../assets/img/html-icon-colored.png', name: 'HTML' },
         { iconUrl: '../../assets/img/css-icon-colored.png', name: 'CSS' },
-        { iconUrl: '../../assets/img/javascript-icon-colored.png', name: 'Javascript' }
+        { iconUrl: '../../assets/img/javascript-icon-colored.png', name: 'Javascript' },
+        { iconUrl: '../../assets/img/angular-icon-colored.png', name: 'Angular' }
       ],
-      imageUrl: '../../assets/img/Photo.png'      
+      imageUrl: '../../assets/img/dabubble-img.png'      
     },
   ];
 }

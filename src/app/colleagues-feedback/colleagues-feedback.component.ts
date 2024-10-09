@@ -61,8 +61,7 @@ export class ColleaguesFeedbackComponent {
       this.comments[this.currentIndex], 
       this.comments[nextIndex]    
     ];
-  }
-  
+  }  
   
   nextCard() {
     this.animateSlide('next');
