@@ -125,11 +125,6 @@ body {
   }
 }
 
-.hello {
-  display: flex; justify-content: center;
-  width: 100%;
-}
-
 .form-bottom-line {
   border-bottom: 1px solid rgba(61, 207, 182, 0.3);
 }
@@ -138,6 +133,7 @@ body {
   @include flexCenter;
   flex-direction: column;
   align-items: flex-start;
+  padding-top: 32px;
   gap: 32px;
   img {
     width: 20px;
@@ -170,7 +166,6 @@ body {
       }
     }
   }
-
   @keyframes slideOutAndIn {
     0% {
       transform: translateX(0);
@@ -193,19 +188,16 @@ body {
       opacity: 1;
     }
   }
-
   .privacy-content {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     gap: 16px;
   }
-
   .priv-policy {
     text-decoration: none;
     color: #3dcfb6;
   }
-
   .accept-policy {
     font-family: "Karla";
     font-size: 14px;
@@ -272,4 +264,31 @@ label {
   border: solid #3dcfb6;
   border-width: 0 2px 2px 0;
   transform: rotate(45deg);  
+}
+
+.hello {
+  display: flex; justify-content: center;
+  width: 100%;
+  button:disabled {
+    background-color: rgba(61, 207, 182, 0.1); 
+    cursor: not-allowed; 
+    color: #666; 
+    opacity: 0.5; 
+  }
+}
+
+.checkInputs {
+  p {
+    font-family: "Karla";
+    font-size: 18px;
+    color: red;
+  }
+}
+
+.privpol {
+  p {
+    font-family: "Karla";
+    font-size: 14px;
+    color: red;
+  }
 }

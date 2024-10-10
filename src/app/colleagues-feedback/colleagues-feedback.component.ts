@@ -41,7 +41,7 @@ export class ColleaguesFeedbackComponent {
     cardContainer.style.transform = `translateX(${shiftAmount})`;      
     
     setTimeout(() => {      
-      cardContainer.style.transition = 'transform 0.5s ease-in-out';
+      cardContainer.style.transition = 'transform 1s ease-in-out';
       cardContainer.style.transform = 'translateX(0)';      
       if (direction === 'next') {
         this.currentIndex = (this.currentIndex + 1) % this.comments.length;

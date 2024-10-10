@@ -14,44 +14,59 @@
       </div>
     </div>
 
-    <div class="work-togehter-right-content">
-      <div>
-        
-        <div class="work-together-form">
-          <span>{{ 'yourName' | translate }}</span>
-          <input type="text" placeholder="{{ 'placeholder1' | translate }}" />
-        </div>
-        <div class="work-together-form">
-          <span>{{ 'yourMail' | translate }}</span>
-          <input type="text" placeholder="{{ 'placeholder2' | translate }}" />
-        </div>
-        <div class="work-together-form form-bottom-line">
-          <span>{{ 'helpYou' | translate }}</span>
-          <input type="text" placeholder="{{ 'placeholder3' | translate }}" />
-        </div>
-      </div>
-      <div class="work-together-priv-policy">
-        <div class="privacy-content">
 
-            <form>
-              <div class="form-group">
-                <input type="checkbox" id="html">
-                <label for="html"></label>
-                <span>{{ 'readThe' | translate }} 
-                  <a routerLink="/policy" class="priv-policy">{{ 'privPol' | translate }}                       
-                  </a> {{ 'processing' | translate }}
-                </span>
-              </div> 
-              <span class="accept-policy d-none">{{ 'acceptPol' | translate }}</span>          
-            </form>        
-          
-        </div>
-        <div class="hello">          
-            <button>
-              <p class="send-mail">{{ 'sayHello' | translate }}</p>
-            </button>         
-        </div>
+  <div class="work-together-right-content">
+  <form [formGroup]="workTogetherForm" (ngSubmit)="onSubmit()">
+    
+    <div class="work-together-form">
+      <span>{{ 'yourName' | translate }}</span>
+      <input type="text" formControlName="yourName" placeholder="{{ 'placeholder1' | translate }}" />
+      <div class="checkInputs" *ngIf="workTogetherForm.controls['yourName']?.invalid && workTogetherForm.controls['yourName']?.touched">
+        <p>{{ 'contactName' | translate }}</p>
       </div>
     </div>
+
+    <div class="work-together-form">
+      <span>{{ 'yourMail' | translate }}</span>
+      <input type="email" formControlName="yourMail" placeholder="{{ 'placeholder2' | translate }}" />
+      <div class="checkInputs" *ngIf="workTogetherForm.controls['yourMail']?.invalid && workTogetherForm.controls['yourMail']?.touched">
+        <p>{{ 'contactMail' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="work-together-form form-bottom-line">
+      <span>{{ 'helpYou' | translate }}</span>
+      <input type="text" formControlName="helpYou" placeholder="{{ 'placeholder3' | translate }}" />
+      <div class="checkInputs" *ngIf="workTogetherForm.controls['helpYou']?.invalid && workTogetherForm.controls['helpYou']?.touched">
+        <p>{{ 'contactMessage' | translate }}</p>
+      </div>
+    </div>
+
+    <div class="work-together-priv-policy">
+      <div class="privacy-content">
+        <div class="form-group">
+          <input type="checkbox" formControlName="acceptPolicy" id="html" />
+          <label for="html"></label>
+          <span>{{ 'readThe' | translate }} 
+            <a routerLink="/policy" class="priv-policy">{{ 'privPol' | translate }}</a>
+            {{ 'processing' | translate }}
+          </span>
+        </div>
+    
+        <div class="checkInputs" *ngIf="workTogetherForm.get('acceptPolicy')?.invalid && workTogetherForm.get('acceptPolicy')?.touched">
+          <p>{{ 'checkBoxMessage' | translate }}</p>
+        </div>
+      </div>
+    
+      <div class="hello">
+        <button type="submit">
+          <p class="send-mail">{{ 'sayHello' | translate }}</p>
+        </button>
+      </div>
+    </div>
+    
+  </form>
+</div>
+
   </div>
 </div>

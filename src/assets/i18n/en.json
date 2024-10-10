@@ -110,5 +110,10 @@
   "restriction": "Right to restriction of processing",
   "restriction1": "You have the right to request the restriction of the processing of your personal data. You can contact us at any time to do this. The right to restriction of processing exists in the following cases: If you dispute the accuracy of your personal data stored by us, we generally need time to verify this. For the duration of the review, you have the right to request that the processing of your personal data be restricted. If the processing of your personal data was/is unlawful, you can request the restriction of data processing instead of erasure. If we no longer need your personal data, but you need it for the exercise, defense or assertion of legal claims, you have the right to request the restriction of the processing of your personal data instead of its erasure. If you have lodged an objection in accordance with Art. 21 para. 1 GDPR, a balance must be struck between your interests and ours. As long as it has not yet been determined whose interests prevail, you have the right to request the restriction of the processing of your personal data. If you have restricted the processing of your personal data, this data - apart from its storage - may only be processed with your consent or for the establishment, exercise or defense of legal claims or for the protection of the rights of another natural or legal person or for reasons of important public interest of the European Union or of a Member State.",
   "source": "Source www.e-recht24.de",
-  "party": "Responsible party"
+  "party": "Responsible party",
+
+  "contactName": "Oops! it seems your name is missing",
+  "contactMail": "Hoppla! your email is required",
+  "contactMessage": "What do you need to develop?",
+  "checkBoxMessage": "Please accept the privacy policy" 
 }
