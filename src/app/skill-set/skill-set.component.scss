@@ -6,6 +6,7 @@ body {
 
 .skill-set-main {
   @include flexCenter;
+  background-color: #1c1c1c;
   background-image: url("./../../assets/img/skill-set-background.png");
   height: 1100px;
   background-repeat: no-repeat;

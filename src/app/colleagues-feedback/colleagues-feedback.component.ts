@@ -12,12 +12,12 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class ColleaguesFeedbackComponent {
   comments: { name: string; description: string }[] = [
-    { name: 'Yassin Benjelloun', description: 'test' },
+    { name: 'Maximilian Lackmann', description: 'test' },
     { name: 'Marco Angermann', description: 'test' },
     { name: 'Lukas Nolting', description: 'test' },
-    { name: 'James Dunn', description: 'test' },
-    { name: 'Nafi Müftüoglu', description: 'test' },
-    { name: 'John Smith', description: 'test' },
+    { name: 'Maximilian Lackmann', description: 'test' },
+    { name: 'Marco Angermann', description: 'test' },
+    { name: 'Lukas Nolting', description: 'test' },
   ];
 
   currentIndex = 0;

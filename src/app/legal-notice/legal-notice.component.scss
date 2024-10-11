@@ -1,18 +1,13 @@
 @import "./../../styles.scss";
 
 section {
+  @include flexCenter;
   background-color: #1c1c1c;
   width: 100vw;
   max-width: 100%;
-  padding-top: 194px;
-  min-height: 60vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
+  height: 79vh;
   background-image: url("./../../assets/img/background-main.png");
   background-size: cover;
-  overflow-y: hidden !important;
   @media (max-width: 400px) {
     padding-top: 112px;
   }

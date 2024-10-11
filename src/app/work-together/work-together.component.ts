@@ -3,24 +3,14 @@ import { Component } from '@angular/core';
 import { RouterLink } from '@angular/router';
 import { TranslateModule } from '@ngx-translate/core';
 import { PolicyComponent } from '../policy/policy.component';
-import {
-  ReactiveFormsModule,
-  FormBuilder,
-  FormGroup,
-  Validators,
-} from '@angular/forms';
+import { ReactiveFormsModule, FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { HttpClient } from '@angular/common/http';
 import Swal from 'sweetalert2';  
 
 @Component({
   selector: 'app-work-together',
   standalone: true,
-  imports: [
-    CommonModule,
-    TranslateModule,
-    RouterLink,
-    PolicyComponent,
-    ReactiveFormsModule,
-  ],
+  imports: [ CommonModule, TranslateModule, RouterLink, PolicyComponent, ReactiveFormsModule ],
   templateUrl: './work-together.component.html',
   styleUrls: ['./work-together.component.scss'],  
 })
@@ -28,42 +18,77 @@ import Swal from 'sweetalert2';
 export class WorkTogetherComponent {
   workTogetherForm: FormGroup;
 
-  constructor(private fb: FormBuilder) {
+  constructor(private fb: FormBuilder, private http: HttpClient) { 
     this.workTogetherForm = this.fb.group({
       yourName: ['', Validators.required],
       yourMail: ['', [Validators.required, Validators.email]],
       helpYou: ['', Validators.required],
-      acceptPolicy: [false, Validators.requiredTrue],  
+      acceptPolicy: [false, Validators.requiredTrue],
     });
+  }
+
+  areFieldsFilled(): boolean {
+    let nameCheck = this.workTogetherForm.get('yourName');
+    let mailCheck = this.workTogetherForm.get('yourMail');
+    let helpYouCheck = this.workTogetherForm.get('helpYou');
+
+    return (
+      nameCheck?.valid === true &&
+      mailCheck?.valid === true &&
+      helpYouCheck?.valid === true
+    );
   }
 
   onSubmit() {
     if (!this.workTogetherForm.get('acceptPolicy')?.value) {
       this.workTogetherForm.get('acceptPolicy')?.setErrors({ required: true });
-      this.workTogetherForm.get('acceptPolicy')?.markAsTouched();  
+      this.workTogetherForm.get('acceptPolicy')?.markAsTouched();
     }
+
     if (this.workTogetherForm.invalid) {
-      this.workTogetherForm.markAllAsTouched();  
-      return; 
+      this.workTogetherForm.markAllAsTouched();
+      return;
     }
 
-    console.log('Form Daten:', this.workTogetherForm.value);
+    const formData = {
+      name: this.workTogetherForm.get('yourName')?.value,
+      email: this.workTogetherForm.get('yourMail')?.value,
+      message: this.workTogetherForm.get('helpYou')?.value,
+    };
 
-    Swal.fire({
-      title: 'Die Nachricht wurde gesendet.',
-      text: 'Vielen Dank :-)',
-      icon: 'success',
-      confirmButtonText: 'Okay',
-      confirmButtonColor: '#3dcfb6',
-      background: '#1c1c1c',
-      customClass: {
-        title: 'swal-title',
-        popup: 'swal-popup',
+    this.http.post('https://www.nafi-mueftueoglu.de/your-php-script.php', formData).subscribe({
+      next: () => {
+        Swal.fire({
+          title: 'Message Sent',
+          text: 'Thank you :-)',
+          icon: 'success',
+          confirmButtonText: 'Okay',
+          confirmButtonColor: '#3dcfb6',
+          background: '#1c1c1c',
+          customClass: {
+            title: 'swal-title',
+            popup: 'swal-popup',
+          },
+        });
+        this.workTogetherForm.reset();
       },
+      error: () => {
+        Swal.fire({
+          title: 'Error!',
+          text: 'Message could not be sent',
+          icon: 'error',
+          confirmButtonText: 'Okay',
+          confirmButtonColor: '#3dcfb6',
+          background: '#1c1c1c',
+        });
+      }
     });
-    
-    this.workTogetherForm.reset();
+  }
+  scrollToTop(): void {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
   }
 }
-
-
