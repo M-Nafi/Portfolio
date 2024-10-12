@@ -6,7 +6,7 @@
     <div class="feedback-slider-main">
       <div class="card-container">
         <div class="double-quotes-comments">
-          <img src="./../../assets/img/double-quotes-comments.png" />
+          <img src="./assets/img/double-quotes-comments.png" />
         </div>
         <div class="carousel-style"
           *ngFor="let comment of visibleCards; let i = index"
@@ -23,7 +23,7 @@
     </div>
 
     <div class="slide-arrows">
-      <img class="arrows left-arrow" src="./../../assets/img/slider-arrow-left.png" (click)="prevCard()"/>
+      <img class="arrows left-arrow" src="./assets/img/slider-arrow-left.png" (click)="prevCard()"/>
       <div class="dots-container">
         <span *ngFor="let comment of comments; let j = index"
           [class.active]="j == currentIndex"
@@ -31,7 +31,7 @@
           class="dot">
         </span>
       </div>
-      <img class="arrows right-arrow" src="./../../assets/img/slider-arrow-right.png" (click)="nextCard()"/>
+      <img class="arrows right-arrow" src="./assets/img/slider-arrow-right.png" (click)="nextCard()"/>
     </div>
   </div>
 </section>

@@ -25,19 +25,50 @@ body {
 
 .about-me-content-left {
   display: flex;
-  position: relative;
-  .picture {
-    position: absolute;
-    padding-left: 30px;
-    @media (max-width: 650px) {
-      padding-left: 16px;
-    }
-  }
+  align-items: center;
+  padding-top: 32px;
 }
 
-.images {
-  max-width: 100%;
-  max-height: 100vh;
+.picture {
+  position: relative;
+  .me {
+    object-fit: cover;
+    position: absolute;
+    left: 32px;
+    bottom: 20px;
+    width: 568px;
+    height: 568px;
+    border-radius: 16px;
+    border: 2px solid #3dcfb6;
+  }
+  @media (max-width: 1260px) {
+    .image-bgr, .me {
+      width: 468px;
+      height: 468px;
+    }
+  }
+  @media (max-width: 1160px) {
+    .image-bgr, .me {
+      width: 368px;
+      height: 368px;
+    }
+  }
+  @media (max-width: 1024px) {
+    .me {
+      width: 568px;
+      height: 568px;
+      position: static;
+    }
+    .image-bgr {
+      display: none;
+    }
+  }
+  @media (max-width: 600px) {
+    .me {
+      width: 100%;
+      height: auto;
+    }
+  }
 }
 
 .about-me-content-right {

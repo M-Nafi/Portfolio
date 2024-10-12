@@ -76,20 +76,20 @@
               <a href="https://github.com/M-Nafi" target="_blank">
                 <div class="link-buttons">GitHub
                   <img class="arrow-outward"
-                    src="./../../assets/img/arrow-outward.png"/>
+                    src="./assets/img/arrow-outward.png"/>
                 </div>
               </a>
               <div class="link-buttons">Live Test
                 <img class="arrow-outward"
-                  src="./../../assets/img/arrow-outward.png"/>
+                  src="./assets/img/arrow-outward.png"/>
               </div>
             </div>
           </div>
           <div class="introducing-right">
             <div (click)="hideProjectDetails($event)"
               class="closing-icon" 
-              (mouseout)=" changeImage('./../../assets/img/close-icon-white.png')"
-              (mouseover)="changeImage('./../../assets/img/close-icon-colored.png')">
+              (mouseout)=" changeImage('./assets/img/close-icon-white.png')"
+              (mouseover)="changeImage('./assets/img/close-icon-colored.png')">
               <img [src]="imageSource"/>
             </div>
             <div class="introducing-project-image">
@@ -97,7 +97,7 @@
             </div>
             <div class="next-project-container" (click)="nextProject()">
               <span>{{ 'nextProject' | translate }}</span>
-              <img src="./../../assets/img/arrow-forward.png"/>
+              <img src="./assets/img/arrow-forward.png"/>
             </div>
           </div>
         </div>
@@ -105,11 +105,11 @@
     </div>
     <div class="featured-projects-content-right">
       <img class="feat-project-images" *ngIf="activeImage == 'join'"
-        src="./../../assets/img/join-img.png"/>
+        src="./assets/img/join-img.png"/>
       <img class="feat-project-images second" *ngIf="activeImage == 'pollo'"
-        src="./../../assets/img/epl-img.png"/>
+        src="./assets/img/epl-img.png"/>
       <img class="feat-project-images third" *ngIf="activeImage == 'portfolio'"
-        src="./../../assets/img/dabubble-img.png"/>
+        src="./assets/img/dabubble-img.png"/>
     </div>
   </div>
 </section>
