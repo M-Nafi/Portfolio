@@ -35,7 +35,6 @@ body {
 }
 
 .work-together-left-top {
-  
   span {
     font-family: "Karla";
     font-size: 24px;
@@ -51,8 +50,8 @@ body {
       font-size: 54px;
       padding-bottom: 16px;
     }
-    @media (max-width: 615px) { 
-      font-size: 50px;     
+    @media (max-width: 615px) {
+      font-size: 50px;
       padding-bottom: 16px;
     }
     @media (max-width: 570px) {
@@ -138,7 +137,6 @@ body {
   img {
     width: 20px;
     height: 20px;
-    padding-right: 5px;
   }
 
   button {
@@ -234,8 +232,8 @@ body {
 .form-group .read-policy,
 label {
   display: flex;
-  position: relative; 
-  align-items: center; 
+  position: relative;
+  align-items: center;
 }
 
 .form-group label:before {
@@ -254,7 +252,7 @@ label {
 }
 
 .form-group input:checked + label:after {
-  content: "";  
+  content: "";
   position: absolute;
   top: 3px;
   left: 7px;
@@ -262,17 +260,21 @@ label {
   height: 12px;
   border: solid #3dcfb6;
   border-width: 0 2px 2px 0;
-  transform: rotate(45deg);  
+  transform: rotate(45deg);
 }
 
 .hello {
-  display: flex; justify-content: center;
+  display: flex;
+  justify-content: center;
   width: 100%;
   button:disabled {
-    background-color: rgba(61, 207, 182, 0.1); 
-    cursor: not-allowed; 
-    color: #666; 
-    opacity: 0.5; 
+    background-color: rgba(61, 207, 182, 0.1);
+    cursor: not-allowed;
+    color: #666;
+    opacity: 0.5;
+  }
+  @media (max-width: 450px) {
+    justify-content: flex-start;
   }
 }
 
@@ -289,5 +291,60 @@ label {
     font-family: "Karla";
     font-size: 14px;
     color: red;
+  }
+}
+
+.scroll-up-bottom {
+  @include flexCenter;
+  width: 46px;
+  height: 82px;
+  border-radius: 32px;
+  padding: 16px 7px;
+  border: 1px solid #3dcfb6;
+  transform: rotate(180deg);
+  img {
+    width: 8px;
+    height: 14px;
+  }
+  @media (max-width: 1024px) {
+    display: none;
+  }
+}
+
+.scrolling {
+  width: 46px;
+}
+
+.scroll-up-img {
+  animation: swing 1s infinite;
+}
+
+@keyframes swing {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.scroll-up-responsive {
+  @media (max-width: 1023px) {
+    @include flexCenter;
+    width: 46px;
+    height: 82px;
+    border-radius: 32px;
+    padding: 16px 7px;
+    border: 1px solid #3dcfb6;
+    transform: rotate(180deg);
+    position: absolute;
+    right: 30px;
+    img {
+      width: 8px;
+      height: 14px;
+    }
   }
 }

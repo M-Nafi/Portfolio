@@ -10,7 +10,7 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
   styleUrls: ['./featured-projects.component.scss'],
 })
 export class FeaturedProjectsComponent {
-  imageSource: string = './../../assets/img/close-icon-white.png';
+  imageSource: string = './assets/img/close-icon-white.png';
 
   changeImage(newImage: string): void {
     this.imageSource = newImage;
@@ -55,11 +55,11 @@ export class FeaturedProjectsComponent {
       description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
       technologies: 
       [
-        { iconUrl: '../../assets/img/javascript-icon-colored.png', name: 'Javascript'},
-        { iconUrl: '../../assets/img/html-icon-colored.png', name: 'HTML' },
-        { iconUrl: '../../assets/img/css-icon-colored.png', name: 'CSS' }
+        { iconUrl: './assets/img/javascript-icon-colored.png', name: 'Javascript'},
+        { iconUrl: './assets/img/html-icon-colored.png', name: 'HTML' },
+        { iconUrl: './assets/img/css-icon-colored.png', name: 'CSS' }
       ],
-      imageUrl: '../../assets/img/join-img.png'
+      imageUrl: './assets/img/join-img.png'
     },
     {
       number: '02',
@@ -70,11 +70,11 @@ export class FeaturedProjectsComponent {
       description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
       technologies: 
       [
-        { iconUrl: '../../assets/img/html-icon-colored.png', name: 'HTML' },
-        { iconUrl: '../../assets/img/css-icon-colored.png', name: 'CSS' },
-        { iconUrl: '../../assets/img/javascript-icon-colored.png', name: 'Javascript' }
+        { iconUrl: './assets/img/html-icon-colored.png', name: 'HTML' },
+        { iconUrl: './assets/img/css-icon-colored.png', name: 'CSS' },
+        { iconUrl: './assets/img/javascript-icon-colored.png', name: 'Javascript' }
       ],
-      imageUrl: '../../assets/img/epl-img.png'    
+      imageUrl: './assets/img/epl-img.png'    
     },
     {
       number: '03',
@@ -85,12 +85,12 @@ export class FeaturedProjectsComponent {
       description: 'This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive interface, real-time messaging, and robust channel organization.',
       technologies: 
       [
-        { iconUrl: '../../assets/img/html-icon-colored.png', name: 'HTML' },
-        { iconUrl: '../../assets/img/css-icon-colored.png', name: 'CSS' },
-        { iconUrl: '../../assets/img/javascript-icon-colored.png', name: 'Javascript' },
-        { iconUrl: '../../assets/img/angular-icon-colored.png', name: 'Angular' }
+        { iconUrl: './assets/img/html-icon-colored.png', name: 'HTML' },
+        { iconUrl: './assets/img/css-icon-colored.png', name: 'CSS' },
+        { iconUrl: './assets/img/javascript-icon-colored.png', name: 'Javascript' },
+        { iconUrl: './assets/img/angular-icon-colored.png', name: 'Angular' }
       ],
-      imageUrl: '../../assets/img/dabubble-img.png'      
+      imageUrl: './assets/img/dabubble-img.png'      
     },
   ];
 }

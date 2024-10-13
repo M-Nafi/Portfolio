@@ -12,8 +12,7 @@
       </div>
 
       <div class="my-projects-main">
-
-        <!-- join -->
+        
         <div class="my-projects my-projects-first-container"
             (click)="showProjectDetails(projects[0])"
               (mouseenter)="showImage('join')"
@@ -23,8 +22,7 @@
               Javascript<span> |</span> HTML<span> |</span> CSS
             </div>
         </div>
-
-        <!-- el pollo loco -->
+      
         <div class="my-projects"
           (click)="showProjectDetails(projects[1])"
             (mouseenter)="showImage('pollo')"
@@ -34,8 +32,7 @@
               Javascript<span> |</span> HTML<span> |</span> CSS
             </div>
         </div>
-
-        <!-- portfolio -->
+    
         <div class="my-projects"
             (click)="showProjectDetails(projects[2])"
               (mouseenter)="showImage('portfolio')"
@@ -45,14 +42,12 @@
                 Angular<span> |</span> Javascript<span> |</span> HTML<span> |</span> CSS
               </div>
         </div>
-
-        <!-- overlay for background -->
+      
         <div class="overlay"
           [ngClass]="{ 'd-none': !isProjectVisible }"
           (click)="hideProjectDetails($event)">
         </div>
-
-        <!-- introducing projects (project details) -->
+        
         <div class="introducing-projects"
           [ngClass]="{ 'd-none': !isProjectVisible }" *ngIf="selectedProject">
           <div class="introducing-left">

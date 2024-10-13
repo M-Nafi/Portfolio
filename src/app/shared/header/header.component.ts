@@ -11,39 +11,39 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 })
 export class HeaderComponent {
   isMobileNavVisible = false;
-  currentResponsiveMenuIcon: string = './../../../assets/img/menu-icon.png';
+  currentResponsiveMenuIcon: string = './assets/img/menu-icon.png';
 
   currentLanguage: string = 'EN';  
 
   constructor(private translate: TranslateService) {
-    this.currentLanguage = translate.currentLang?.toUpperCase() || 'EN'; // beginnt immer mit en. also standart
+    this.currentLanguage = translate.currentLang?.toUpperCase() || 'EN'; 
   }
 
   switchLanguage() {
     this.currentLanguage = this.currentLanguage === 'DE' ? 'EN' : 'DE';
     this.translate.use(this.currentLanguage.toLowerCase());
-    this.currentResponsiveMenuIcon = './../../../assets/img/menu-icon.png'; 
+    this.currentResponsiveMenuIcon = './assets/img/menu-icon.png'; 
     this.isMobileNavVisible = false;  
   } 
 
   switchMenuIcon() {
-    if (this.currentResponsiveMenuIcon == './../../../assets/img/menu-icon.png') {
-      this.currentResponsiveMenuIcon = './../../../assets/img/responsive-close-icon.png';
+    if (this.currentResponsiveMenuIcon == './assets/img/menu-icon.png') {
+      this.currentResponsiveMenuIcon = './assets/img/responsive-close-icon.png';
       this.isMobileNavVisible = true;      
     } else {
-      this.currentResponsiveMenuIcon = './../../../assets/img/menu-icon.png';
+      this.currentResponsiveMenuIcon = './assets/img/menu-icon.png';
       this.isMobileNavVisible = false;
     }
   }
   
   closeMobileNav() {
     this.isMobileNavVisible = false;
-    this.currentResponsiveMenuIcon = './../../../assets/img/menu-icon.png';
+    this.currentResponsiveMenuIcon = './assets/img/menu-icon.png';
   }
 
   hideMobileNav(event: Event) {
     event.stopPropagation(); 
     this.isMobileNavVisible = false;
-    this.currentResponsiveMenuIcon = './../../../assets/img/menu-icon.png';
+    this.currentResponsiveMenuIcon = './assets/img/menu-icon.png';
   }
 }

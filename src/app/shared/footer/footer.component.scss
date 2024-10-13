@@ -63,7 +63,7 @@ body {
   font-family: sans-serif;
   color: white;
   letter-spacing: 1px;
-  @media (max-width: 500px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 }
@@ -83,7 +83,6 @@ body {
   transition: 500ms;
   color: transparent;
   -webkit-text-stroke: 1px #ffffff;
-  //   -webkit-text-stroke: 1px #93d6c9;
 }
 
 .footer-left-bottom {
@@ -156,4 +155,3 @@ body {
     padding-top: 10px;
   }
 }
-
