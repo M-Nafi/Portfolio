@@ -12,5 +12,11 @@ import { LegalNoticeComponent } from '../../legal-notice/legal-notice.component'
   styleUrl: './footer.component.scss'
 })
 export class FooterComponent {
-
+  scrollToTop(): void {
+    window.scroll({ 
+      top: 0, 
+      left: 0, 
+      behavior: 'smooth' 
+    });
+  }
 }

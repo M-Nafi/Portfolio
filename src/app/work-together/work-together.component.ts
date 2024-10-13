@@ -31,11 +31,13 @@ export class WorkTogetherComponent {
     let nameCheck = this.workTogetherForm.get('yourName');
     let mailCheck = this.workTogetherForm.get('yourMail');
     let helpYouCheck = this.workTogetherForm.get('helpYou');
+    let policyCheck = this. workTogetherForm. get('acceptPolicy');
 
     return (
       nameCheck?.valid === true &&
       mailCheck?.valid === true &&
-      helpYouCheck?.valid === true
+      helpYouCheck?.valid === true &&
+      policyCheck?.valid === true
     );
   }
 
@@ -50,7 +52,7 @@ export class WorkTogetherComponent {
       return;
     }
 
-    const formData = {
+    let formData = {
       name: this.workTogetherForm.get('yourName')?.value,
       email: this.workTogetherForm.get('yourMail')?.value,
       message: this.workTogetherForm.get('helpYou')?.value,
