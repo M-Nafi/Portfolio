@@ -1,265 +1,265 @@
-@import "./../../styles.scss";
+@import './../../styles.scss';
 
 body {
-  overflow-x: hidden !important;
+    overflow-x: hidden !important;
 }
 
 section {
-  @include flexCenter;
-  background-image: url(./../../assets/img/background-main.png);
-  background-repeat: no-repeat;
-  background-size: cover;
-  max-width: 100%;
-  width: 100vw;
-  height: 100vh;
-  overflow: hidden;
+    @include flexCenter;
+    background-image: url(./../../assets/img/background-main.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    max-width: 100%;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
 }
 
 .introducing {
-  @include flexCenter;
-  @include max-width;
-  position: relative;
-  color: #d9d9d9;
-  flex-direction: column;
-  h2 {
-    font-size: 40px;
-    font-family: "Fira Code";
-    margin-bottom: 10px;
-  }
-  h1 {
-    font-size: 128px;
-    font-family: "Karla";
-    margin-top: 0;
-    margin-bottom: 32px;
-  }
-  @media (max-width: 1280px) {
-    h1 {
-      font-size: 110px;
-    }
+    @include flexCenter;
+    @include max-width;
+    position: relative;
+    color: #d9d9d9;
+    flex-direction: column;
     h2 {
-      font-size: 35px;
+        font-size: 40px;
+        font-family: 'Fira Code';
+        margin-bottom: 10px;
     }
-  }
-  @media (max-width: 1024px) {
     h1 {
-      font-size: 80px;
+        font-size: 128px;
+        font-family: 'Karla';
+        margin-top: 0;
+        margin-bottom: 32px;
     }
-    h2 {
-      font-size: 30px;
+    @media (max-width: 1280px) {
+        h1 {
+            font-size: 110px;
+        }
+        h2 {
+            font-size: 35px;
+        }
     }
-  }
-  @media (max-width: 900px) {
-    padding-bottom: 32px;
-    text-align: center;
-    h1 {
-      font-size: 60px;
+    @media (max-width: 1024px) {
+        h1 {
+            font-size: 80px;
+        }
+        h2 {
+            font-size: 30px;
+        }
     }
-    h2 {
-      font-size: 25px;
+    @media (max-width: 900px) {
+        padding-bottom: 32px;
+        text-align: center;
+        h1 {
+            font-size: 60px;
+        }
+        h2 {
+            font-size: 25px;
+        }
     }
-  }
-  @media (max-width: 600px) {
-    h1 {
-      font-size: 40px;
+    @media (max-width: 600px) {
+        h1 {
+            font-size: 40px;
+        }
+        h2 {
+            font-size: 15px;
+        }
     }
-    h2 {
-      font-size: 15px;
-    }
-  }
 }
 
 .sliding-buttons {
-  font-family: "Karla";
-  font-size: 18px;
-  padding-left: 24px;
-  padding-right: 24px;
-  height: 48px;
-  border-radius: 100px;
-  color: white;
-  background-color: transparent;
-  border: 1px solid white;
-  overflow: hidden;
-  transition: border 0.3s ease;
-  cursor: pointer;
-  &:hover {
-    border: 1px solid #3dcfb6;
-    span {
-      animation: slideOutAndIn 1.5s linear;
-      transition: color 0.3s ease;
-      color: #3dcfb6;
+    font-family: 'Karla';
+    font-size: 18px;
+    padding-left: 24px;
+    padding-right: 24px;
+    height: 48px;
+    border-radius: 100px;
+    color: white;
+    background-color: transparent;
+    border: 1px solid white;
+    overflow: hidden;
+    transition: border 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        border: 1px solid #3dcfb6;
+        span {
+            animation: slideOutAndIn 1.5s linear;
+            transition: color 0.3s ease;
+            color: #3dcfb6;
+        }
     }
-  }
-  span {
-    display: inline-block;
-  }
-  @media (max-width: 900px) {
-    font-size: 16px;
-    padding-left: 22px;
-    padding-right: 22px;
-  }
-  @media (max-width: 600px) {
-    font-size: 14px;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+    span {
+        display: inline-block;
+    }
+    @media (max-width: 900px) {
+        font-size: 16px;
+        padding-left: 22px;
+        padding-right: 22px;
+    }
+    @media (max-width: 600px) {
+        font-size: 14px;
+        padding-left: 20px;
+        padding-right: 20px;
+    }
 }
 
 @keyframes slideOutAndIn {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  25% {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-  75% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .contact-me {
-  display: flex;
-  gap: 48px;
+    display: flex;
+    gap: 48px;
 }
 
 .scroll-down-left-main {
-  @include flexCenter;
-  flex-direction: column;
-  left: 0;
-  top: 100%;
-  position: absolute;
-  gap: 25px;
-  img {
-    height: 500px;
-  }
+    @include flexCenter;
+    flex-direction: column;
+    left: 0;
+    top: 100%;
+    position: absolute;
+    gap: 25px;
+    img {
+        height: 500px;
+    }
 }
 
 .scroll-down-left {
-  @include flexCenter;
-  width: 30px;
-  height: 48px;
-  border-radius: 32px;
-  padding: 16px 7px;
-  border: 1px solid #3dcfb6;
-  img {
-    width: 8px;
-    height: 14px;
-  }
+    @include flexCenter;
+    width: 30px;
+    height: 48px;
+    border-radius: 32px;
+    padding: 16px 7px;
+    border: 1px solid #3dcfb6;
+    img {
+        width: 8px;
+        height: 14px;
+    }
 }
 
 .social-contact-main-right {
-  @include flexCenter;
-  flex-direction: column;
-  right: 0;
-  top: 50%;
-  position: absolute;
-  gap: 20px;
-  img {
-    height: 32px;
-    &:hover {
-      cursor: pointer;
+    @include flexCenter;
+    flex-direction: column;
+    right: 0;
+    top: 50%;
+    position: absolute;
+    gap: 20px;
+    img {
+        height: 32px;
+        &:hover {
+            cursor: pointer;
+        }
     }
-  }
-  .contact-name {
-    color: #ffffff;
-    text-decoration: none;
-    transform: rotate(180deg);
-    writing-mode: vertical-lr;
-    font-family: "Karla";
-    font-size: 20px;
-    &:hover {
-      color: #3dcfb6;
-    }
-  }
-  @media (max-width: 900px) {
-    top: 99%;
     .contact-name {
-      display: none;
+        color: #ffffff;
+        text-decoration: none;
+        transform: rotate(180deg);
+        writing-mode: vertical-lr;
+        font-family: 'Karla';
+        font-size: 20px;
+        &:hover {
+            color: #3dcfb6;
+        }
     }
-  }
+    @media (max-width: 900px) {
+        top: 99%;
+        .contact-name {
+            display: none;
+        }
+    }
 }
 
-.green-mail-icon {  
-  @media (max-width: 900px) {
-    display: flex;
-  }
+.green-mail-icon {
+    @media (max-width: 900px) {
+        display: flex;
+    }
 }
 
 .separator-left,
 .separator-right {
-  position: relative;
-  height: 500px;
-  width: 1px;
+    position: relative;
+    height: 500px;
+    width: 1px;
 }
 
 .separator-right {
-  background-color: #ffffff;
+    background-color: #ffffff;
 }
 
 .separator-left {
-  background-color: #3dcfb6;
+    background-color: #3dcfb6;
 }
 
 .marquee-slider {
-  @include flexCenter;
-  position: absolute;
-  overflow: hidden;
-  white-space: nowrap;
-  bottom: -225px;
-  height: 50px;
-  rotate: -4deg;
-  width: 100vw;
-  background-color: rgba(61, 207, 182, 0.1);
-  backdrop-filter: blur(0.3);
+    @include flexCenter;
+    position: absolute;
+    overflow: hidden;
+    white-space: nowrap;
+    bottom: -225px;
+    height: 50px;
+    rotate: -4deg;
+    width: 100vw;
+    background-color: rgba(61, 207, 182, 0.1);
+    backdrop-filter: blur(0.3);
 }
 
 .marquee-content {
-  @include flexCenter;
-  font-size: 20px;
-  margin-right: 20px;
-  animation: marquee 15s linear infinite;
-  z-index: 5;
+    @include flexCenter;
+    font-size: 20px;
+    margin-right: 20px;
+    animation: marquee 15s linear infinite;
+    z-index: 5;
 }
 
 .marquee-content span {
-  margin: 0 24px;
-  color: #3dcfb6;
-  font-family: "Karla";
-  font-size: 25px;
+    margin: 0 24px;
+    color: #3dcfb6;
+    font-family: 'Karla';
+    font-size: 25px;
 }
 
 @keyframes marquee {
-  0% {
-    transform: translateX(0%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
 
-  100% {
-    transform: translateX(-25%);
-  }
+    100% {
+        transform: translateX(-25%);
+    }
 }
 
 .scroll-down-left img {
-  animation: swing 1s infinite;
+    animation: swing 1s infinite;
 }
 
 @keyframes swing {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
 }

@@ -1,59 +1,61 @@
 <section id="welcome_area">
-  <div class="introducing">
-    <h2>{{ 'frontendDeveloper' | translate }}</h2>
-    <h1>Nafi Müftüoglu</h1>
-    <div class="contact-me">
-      
-      <a href="#myProjects">
-        <button class="sliding-buttons">
-          <span>{{ 'checkMyWork' | translate }}</span>
-        </button>
-      </a>
-      
-      <a href="#contactMe">
-        <button class="sliding-buttons">         
-            <span>{{ 'contactMe' | translate }}</span>          
-        </button>
-      </a>
+    <div class="introducing">
+        <h2>{{ 'frontendDeveloper' | translate }}</h2>
+        <h1>Nafi Müftüoglu</h1>
+        <div class="contact-me">
+            <a href="#myProjects">
+                <button class="sliding-buttons">
+                    <span>{{ 'checkMyWork' | translate }}</span>
+                </button>
+            </a>
 
-    </div>
-
-    <a href="#footer">
-      <div class="scroll-down-left-main">
-        <div class="scroll-down-left">
-          <img src="./assets/img/scroll-down.png" />
+            <a href="#contactMe">
+                <button class="sliding-buttons">
+                    <span>{{ 'contactMe' | translate }}</span>
+                </button>
+            </a>
         </div>
-          <div class="separator-left"></div>
-      </div>
-    </a>
-    
-    <div class="social-contact-main-right">
-      <a class="contact-name" href="mailto:nafi-m@gmx.de">nafi-m&#64;gmx.de</a>
-      
-      <a class="green-mail-icon d-none-normal" href="mailto:nafi-m@gmx.de">
-        <img src="./assets/img/mail-icon-green.png">
-      </a>
-      
-      <a href="https://github.com/M-Nafi" target="_blank">
-        <img src="./assets/img/github-icon-green.png" />
-      </a>
 
-      <a href="https://de.linkedin.com/" target="_blank">
-        <img src="./assets/img/linkedin-icon-green.png" />
-      </a>
-      <div class="separator-right"></div>
-    </div>
+        <a href="#footer">
+            <div class="scroll-down-left-main">
+                <div class="scroll-down-left">
+                    <img src="./assets/img/scroll-down.png" />
+                </div>
+                <div class="separator-left"></div>
+            </div>
+        </a>
 
-    <div class="marquee-slider">
-      <div class="marquee-content">
-        <ng-container *ngFor="let number of [1, 2, 3, 4, 5]">
-          <ng-container *ngFor="let item of items">
-            <span>•</span>
-            <span>{{ item | translate }}</span>
-          </ng-container>
-        </ng-container>
-      </div>
+        <div class="social-contact-main-right">
+            <a class="contact-name" href="mailto:nafi-m@gmx.de"
+                >nafi-m&#64;gmx.de</a
+            >
+
+            <a
+                class="green-mail-icon d-none-normal"
+                href="mailto:nafi-m@gmx.de"
+            >
+                <img src="./assets/img/mail-icon-green.png" />
+            </a>
+
+            <a href="https://github.com/M-Nafi" target="_blank">
+                <img src="./assets/img/github-icon-green.png" />
+            </a>
+
+            <a href="https://de.linkedin.com/" target="_blank">
+                <img src="./assets/img/linkedin-icon-green.png" />
+            </a>
+            <div class="separator-right"></div>
+        </div>
+
+        <div class="marquee-slider">
+            <div class="marquee-content">
+                <ng-container *ngFor="let number of [1, 2, 3, 4, 5]">
+                    <ng-container *ngFor="let item of items">
+                        <span>•</span>
+                        <span>{{ item | translate }}</span>
+                    </ng-container>
+                </ng-container>
+            </div>
+        </div>
     </div>
-    
-  </div>
 </section>

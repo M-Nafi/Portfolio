@@ -1,129 +1,129 @@
-@import "./../../styles.scss";
+@import './../../styles.scss';
 
 body {
-  overflow-x: hidden !important;
+    overflow-x: hidden !important;
 }
 
 .about-me-main {
-  @include flexCenter;
-  padding-top: 48px;
-  padding-bottom: 74px;
-  background-color: #1c1c1c;
+    @include flexCenter;
+    padding-top: 48px;
+    padding-bottom: 130px;
+    background-color: #1c1c1c;
 }
 
 .about-me-content {
-  @include max-width;
-  display: flex;
-  justify-content: space-between;
-  gap: 90px;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 0;
-  }
+    @include max-width;
+    display: flex;
+    justify-content: space-between;
+    gap: 90px;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        align-items: center;
+        gap: 0;
+    }
 }
 
 .about-me-content-left {
-  display: flex;
-  align-items: center;
-  padding-top: 32px;
-}
-
-.picture {
-  position: relative;
-  .me {
-    object-fit: cover;
-    position: absolute;
-    left: 32px;
-    bottom: 20px;
-    width: 568px;
-    height: 568px;
-    border-radius: 16px;
-    border: 2px solid #3dcfb6;
-  }
-  @media (max-width: 1260px) {
-    .image-bgr, .me {
-      width: 468px;
-      height: 468px;
+    display: flex;
+    align-items: center;
+    padding-top: 32px;
+    .picture {
+        position: relative;
+        .me {
+            object-fit: cover;
+            position: absolute;
+            left: 32px;
+            bottom: 20px;
+            width: 568px;
+            height: 568px;
+            border-radius: 16px;
+            border: 2px solid #3dcfb6;
+        }
+        @media (max-width: 1260px) {
+            .image-bgr,
+            .me {
+                width: 468px;
+                height: 468px;
+            }
+        }
+        @media (max-width: 1160px) {
+            .image-bgr,
+            .me {
+                width: 368px;
+                height: 368px;
+            }
+        }
+        @media (max-width: 1024px) {
+            .me {
+                width: 568px;
+                height: 568px;
+                position: static;
+            }
+            .image-bgr {
+                display: none;
+            }
+        }
+        @media (max-width: 600px) {
+            .me {
+                width: 100%;
+                height: auto;
+            }
+        }
     }
-  }
-  @media (max-width: 1160px) {
-    .image-bgr, .me {
-      width: 368px;
-      height: 368px;
-    }
-  }
-  @media (max-width: 1024px) {
-    .me {
-      width: 568px;
-      height: 568px;
-      position: static;
-    }
-    .image-bgr {
-      display: none;
-    }
-  }
-  @media (max-width: 600px) {
-    .me {
-      width: 100%;
-      height: auto;
-    }
-  }
 }
 
 .about-me-content-right {
-  display: flex;
-  flex-direction: column;
-  position: relative;
-  top: 98px;
-  gap: 10px;
-  span {
-    font-family: "Karla";
-    color: #3dcfb6;
-    font-size: 24px;
-  }
-  @media (max-width: 1024px) {
-  top: 50px;
-  max-width: 568px;
-  }  
-}
-
-.about-me-description {
-  background-color: rgba(61, 207, 182, 0.1);
-  border: 1px solid #3dcfb6;
-  border-radius: 30px;
-  padding: 32px;
-  max-width: 568px;
-  h1 {
-    margin-top: 0;
-    font-family: "Fira Code";
-    font-weight: 700;
-    font-size: 64px;
-    color: #3dcfb6;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 98px;
+    gap: 10px;
+    span {
+        font-family: 'Karla';
+        color: #3dcfb6;
+        font-size: 24px;
+    }
     @media (max-width: 1024px) {
-      font-size: 40px;     
+        top: 50px;
+        max-width: 568px;
     }
-    @media (max-width: 400px) {
-      font-size: 30px;
+    .about-me-description {
+        background-color: rgba(61, 207, 182, 0.1);
+        border: 1px solid #3dcfb6;
+        border-radius: 30px;
+        padding: 32px;
+        max-width: 568px;
+        h1 {
+            margin-top: 0;
+            font-family: 'Fira Code';
+            font-weight: 700;
+            font-size: 64px;
+            color: #3dcfb6;
+            @media (max-width: 1024px) {
+                font-size: 40px;
+            }
+            @media (max-width: 400px) {
+                font-size: 30px;
+            }
+        }
+        p {
+            color: whitesmoke;
+            font-family: 'Karla';
+            font-size: 18px;
+        }
     }
-  }
-  p {
-    color: whitesmoke;
-    font-family: "Karla";
-    font-size: 18px;
-  } 
 }
 
 .about-me-description-first-bottom,
 .about-me-description-second-bottom,
 .about-me-description-third-bottom {
-  display: flex;
-  gap: 24px;
-  img {
-    width: 25px;
-    height: 25px;
-  }
-  p {
-    margin-top: 0;
-  }
+    display: flex;
+    gap: 24px;
+    img {
+        width: 25px;
+        height: 25px;
+    }
+    p {
+        margin-top: 0;
+    }
 }

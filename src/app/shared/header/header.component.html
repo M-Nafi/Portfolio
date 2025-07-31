@@ -1,66 +1,86 @@
 <section id="header">
-  <div class="header-content">
-    <nav>
-      <div class="language-change">
-        <button (click)="switchLanguage()">
-          <span
-            [ngClass]="{
-              active: currentLanguage === 'EN',
-              inactive: currentLanguage === 'DE'
-            }"
-            >EN</span>
-          <span
-            [ngClass]="{
-              active: currentLanguage === 'DE',
-              inactive: currentLanguage === 'EN'
-            }"
-            >DE</span>
-        </button>
-      </div>
+    <div class="header-content">
+        <nav>
+            <div class="language-change">
+                <button (click)="switchLanguage()">
+                    <span
+                        [ngClass]="{
+                            active: currentLanguage === 'EN',
+                            inactive: currentLanguage === 'DE'
+                        }"
+                        >EN</span
+                    >
+                    <span
+                        [ngClass]="{
+                            active: currentLanguage === 'DE',
+                            inactive: currentLanguage === 'EN'
+                        }"
+                        >DE</span
+                    >
+                </button>
+            </div>
 
-      <div class="about-me">
-        <a href="#aboutMe">{{ "aboutMe" | translate }}</a>
-        <a href="#mySkills">{{ "skills" | translate }}</a>
-        <a href="#myProjects">{{ "projects" | translate }}</a>
-      </div>
-    </nav>
+            <div class="about-me">
+                <a href="#aboutMe">{{ 'aboutMe' | translate }}</a>
+                <a href="#mySkills">{{ 'skills' | translate }}</a>
+                <a href="#myProjects">{{ 'projects' | translate }}</a>
+            </div>
+        </nav>
 
-    <div class="header-content-right">
-      <div class="logo">
-        <div class="initials">
-          <span class="letter-N">N</span>
-          <span class="letter-M">M</span>
+        <div class="header-content-right">
+            <div class="logo">
+                <div class="initials">
+                    <span class="letter-N">N</span>
+                    <span class="letter-M">M</span>
+                </div>
+                <div class="name">
+                    Nafi <br />
+                    Müftüoglu
+                </div>
+            </div>
         </div>
-        <div class="name">
-          Nafi <br />
-          Müftüoglu
+
+        <div class="menu-icon d-none-normal">
+            <img (click)="switchMenuIcon()" [src]="currentResponsiveMenuIcon" />
         </div>
-      </div>
+
+        <div
+            class="mobile-overlay"
+            [ngClass]="{ 'd-none-normal': !isMobileNavVisible }"
+            (click)="hideMobileNav($event)"
+        ></div>
+
+        <div class="mobile-nav" [ngClass]="{ 'd-none': !isMobileNavVisible }">
+            <div class="language-change">
+                <button (click)="switchLanguage()">
+                    <span
+                        [ngClass]="{
+                            active: currentLanguage === 'EN',
+                            inactive: currentLanguage === 'DE'
+                        }"
+                        >EN</span
+                    >
+                    <span
+                        [ngClass]="{
+                            active: currentLanguage === 'DE',
+                            inactive: currentLanguage === 'EN'
+                        }"
+                        >DE</span
+                    >
+                </button>
+            </div>
+
+            <div class="about-me">
+                <a href="#aboutMe" (click)="closeMobileNav()">{{
+                    'aboutMe' | translate
+                }}</a>
+                <a href="#mySkills" (click)="closeMobileNav()">{{
+                    'skills' | translate
+                }}</a>
+                <a href="#myProjects" (click)="closeMobileNav()">{{
+                    'projects' | translate
+                }}</a>
+            </div>
+        </div>
     </div>
-
-    <div class="menu-icon d-none-normal">
-      <img (click)="switchMenuIcon()" [src]="currentResponsiveMenuIcon" />
-    </div>
-
-    <div
-      class="mobile-overlay"
-      [ngClass]="{ 'd-none-normal': !isMobileNavVisible }"
-      (click)="hideMobileNav($event)"
-    ></div>
-
-    <div class="mobile-nav" [ngClass]="{ 'd-none': !isMobileNavVisible }">
-      <div class="language-change">
-        <button (click)="switchLanguage()">
-          <span [ngClass]="{active: currentLanguage === 'EN', inactive: currentLanguage === 'DE'}">EN</span>
-          <span [ngClass]="{active: currentLanguage === 'DE', inactive: currentLanguage === 'EN'}">DE</span>
-        </button>
-      </div>
-
-      <div class="about-me">
-        <a href="#aboutMe" (click)="closeMobileNav()">{{"aboutMe" | translate}}</a>
-        <a href="#mySkills" (click)="closeMobileNav()">{{"skills" | translate}}</a>
-        <a href="#myProjects" (click)="closeMobileNav()">{{"projects" | translate}}</a>
-      </div>
-    </div>
-  </div>
 </section>

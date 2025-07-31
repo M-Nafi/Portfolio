@@ -1,46 +1,44 @@
 <div class="footer-main" id="footer">
-  <div class="footer-contents">
+    <div class="footer-contents">
+        <div class="footer-content-left">
+            <div class="logo">
+                <div class="initials">
+                    <span class="letter-N">N</span>
+                    <span class="letter-M">M</span>
+                </div>
+                <div class="name">
+                    Nafi <br />
+                    Müftüoglu
+                </div>
+            </div>
 
-    <div class="footer-content-left">
-      <div class="logo">
-        <div class="initials">
-          <span class="letter-N">N</span>
-          <span class="letter-M">M</span>
+            <div class="footer-left-bottom">
+                <span>{{ 'webDeveloper' | translate }}</span>
+                <span>{{ 'location' | translate }}</span>
+            </div>
         </div>
-        <div class="name">
-          Nafi <br />
-          Müftüoglu
-        </div>
-      </div>
 
-      <div class="footer-left-bottom">
-        <span>{{ 'webDeveloper' | translate }}</span>
-        <span>{{ 'location' | translate }}</span>
-      </div>
+        <div class="footer-content-center">
+            <span>&#169; Nafi Müftüoglu 2024</span>
+        </div>
+
+        <div class="footer-content-right">
+            <a href="https://github.com/M-Nafi" target="_blank">
+                <span>Github</span>
+            </a>
+            <a href="https://de.linkedin.com/" target="_blank">
+                <span>LinkedIn</span>
+            </a>
+            <a href="mailto:nafi-m@gmx.de">
+                <span>Email</span>
+            </a>
+            <a routerLink="/legal-notice" (click)="scrollToTop()">
+                <span class="legal">{{ 'legalNotice' | translate }}</span>
+            </a>
+        </div>
     </div>
 
-    <div class="footer-content-center">
+    <div class="footer-content-center-responsive d-none">
         <span>&#169; Nafi Müftüoglu 2024</span>
     </div>
-
-    <div class="footer-content-right">
-      <a href="https://github.com/M-Nafi" target="_blank">
-        <span>Github</span>
-      </a>
-      <a href="https://de.linkedin.com/" target="_blank">  
-        <span>LinkedIn</span>
-      </a>
-      <a href="mailto:nafi-m@gmx.de"> 
-        <span>Email</span>
-      </a> 
-      <a routerLink="/legal-notice" (click)="scrollToTop()">
-        <span class="legal">{{ 'legalNotice' | translate }}</span>
-      </a>
-    </div>
-
-  </div>
-
-  <div class="footer-content-center-responsive d-none">
-    <span>&#169; Nafi Müftüoglu 2024</span>
-  </div>
 </div>

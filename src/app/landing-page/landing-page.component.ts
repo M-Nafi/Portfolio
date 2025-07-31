@@ -8,18 +8,18 @@ import { ColleaguesFeedbackComponent } from '../colleagues-feedback/colleagues-f
 import { WorkTogetherComponent } from '../work-together/work-together.component';
 
 @Component({
-  selector: 'app-landing-page',
-  standalone: true,
-  imports: [
-    CommonModule,
-    WelcomeAreaComponent,
-    AboutMeComponent,
-    SkillSetComponent,
-    FeaturedProjectsComponent,
-    ColleaguesFeedbackComponent,
-    WorkTogetherComponent
-  ],
-  templateUrl: './landing-page.component.html',
-  styleUrl: './landing-page.component.scss',
+    selector: 'app-landing-page',
+    standalone: true,
+    imports: [
+        CommonModule,
+        WelcomeAreaComponent,
+        AboutMeComponent,
+        SkillSetComponent,
+        FeaturedProjectsComponent,
+        ColleaguesFeedbackComponent,
+        WorkTogetherComponent,
+    ],
+    templateUrl: './landing-page.component.html',
+    styleUrl: './landing-page.component.scss',
 })
 export class LandingPageComponent {}

@@ -1,378 +1,377 @@
-@import "./../../styles.scss";
+@import './../../styles.scss';
 
 body {
-  overflow-x: hidden !important;
+    overflow-x: hidden !important;
 }
 
 section {
-  @include flexCenter;
-  width: 100%;
-  background-color: #1c1c1c;
-  height: 581px;
-  @media (max-width: 1024px) {
-    padding-top: 64px;
-    height: auto;
-  }
+    @include flexCenter;
+    width: 100%;
+    background-color: #1c1c1c;
+    height: 581px;
+    @media (max-width: 1024px) {
+        padding-top: 64px;
+        height: auto;
+    }
 }
 
 .featured-projects-contend {
-  @include max-width;
-  display: flex;
-  position: relative;
-  @media (max-width: 1024px) {
-    height: auto;
-  }
-  @media (max-width: 500px) {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-
-.featured-projects-content-left {  
-  flex-direction: column;
-  max-width: 880px;
-  font-weight: 700;
-  &:first-child {
-    font-family: "Karla";
-    color: #3dcfb6;
-    font-size: 24px;   
-  }
-  h1 {
-    margin-top: 10px;
-    margin-bottom: 15px;
-    font-family: "Fira Code";    
-    font-size: 64px;
-    @media (max-width: 1200px) {
-      font-size: 55px;
+    @include max-width;
+    display: flex;
+    position: relative;
+    @media (max-width: 1024px) {
+        height: auto;
     }
     @media (max-width: 500px) {
-      font-size: 30px;
+        margin-left: 0;
+        margin-right: 0;
     }
-    
-  }
-  @media (max-width: 1024px) {
-    @include max-width;
-    max-width: none;
-    width: 100vw;
-    padding-top: 32px;
-  }  
+}
+
+.featured-projects-content-left {
+    flex-direction: column;
+    max-width: 880px;
+    font-weight: 700;
+    &:first-child {
+        font-family: 'Karla';
+        color: #3dcfb6;
+        font-size: 24px;
+    }
+    h1 {
+        margin-top: 10px;
+        margin-bottom: 15px;
+        font-family: 'Fira Code';
+        font-size: 64px;
+        @media (max-width: 1200px) {
+            font-size: 55px;
+        }
+        @media (max-width: 500px) {
+            font-size: 30px;
+        }
+    }
+    @media (max-width: 1024px) {
+        @include max-width;
+        max-width: none;
+        width: 100vw;
+        padding-top: 32px;
+    }
 }
 
 .featured-projects-left-top,
 .featured-projects-left-bottom,
 .featured-left-bottom-p {
-  @media (max-width: 1024px) {
-    @include flexCenter;    
-    flex-direction: column;   
-    padding-bottom: 16px;
-    align-items: flex-start;
-  }
+    @media (max-width: 1024px) {
+        @include flexCenter;
+        flex-direction: column;
+        padding-bottom: 16px;
+        align-items: flex-start;
+    }
 }
 
 .featured-left-bottom-p {
-  max-width: 456px;
-  p {
-    color: white;
-    font-family: "Karla";
-    font-size: 18px;   
-  }
+    max-width: 456px;
+    p {
+        color: white;
+        font-family: 'Karla';
+        font-size: 18px;
+    }
 }
 
 .my-projects-first-container {
-  border-top: 1px solid;
+    border-top: 1px solid;
 }
 
 .my-projects {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 40px 32px 40px 32px;
-  flex-direction: row;
-  border-bottom: 1px solid;
-  &:hover {
-    background-color: rgba(43, 145, 127, 0.75);
-    cursor: pointer;
-  }
-  h3 {
-    margin: 0;
-    font-family: "Fira Code";
-    font-weight: 700;
-    color: white;
-    font-size: 24px;
-  }
-  .my-project-types {
-    color: white;
-    font-family: "Karla";
-    font-size: 18px;
-  }
-  span {
-    color: #3dcfb6;
-  }
-  @media (max-width: 688px) {
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 32px 0px;
-  }
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 32px 40px 32px;
+    flex-direction: row;
+    border-bottom: 1px solid;
+    &:hover {
+        background-color: rgba(43, 145, 127, 0.75);
+        cursor: pointer;
+    }
+    h3 {
+        margin: 0;
+        font-family: 'Fira Code';
+        font-weight: 700;
+        color: white;
+        font-size: 24px;
+    }
+    .my-project-types {
+        color: white;
+        font-family: 'Karla';
+        font-size: 18px;
+    }
+    span {
+        color: #3dcfb6;
+    }
+    @media (max-width: 688px) {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 32px 0px;
+    }
 }
 
 .featured-projects-content-right {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding-top: 115px;
-  width: 560px;
-  @media (max-width: 1200px) {
-    padding-top: 100px;
-  }
-  @media (max-width: 1024px) {
-    display: none;
-  }
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 115px;
+    width: 560px;
+    @media (max-width: 1200px) {
+        padding-top: 100px;
+    }
+    @media (max-width: 1024px) {
+        display: none;
+    }
 }
 
 .feat-project-images {
-  width: 350px;
-  height: 250px;
-  padding-left: 32px;
-  border-radius: 16px;
-  animation: myAnim 2s ease 0s 1 normal forwards;
+    width: 350px;
+    height: 250px;
+    padding-left: 32px;
+    border-radius: 16px;
+    animation: myAnim 2s ease 0s 1 normal forwards;
 }
 
 @keyframes myAnim {
-	0% {
-		opacity: 0;
-		transform: translateX(250px) rotate(200deg);
-	}
+    0% {
+        opacity: 0;
+        transform: translateX(250px) rotate(200deg);
+    }
 
-	100% {
-		opacity: 1;
-		transform: translateX(0) rotate(0deg);
-	}
+    100% {
+        opacity: 1;
+        transform: translateX(0) rotate(0deg);
+    }
 }
 
 .second {
-  display: flex;
-  padding-top: 115px;
+    display: flex;
+    padding-top: 115px;
 }
 
 .third {
-  display: flex;
-  padding-top: 230px;
-  position: absolute;
+    display: flex;
+    padding-top: 230px;
+    position: absolute;
 }
 
 .overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  z-index: 9;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 9;
 }
 
 .introducing-projects {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  z-index: 10;
-  display: flex;
-  justify-content: space-between;
-  background-image: url("./../../assets/img/background-main.png");
-  background-repeat: no-repeat;
-  background-size: cover;
-  width: 70%;
-  max-height: 656px;
-  border-radius: 30px;
-  border: 1px solid #3dcfb6;
-  padding: 32px 32px;  
-  @media (max-width: 1024px) {
-    max-width: 366px;
-    flex-direction: column-reverse;
-    align-items: center;
-    max-height: none;
-    border-radius: 20px;
-    padding: 20px 20px;
-    img {
-      width: 100%;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    display: flex;
+    justify-content: space-between;
+    background-image: url('./../../assets/img/background-main.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 70%;
+    max-height: 656px;
+    border-radius: 30px;
+    border: 1px solid #3dcfb6;
+    padding: 32px 32px;
+    @media (max-width: 1024px) {
+        max-width: 366px;
+        flex-direction: column-reverse;
+        align-items: center;
+        max-height: none;
+        border-radius: 20px;
+        padding: 20px 20px;
+        img {
+            width: 100%;
+        }
     }
-  }
-  @media (max-width: 500px) {
-    align-items: unset;
-  }
+    @media (max-width: 500px) {
+        align-items: unset;
+    }
 }
 
 .introducing-left {
-  display: flex;
-  flex-direction: column;
-  max-width: 480px;
-  h1 {
-    margin: 0;
-    font-family: "Karla";
-    font-size: 45px;
-  }
-  h2 {
-    margin: 0;
-    font-family: "Fira Code";
-    font-size: 45px;
-    color: white;
-  }
-  h3 {
-    font-family: "Fira Code";
-    font-size: 24px;
-    @media (max-width: 1024px) {
-      font-size: 20px;
+    display: flex;
+    flex-direction: column;
+    max-width: 480px;
+    h1 {
+        margin: 0;
+        font-family: 'Karla';
+        font-size: 45px;
     }
-  }
-  span {
-    font-family: "Karla";
-    font-size: 18px;
-    color: white;
-    @media (max-width: 1024px) {
-      font-size: 16px;
-    }
-  }
-  @media (max-width: 500px) {
-    h1, h2 {
-      font-size: 30px;
+    h2 {
+        margin: 0;
+        font-family: 'Fira Code';
+        font-size: 45px;
+        color: white;
     }
     h3 {
-      font-size: 18px;
+        font-family: 'Fira Code';
+        font-size: 24px;
+        @media (max-width: 1024px) {
+            font-size: 20px;
+        }
     }
-  }
+    span {
+        font-family: 'Karla';
+        font-size: 18px;
+        color: white;
+        @media (max-width: 1024px) {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 500px) {
+        h1,
+        h2 {
+            font-size: 30px;
+        }
+        h3 {
+            font-size: 18px;
+        }
+    }
 }
 
 .introducing-icons {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  gap: 16px;
-  padding-top: 32px;
-  flex-wrap: wrap;
-  .introducing-icons-container {
-    display: flex;    
+    display: flex;
+    flex-direction: row;
     align-items: center;
-    gap: 10px;
-  }
-  img {
-    width: 24px;
-    height: 24px;
-  }
-  p {
-    color: white;
-    font-family: "Karla";
-    font-size: 16px;
-  }
-  @media (max-width: 500px) {    
-    align-items: flex-start;    
-  }
+    gap: 16px;
+    padding-top: 32px;
+    flex-wrap: wrap;
+    .introducing-icons-container {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
+    img {
+        width: 24px;
+        height: 24px;
+    }
+    p {
+        color: white;
+        font-family: 'Karla';
+        font-size: 16px;
+    }
+    @media (max-width: 500px) {
+        align-items: flex-start;
+    }
 }
 
 .link-button-continer {
-  display: flex;
-  gap: 32px;
-  padding-top: 32px;
-  padding-bottom: 16px;
-  @media (max-width: 1024px) {
-    justify-content: center;
-    img {
-      width: 20px;
-      height: 20px;
-    }    
-  }
-  @media (max-width: 500px) {   
-    align-items: flex-start;    
-  }
-  @media (max-width: 420px) {
-    flex-direction: column;
-     
-  }
+    display: flex;
+    gap: 32px;
+    padding-top: 32px;
+    padding-bottom: 16px;
+    @media (max-width: 1024px) {
+        justify-content: center;
+        img {
+            width: 20px;
+            height: 20px;
+        }
+    }
+    @media (max-width: 500px) {
+        align-items: flex-start;
+    }
+    @media (max-width: 420px) {
+        flex-direction: column;
+    }
 }
 
 .link-buttons {
-  display: flex;
-  padding: 8px 16px;
-  font-family: "Karla";
-  font-size: 18px;
-  color: white;
-  font-weight: 400;
-  border: 1px solid white;
-  border-radius: 100px;
-  cursor: pointer;
-  gap: 10px;
-  &:hover {
-    border: 1px solid #3dcfb6;
-    color: #3dcfb6;
-  }
-  &:hover .arrow-outward {
-    animation: swing-diagonal 0.8s infinite;
-  }
-  @media (max-width: 420px) {
-    gap: 5px;     
-  }  
+    display: flex;
+    padding: 8px 16px;
+    font-family: 'Karla';
+    font-size: 18px;
+    color: white;
+    font-weight: 400;
+    border: 1px solid white;
+    border-radius: 100px;
+    cursor: pointer;
+    gap: 10px;
+    &:hover {
+        border: 1px solid #3dcfb6;
+        color: #3dcfb6;
+    }
+    &:hover .arrow-outward {
+        animation: swing-diagonal 0.8s infinite;
+    }
+    @media (max-width: 420px) {
+        gap: 5px;
+    }
 }
 
 @keyframes swing-diagonal {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(7px, -7px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(7px, -7px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }
 
 .introducing-right {
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-  flex-direction: column;
-  gap: 20px;  
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    gap: 20px;
 }
 
 .closing-icon {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 .introducing-project-image {
-  display: flex;
-  img {
-    width: 360px;
-    height: 260px;
-    @media (max-width: 1024px) {
-      width: 100%;
-      height: 50%;
+    display: flex;
+    img {
+        width: 360px;
+        height: 260px;
+        @media (max-width: 1024px) {
+            width: 100%;
+            height: 50%;
+        }
     }
-  }
 }
 
 .next-project-container {
-  display: flex;
-  align-items: center;
-  font-family: "Karla";
-  font-weight: 400;
-  font-size: 18px;
-  gap: 10px;
-  cursor: pointer;
-  &:hover img {
-    animation: swing-right 0.8s infinite;
-  }
-  img {
-    width: 40px;
-    height: 40px;
-  }
+    display: flex;
+    align-items: center;
+    font-family: 'Karla';
+    font-weight: 400;
+    font-size: 18px;
+    gap: 10px;
+    cursor: pointer;
+    &:hover img {
+        animation: swing-right 0.8s infinite;
+    }
+    img {
+        width: 40px;
+        height: 40px;
+    }
 }
 
 @keyframes swing-right {
-  0% {
-    transform: translate(0, 0);
-  }
-  50% {
-    transform: translate(10px);
-  }
-  100% {
-    transform: translate(0, 0);
-  }
+    0% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(10px);
+    }
+    100% {
+        transform: translate(0, 0);
+    }
 }

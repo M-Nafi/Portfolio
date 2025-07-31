@@ -1,110 +1,104 @@
 <section id="myProjects">
-  
-  <div class="featured-projects-contend">
-    
-    <div class="featured-projects-content-left">
-      <div class="featured-projects-left-top">Portfolio</div>
-      <div class="featured-projects-left-bottom">
-        <h1>{{ 'featuredProjects' | translate }}</h1>
-        <div class="featured-left-bottom-p">
-          <p>{{ 'explore' | translate }}</p>
-        </div>
-      </div>
-
-      <div class="my-projects-main">
-        
-        <div class="my-projects my-projects-first-container"
-            (click)="showProjectDetails(projects[0])"
-              (mouseenter)="showImage('join')"
-                (mouseleave)="hideImage()">
-              <h3>Join</h3>
-            <div class="my-project-types">
-              Javascript<span> |</span> HTML<span> |</span> CSS
-            </div>
-        </div>
-      
-        <div class="my-projects"
-          (click)="showProjectDetails(projects[1])"
-            (mouseenter)="showImage('pollo')"
-              (mouseleave)="hideImage()">
-              <h3>El Pollo Loco</h3>
-            <div class="my-project-types">
-              Javascript<span> |</span> HTML<span> |</span> CSS
-            </div>
-        </div>
-    
-        <div class="my-projects"
-            (click)="showProjectDetails(projects[2])"
-              (mouseenter)="showImage('portfolio')"
-              (mouseleave)="hideImage()">
-                <h3>DABubble</h3>
-              <div class="my-project-types">
-                Angular<span> |</span> Javascript<span> |</span> HTML<span> |</span> CSS
-              </div>
-        </div>
-      
-        <div class="overlay"
-          [ngClass]="{ 'd-none': !isProjectVisible }"
-          (click)="hideProjectDetails($event)">
-        </div>
-        
-        <div class="introducing-projects"
-          [ngClass]="{ 'd-none': !isProjectVisible }" *ngIf="selectedProject">
-          <div class="introducing-left">
-            <div>
-              <h1>{{ selectedProject.number }}</h1>
-              <h2>{{ selectedProject.title }}</h2>
-            </div>
-            <div>
-              <h3>{{ 'myProjects.' + selectedProject.number + '.subtitle' | translate }}</h3>
-              <span>{{ 'myProjects.' + selectedProject.number + '.description' | translate }}</span>
-
-              <div class="introducing-icons" *ngIf="selectedProject && selectedProject.technologies">
-                <div class="introducing-icons-container" *ngFor="let technology of selectedProject.technologies">
-                  <img [src]="technology.iconUrl" alt="{{ technology.name }}" />
-                  <span>{{ technology.name }}</span> 
+    <div class="featured-projects-contend">
+        <div class="featured-projects-content-left">
+            <div class="featured-projects-left-top">Portfolio</div>
+            <div class="featured-projects-left-bottom">
+                <h1>{{ 'featuredProjects' | translate }}</h1>
+                <div class="featured-left-bottom-p">
+                    <p>{{ 'explore' | translate }}</p>
                 </div>
-              </div>
-              
             </div>
-            <div class="link-button-continer">
-              <a href="https://github.com/M-Nafi" target="_blank">
-                <div class="link-buttons">GitHub
-                  <img class="arrow-outward"
-                    src="./assets/img/arrow-outward.png"/>
+
+            <div class="my-projects-main">
+                <div class="my-projects my-projects-first-container"
+                    (click)="showProjectDetails(projects[0])"
+                    (mouseenter)="showImage('join')"
+                    (mouseleave)="hideImage()">
+                    <h3>Join</h3>
+                    <div class="my-project-types">
+                        Javascript<span> |</span> HTML<span> |</span> CSS
+                    </div>
                 </div>
-              </a>
-              <div class="link-buttons">Live Test
-                <img class="arrow-outward"
-                  src="./assets/img/arrow-outward.png"/>
-              </div>
+
+                <div class="my-projects"
+                    (click)="showProjectDetails(projects[1])"
+                    (mouseenter)="showImage('pollo')"
+                    (mouseleave)="hideImage()">
+                    <h3>El Pollo Loco</h3>
+                    <div class="my-project-types">
+                        Javascript<span> |</span> HTML<span> |</span> CSS
+                    </div>
+                </div>
+
+                <div class="my-projects"
+                    (click)="showProjectDetails(projects[2])"
+                    (mouseenter)="showImage('portfolio')"
+                    (mouseleave)="hideImage()">
+                    <h3>DABubble</h3>
+                    <div class="my-project-types">
+                        Angular<span> |</span> Javascript<span> |</span>
+                        HTML<span> |</span> CSS
+                    </div>
+                </div>
+
+                <div class="overlay"
+                    [ngClass]="{ 'd-none': !isProjectVisible }"
+                    (click)="hideProjectDetails($event)">
+                </div>
+
+                <div class="introducing-projects"
+                    [ngClass]="{ 'd-none': !isProjectVisible }"
+                    *ngIf="selectedProject">
+                    <div class="introducing-left">
+                        <div>
+                            <h1>{{ selectedProject.number }}</h1>
+                            <h2>{{ selectedProject.title }}</h2>
+                        </div>
+                        <div>
+                            <h3>{{ 'myProjects.' + selectedProject.number + '.subtitle' | translate }}
+                            </h3>
+                            <span>{{ 'myProjects.' + selectedProject.number + '.description' | translate }}</span>
+
+                            <div class="introducing-icons" *ngIf="selectedProject && selectedProject.technologies">
+                                <div class="introducing-icons-container" *ngFor=" let technology of selectedProject.technologies">
+                                    <img [src]="technology.iconUrl" alt="{{ technology.name }}"/>
+                                    <span>{{ technology.name }}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="link-button-continer">
+                            <a href="https://github.com/M-Nafi" target="_blank">
+                                <div class="link-buttons">GitHub
+                                    <img class="arrow-outward" src="./assets/img/arrow-outward.png"/>
+                                </div>
+                            </a>
+                            <div class="link-buttons">Live Test
+                                <img class="arrow-outward" src="./assets/img/arrow-outward.png"/>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="introducing-right">
+                        <div (click)="hideProjectDetails($event)"
+                            class="closing-icon"
+                            (mouseout)="changeImage('./assets/img/close-icon-white.png')"
+                            (mouseover)="changeImage('./assets/img/close-icon-colored.png')">
+                            <img [src]="imageSource" />
+                        </div>
+                        <div class="introducing-project-image">
+                            <img [src]="selectedProject.imageUrl" />
+                        </div>
+                        <div class="next-project-container" (click)="nextProject()">
+                            <span>{{ 'nextProject' | translate }}</span>
+                            <img src="./assets/img/arrow-forward.png" />
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
-          <div class="introducing-right">
-            <div (click)="hideProjectDetails($event)"
-              class="closing-icon" 
-              (mouseout)=" changeImage('./assets/img/close-icon-white.png')"
-              (mouseover)="changeImage('./assets/img/close-icon-colored.png')">
-              <img [src]="imageSource"/>
-            </div>
-            <div class="introducing-project-image">
-              <img [src]="selectedProject.imageUrl"/>
-            </div>
-            <div class="next-project-container" (click)="nextProject()">
-              <span>{{ 'nextProject' | translate }}</span>
-              <img src="./assets/img/arrow-forward.png"/>
-            </div>
-          </div>
         </div>
-      </div>
+        <div class="featured-projects-content-right">
+            <img class="feat-project-images" *ngIf="activeImage == 'join'"src="./assets/img/join-img.png"/>
+            <img class="feat-project-images second" *ngIf="activeImage == 'pollo'" src="./assets/img/epl-img.png"/>
+            <img class="feat-project-images third" *ngIf="activeImage == 'portfolio'" src="./assets/img/dabubble-img.png"/>
+        </div>
     </div>
-    <div class="featured-projects-content-right">
-      <img class="feat-project-images" *ngIf="activeImage == 'join'"
-        src="./assets/img/join-img.png"/>
-      <img class="feat-project-images second" *ngIf="activeImage == 'pollo'"
-        src="./assets/img/epl-img.png"/>
-      <img class="feat-project-images third" *ngIf="activeImage == 'portfolio'"
-        src="./assets/img/dabubble-img.png"/>
-    </div>
-  </div>
 </section>

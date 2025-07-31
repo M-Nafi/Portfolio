@@ -1,338 +1,300 @@
-@import "./../../styles.scss";
+@import './../../styles.scss';
 
 body {
-  overflow-x: hidden !important;
+    overflow-x: hidden !important;
 }
 
 .work-together-main {
-  @include flexCenter;
-  width: 100%;
-  background-color: #1c1c1c;
+    @include flexCenter;
+    width: 100%;
+    background-color: #1c1c1c;
 }
 
 .work-together-content {
-  @include max-width;
-  display: flex;
-  justify-content: space-between;
-  margin-top: 100px;
-  @media (max-width: 1024px) {
-    flex-direction: column;
-  }
-  @media (max-width: 500px) {
-    margin-top: 120px;
-  }
+    @include max-width;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 100px;
+    @media (max-width: 1024px) {
+        flex-direction: column;
+    }
+    @media (max-width: 500px) {
+        margin-top: 120px;
+    }
 }
 
 .work-togehter-left-content {
-  display: flex;
-  flex-direction: column;
-  max-width: 45%;
-  gap: 40px;
-  @media (max-width: 1024px) {
-    max-width: none;
-    padding-bottom: 64px;
-  }
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    gap: 40px;
+    @media (max-width: 1024px) {
+        max-width: none;
+        padding-bottom: 64px;
+    }
 }
 
 .work-together-left-top {
-  span {
-    font-family: "Karla";
-    font-size: 24px;
-    color: #3dcfb6;
-  }
-  h1 {
-    margin-top: 0;
-    font-family: "Fira Code";
-    font-weight: 700;
-    font-size: 64px;
-    color: #3dcfb6;
-    @media (max-width: 800px) {
-      font-size: 54px;
-      padding-bottom: 16px;
+    span {
+        font-family: 'Karla';
+        font-size: 24px;
+        color: #3dcfb6;
     }
-    @media (max-width: 615px) {
-      font-size: 50px;
-      padding-bottom: 16px;
+    h1 {
+        margin-top: 0;
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 64px;
+        color: #3dcfb6;
+        @media (max-width: 800px) {
+            font-size: 54px;
+            padding-bottom: 16px;
+        }
+        @media (max-width: 615px) {
+            font-size: 50px;
+            padding-bottom: 16px;
+        }
+        @media (max-width: 570px) {
+            font-size: 40px;
+        }
+        @media (max-width: 500px) {
+            font-size: 30px;
+        }
     }
-    @media (max-width: 570px) {
-      font-size: 40px;
-    }
-    @media (max-width: 500px) {
-      font-size: 30px;
-    }
-  }
 }
 
 .work-together-left-bottom {
-  span {
-    font-family: "Fira Code";
-    font-weight: 700;
-    font-size: 24px;
-    color: #3dcfb6;
-    @media (max-width: 500px) {
-      font-size: 20px;
+    span {
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 24px;
+        color: #3dcfb6;
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
     }
-  }
-  p {
-    font-family: "Karla";
-    color: white;
-    font-size: 16px;
-  }
-  @media (max-width: 500px) {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
+    p {
+        font-family: 'Karla';
+        color: white;
+        font-size: 16px;
+    }
+    @media (max-width: 500px) {
+        display: flex;
+        flex-direction: column;
+        gap: 16px;
+    }
 }
 
 .work-togehter-right-content {
-  display: flex;
-  flex-direction: column;
-  width: 50%;
-  gap: 40px;
-  @media (max-width: 1024px) {
-    width: auto;
-  }
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    gap: 40px;
+    @media (max-width: 1024px) {
+        width: auto;
+    }
 }
 
 .work-together-form {
-  display: flex;
-  padding: 32px;
-  gap: 10px;
-  flex-direction: column;
-  border-top: 1px solid #3dcfb6;
-  span {
-    font-family: "Fira Code";
-    color: #3dcfb6;
-    font-size: 24px;
-    @media (max-width: 500px) {
-      font-size: 20px;
+    display: flex;
+    padding: 32px;
+    gap: 10px;
+    flex-direction: column;
+    border-top: 1px solid #3dcfb6;
+    span {
+        font-family: 'Fira Code';
+        color: #3dcfb6;
+        font-size: 24px;
+        @media (max-width: 500px) {
+            font-size: 20px;
+        }
     }
-  }
-  input {
-    background-color: transparent;
-    font-family: "Karla";
-    font-size: 18px;
-    color: whitesmoke;
-    border: none;
-    outline: none;
-    &:focus {
-      border: none;
-      outline: none;
-      caret-color: #3dcfb6;
+    input {
+        background-color: transparent;
+        font-family: 'Karla';
+        font-size: 18px;
+        color: whitesmoke;
+        border: none;
+        outline: none;
+        &:focus {
+            border: none;
+            outline: none;
+            caret-color: #3dcfb6;
+        }
     }
-  }
 }
 
 .form-bottom-line {
-  border-bottom: 1px solid rgba(61, 207, 182, 0.3);
+    border-bottom: 1px solid rgba(61, 207, 182, 0.3);
 }
 
 .work-together-priv-policy {
-  @include flexCenter;
-  flex-direction: column;
-  align-items: flex-start;
-  padding-top: 32px;
-  gap: 32px;
-  img {
-    width: 20px;
-    height: 20px;
-  }
-
-  button {
     @include flexCenter;
-    height: 48px;
-    border: 1px solid white;
-    border-radius: 100px;
-    background-color: transparent;
-    padding: 0 24px;
-    cursor: pointer;
-    transition: border 0.3s ease;
-    overflow: hidden;
-    &:hover {
-      border-color: #3dcfb6;
-    }
-    .send-mail {
-      font-family: "Karla";
-      font-size: 16px;
-      color: whitesmoke;
-      text-decoration: none;
-      transition: color 0.3s ease;
-      &:hover {
-        color: #3dcfb6;
-        animation: slideOutAndIn 1.5s linear;
-      }
-    }
-  }
-  @keyframes slideOutAndIn {
-    0% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-    25% {
-      transform: translateX(-30%);
-      opacity: 0;
-    }
-    50% {
-      opacity: 0;
-      transform: translateX(30%);
-    }
-    75% {
-      opacity: 1;
-      transform: translateX(0);
-    }
-    100% {
-      transform: translateX(0);
-      opacity: 1;
-    }
-  }
-  .privacy-content {
-    display: flex;
     flex-direction: column;
-    justify-content: flex-start;
-  }
-  .priv-policy {
-    text-decoration: none;
-    color: #3dcfb6;
-  }
-  .accept-policy {
-    font-family: "Karla";
-    font-size: 14px;
-    color: #ec7b7b;
-  }
+    align-items: flex-start;
+    padding-top: 32px;
+    gap: 32px;
+    img {
+        width: 20px;
+        height: 20px;
+    }
+
+    button {
+        @include flexCenter;
+        height: 48px;
+        border: 1px solid white;
+        border-radius: 100px;
+        background-color: transparent;
+        padding: 0 24px;
+        cursor: pointer;
+        transition: border 0.3s ease;
+        overflow: hidden;
+        &:hover {
+            border-color: #3dcfb6;
+        }
+        .send-mail {
+            font-family: 'Karla';
+            font-size: 16px;
+            color: whitesmoke;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            &:hover {
+                color: #3dcfb6;
+                animation: slideOutAndIn 1.5s linear;
+            }
+        }
+    }
+    @keyframes slideOutAndIn {
+        0% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+        25% {
+            transform: translateX(-30%);
+            opacity: 0;
+        }
+        50% {
+            opacity: 0;
+            transform: translateX(30%);
+        }
+        75% {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(0);
+            opacity: 1;
+        }
+    }
+    .privacy-content {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+    }
+    .priv-policy {
+        text-decoration: none;
+        color: #3dcfb6;
+    }
+    .accept-policy {
+        font-family: 'Karla';
+        font-size: 14px;
+        color: #ec7b7b;
+    }
 }
 
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 .form-group {
-  display: flex;
-  margin-bottom: 15px;
-  height: 30px;
-  align-items: center;
-  span {
-    font-family: "Karla";
-    font-size: 14px;
-    color: white;
-  }
+    display: flex;
+    margin-bottom: 15px;
+    height: 30px;
+    align-items: center;
+    span {
+        font-family: 'Karla';
+        font-size: 14px;
+        color: white;
+    }
 }
 
 .form-group input {
-  display: none;
-  cursor: pointer;
+    display: none;
+    cursor: pointer;
 }
 
 .form-group .read-policy,
 label {
-  display: flex;
-  position: relative;
-  align-items: center;
+    display: flex;
+    position: relative;
+    align-items: center;
 }
 
 .form-group label:before {
-  border-radius: 3px;
-  content: "";
-  background-color: transparent;
-  border: 2px solid #3dcfb6;
-  width: 20px;
-  height: 20px;
-  padding: 0;
-  display: inline-block;
-  position: relative;
-  vertical-align: middle;
-  cursor: pointer;
-  margin-right: 16px;
+    border-radius: 3px;
+    content: '';
+    background-color: transparent;
+    border: 2px solid #3dcfb6;
+    width: 20px;
+    height: 20px;
+    padding: 0;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 16px;
 }
 
 .form-group input:checked + label:after {
-  content: "";
-  position: absolute;
-  top: 3px;
-  left: 7px;
-  width: 6px;
-  height: 12px;
-  border: solid #3dcfb6;
-  border-width: 0 2px 2px 0;
-  transform: rotate(45deg);
+    content: '';
+    position: absolute;
+    top: 3px;
+    left: 7px;
+    width: 6px;
+    height: 12px;
+    border: solid #3dcfb6;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
 }
 
 .hello {
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  button:disabled {
-    background-color: rgba(61, 207, 182, 0.1);
-    cursor: not-allowed;
-    color: #666;
-    opacity: 0.5;
-  }
-  @media (max-width: 450px) {
-    justify-content: flex-start;
-  }
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    button:disabled {
+        background-color: rgba(61, 207, 182, 0.1);
+        cursor: not-allowed;
+        color: #666;
+        opacity: 0.5;
+    }
+    @media (max-width: 450px) {
+        justify-content: flex-start;
+    }
 }
 
 .checkInputs {
-  p {
-    font-family: "Karla";
-    font-size: 18px;
-    color: red;
-  }
+    p {
+        font-family: 'Karla';
+        font-size: 18px;
+        color: red;
+    }
 }
 
 .privpol {
-  p {
-    font-family: "Karla";
-    font-size: 14px;
-    color: red;
-  }
+    p {
+        font-family: 'Karla';
+        font-size: 14px;
+        color: red;
+    }
 }
 
 .scroll-up-bottom {
-  @include flexCenter;
-  width: 46px;
-  height: 82px;
-  border-radius: 32px;
-  padding: 16px 7px;
-  border: 1px solid #3dcfb6;
-  transform: rotate(180deg);
-  img {
-    width: 8px;
-    height: 14px;
-  }
-  @media (max-width: 1024px) {
-    display: none;
-  }
-}
-
-.scrolling {
-  width: 46px;
-}
-
-.scroll-up-img {
-  animation: swing 1s infinite;
-}
-
-@keyframes swing {
-  0% {
-    transform: translateY(0);
-  }
-  50% {
-    transform: translateY(-10px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-}
-
-.scroll-up-responsive {
-  @media (max-width: 1023px) {
     @include flexCenter;
     width: 46px;
     height: 82px;
@@ -340,11 +302,49 @@ label {
     padding: 16px 7px;
     border: 1px solid #3dcfb6;
     transform: rotate(180deg);
-    position: absolute;
-    right: 30px;
     img {
-      width: 8px;
-      height: 14px;
+        width: 8px;
+        height: 14px;
     }
-  }
+    @media (max-width: 1024px) {
+        display: none;
+    }
+}
+
+.scrolling {
+    width: 46px;
+}
+
+.scroll-up-img {
+    animation: swing 1s infinite;
+}
+
+@keyframes swing {
+    0% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+.scroll-up-responsive {
+    @media (max-width: 1023px) {
+        @include flexCenter;
+        width: 46px;
+        height: 82px;
+        border-radius: 32px;
+        padding: 16px 7px;
+        border: 1px solid #3dcfb6;
+        transform: rotate(180deg);
+        position: absolute;
+        right: 30px;
+        img {
+            width: 8px;
+            height: 14px;
+        }
+    }
 }

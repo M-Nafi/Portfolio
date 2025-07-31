@@ -1,257 +1,257 @@
-@import "./../../styles.scss";
+@import './../../styles.scss';
 
 body {
-  overflow-x: hidden !important;
+    overflow-x: hidden !important;
 }
 
 .skill-set-main {
-  @include flexCenter;
-  background-color: #1c1c1c;
-  background-image: url("./../../assets/img/skill-set-background.png");
-  height: 1100px;
-  background-repeat: no-repeat;
-  background-size: cover;
-  @media (max-width: 1024px) {
-    height: auto;
-  }
+    @include flexCenter;
+    background-color: #1c1c1c;
+    background-image: url('./../../assets/img/skill-set-background.png');
+    height: 1100px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    @media (max-width: 1024px) {
+        height: auto;
+    }
 }
 
 .skill-set-content {
-  @include max-width;
-  @include flexCenter;
-  justify-content: space-between;
-  @media (max-width: 1220px) {
+    @include max-width;
+    @include flexCenter;
     justify-content: space-between;
-  }
-  @media (max-width: 1024px) {
-    flex-direction: column;
-    gap: 32px;
-    padding-top: 64px;
-  }
+    @media (max-width: 1220px) {
+        justify-content: space-between;
+    }
+    @media (max-width: 1024px) {
+        flex-direction: column;
+        gap: 32px;
+        padding-top: 64px;
+    }
 }
 
 .skill-set-left {
-  display: flex;
-  flex-direction: column;
-  max-width: 45%;
-  gap: 10px;
-  span {
-    font-family: "Karla";
-    color: #3dcfb6;
-    font-size: 24px;
-  }
-  @media (max-width: 1024px) {
-    max-width: none;
-  }
+    display: flex;
+    flex-direction: column;
+    max-width: 45%;
+    gap: 10px;
+    span {
+        font-family: 'Karla';
+        color: #3dcfb6;
+        font-size: 24px;
+    }
+    @media (max-width: 1024px) {
+        max-width: none;
+    }
 }
 
 .skill-set-description {
-  display: flex;
-  flex-direction: column;
-  max-width: 520px;
-  background-color: rgba(61, 207, 182, 0.1);
-  border: 1px solid #3dcfb6;
-  border-radius: 30px;
-  padding: 32px;
-  h1 {
-    margin-top: 0;
-    margin-bottom: 16px;
-    font-family: "Fira Code";
-    font-weight: 700;
-    font-size: 64px;
-    color: #3dcfb6;
-    @media (max-width: 1024px) {
-      font-size: 40px;
-      margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    max-width: 520px;
+    background-color: rgba(61, 207, 182, 0.1);
+    border: 1px solid #3dcfb6;
+    border-radius: 30px;
+    padding: 32px;
+    h1 {
+        margin-top: 0;
+        margin-bottom: 16px;
+        font-family: 'Fira Code';
+        font-weight: 700;
+        font-size: 64px;
+        color: #3dcfb6;
+        @media (max-width: 1024px) {
+            font-size: 40px;
+            margin-bottom: 0;
+        }
+        @media (max-width: 400px) {
+            font-size: 33px;
+        }
     }
-    @media (max-width: 400px) {
-      font-size: 33px;
+    p {
+        color: whitesmoke;
+        font-family: 'Karla';
+        font-size: 18px;
     }
-  }
-  p {
-    color: whitesmoke;
-    font-family: "Karla";
-    font-size: 18px;
-  }
 }
 
 .skill-set-two-color-question {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  max-width: 331px;
-  font-size: 24px;
-  font-family: "Fira Code";
-  font-weight: 700;
-  .my-skills {
-    font-size: 18px;
-  }
-  .first {
-    color: whitesmoke;
-  }
-  .second {
-    color: #3dcfb6;
-  }
-  .third {
-    font-size: 16px;
-  }
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    max-width: 331px;
+    font-size: 24px;
+    font-family: 'Fira Code';
+    font-weight: 700;
+    .my-skills {
+        font-size: 18px;
+    }
+    .first {
+        color: whitesmoke;
+    }
+    .second {
+        color: #3dcfb6;
+    }
+    .third {
+        font-size: 16px;
+    }
 }
 
 .question {
-  display: flex;
-  font-family: "Fira Code";
-  font-size: 20px;
-  gap: 12px;
-  @media (max-width: 400px) {
-    flex-direction: column;
-  }
+    display: flex;
+    font-family: 'Fira Code';
+    font-size: 20px;
+    gap: 12px;
+    @media (max-width: 400px) {
+        flex-direction: column;
+    }
 }
 
 button {
-  @include flexCenter;
-  cursor: pointer;
-  color: whitesmoke;
-  background: transparent;
-  border-radius: 100px;
-  border: 1px solid white;
-  margin-top: 20px;
-  padding: 10px 15px;
-  overflow: hidden;
-  transition: border 0.3s ease;
-  &:hover {
-    border: 1px solid #3dcfb6;
-    span {
-      animation: slideOutAndIn 1.5s linear;
-      color: #3dcfb6;
-    }
-  }
-  .lets-talk {
+    @include flexCenter;
+    cursor: pointer;
     color: whitesmoke;
-    font-family: "Karla";
-    font-size: 18px;
-    display: inline-block;
-    transition: color 0.3s ease;
-  }
+    background: transparent;
+    border-radius: 100px;
+    border: 1px solid white;
+    margin-top: 20px;
+    padding: 10px 15px;
+    overflow: hidden;
+    transition: border 0.3s ease;
+    &:hover {
+        border: 1px solid #3dcfb6;
+        span {
+            animation: slideOutAndIn 1.5s linear;
+            color: #3dcfb6;
+        }
+    }
+    .lets-talk {
+        color: whitesmoke;
+        font-family: 'Karla';
+        font-size: 18px;
+        display: inline-block;
+        transition: color 0.3s ease;
+    }
 }
 
 .skill-set-btn {
-  text-decoration: none;
+    text-decoration: none;
 }
 
 @keyframes slideOutAndIn {
-  0% {
-    transform: translateX(0);
-    opacity: 1;
-  }
-  25% {
-    transform: translateX(-30%);
-    opacity: 0;
-  }
-  50% {
-    opacity: 0;
-    transform: translateX(50%);
-  }
-  75% {
-    opacity: 1;
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(0);
-    opacity: 1;
-  }
+    0% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    25% {
+        transform: translateX(-30%);
+        opacity: 0;
+    }
+    50% {
+        opacity: 0;
+        transform: translateX(50%);
+    }
+    75% {
+        opacity: 1;
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 .skill-set-right {
-  display: flex;
-  flex-direction: row;
-  justify-content: flex-start;
-  align-items: baseline;
-  flex-wrap: wrap;
-  width: 500px;
-  max-height: 428px;
-  gap: 50px;
-  p {
-    margin-top: 0;
-    margin-bottom: 0;
-    font-family: "Fira Code";
-    color: white;
-    font-size: 15px;
-    @media (max-width: 1024px) {
-      font-size: 15px;
-    }
-    @media (max-width: 700px) {
-      font-size: 13px;
-    }
-  }
-  @media (max-width: 1024px) {
-    justify-content: center;
-    padding-top: 32px;
-    gap: 42px;
-  }
-  @media (max-width: 550px) {    
+    display: flex;
+    flex-direction: row;
     justify-content: flex-start;
-    width: auto;
-    max-height: none;
-    gap: 65px;
-  }
+    align-items: baseline;
+    flex-wrap: wrap;
+    width: 500px;
+    max-height: 428px;
+    gap: 50px;
+    p {
+        margin-top: 0;
+        margin-bottom: 0;
+        font-family: 'Fira Code';
+        color: white;
+        font-size: 15px;
+        @media (max-width: 1024px) {
+            font-size: 15px;
+        }
+        @media (max-width: 700px) {
+            font-size: 13px;
+        }
+    }
+    @media (max-width: 1024px) {
+        justify-content: center;
+        padding: 32px 0;
+        gap: 42px;
+    }
+    @media (max-width: 550px) {
+        justify-content: flex-start;
+        width: auto;
+        max-height: none;
+        gap: 65px;
+    }
 }
 
 .skill-icons {
-  @include flexCenter;
-  position: relative;
-  align-items: center;
-  flex-direction: column;
-  text-align: center;
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-  }
-  @media (max-width: 1024px) {
-    width: 50px;
-  }
-  @media (max-width: 700px) {
-    width: 40px;
-  }
-  @media (max-width: 500px) {
-    width: 30px;
-    display: block;     
-  }
+    @include flexCenter;
+    position: relative;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+    }
+    @media (max-width: 1024px) {
+        width: 50px;
+    }
+    @media (max-width: 700px) {
+        width: 40px;
+    }
+    @media (max-width: 500px) {
+        width: 30px;
+        display: block;
+    }
 }
 
 .skill-set-icons {
-  width: 70px;
+    width: 70px;
 }
 
 .growth-mindset {
-  display: flex;
-  position: relative;
-  flex-direction: column;
-  align-items: center;
-  width: 70px;
-  text-align: center;
-  cursor: pointer;
-  &:hover {
-    transform: scale(1.1);
-    transition: transform 0.3s ease;
-    .growth-mindset-img {
-      display: flex;
-      left: -20px;      
-      position: absolute;
-      z-index: 1;
-      bottom: 104px;
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+    width: 70px;
+    text-align: center;
+    cursor: pointer;
+    &:hover {
+        transform: scale(1.1);
+        transition: transform 0.3s ease;
+        .growth-mindset-img {
+            display: flex;
+            left: -20px;
+            position: absolute;
+            z-index: 1;
+            bottom: 104px;
+        }
+        p {
+            color: #3dcfb6;
+        }
     }
-    p {
-      color: #3dcfb6;
+    @media (max-width: 1024px) {
+        width: 50px;
     }
-  }
-  @media (max-width: 1024px) {
-    width: 50px;
-  }
-  @media (max-width: 700px) {
-    width: 40px;
-  }
-  @media (max-width: 500px) {
-    padding-left: 20px;
-    width: 30px;
-  }
+    @media (max-width: 700px) {
+        width: 40px;
+    }
+    @media (max-width: 500px) {
+        padding-left: 20px;
+        width: 30px;
+    }
 }

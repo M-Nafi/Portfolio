@@ -1,37 +1,35 @@
 <section>
-  <div class="references">
-    <div class="colleagues-feedback-content">
-      <span>{{ "colleaguesOpinion" | translate }}</span>
-    </div>
-    <div class="feedback-slider-main">
-      <div class="card-container">
-        <div class="double-quotes-comments">
-          <img src="./assets/img/double-quotes-comments.png" />
+    <div class="references">
+        <div class="colleagues-feedback-content">
+            <span>{{ 'colleaguesOpinion' | translate }}</span>
         </div>
-        <div class="carousel-style"
-          *ngFor="let comment of visibleCards; let i = index"
-          [class.active]="i === 1">
-          <div class="carousel-container">
-            <p class="title">{{ "comments.comment" + (((currentIndex + i) % comments.length) + 1) | translate }}</p>
-              <div class="author">
-              <div class="seperator"></div>
-              <p>{{ comment.name }}</p>
+        <div class="feedback-slider-main">
+            <div class="card-container">
+                <div class="double-quotes-comments">
+                    <img src="./assets/img/double-quotes-comments.png" />
+                </div>
+                <div class="carousel-style" *ngFor="let comment of visibleCards; let i = index"
+                    [class.active]="i === 1">
+                    <div class="carousel-container">
+                        <p class="title"> {{ 'comments.comment' + (((currentIndex + i) % comments.length) + 1)| translate }}
+                        </p>
+                        <div class="author">
+                            <div class="seperator"></div>
+                            <p>{{ comment.name }}</p>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-      </div>
-    </div>
 
-    <div class="slide-arrows">
-      <img class="arrows left-arrow" src="./assets/img/slider-arrow-left.png" (click)="prevCard()"/>
-      <div class="dots-container">
-        <span *ngFor="let comment of comments; let j = index"
-          [class.active]="j == currentIndex"
-          (click)="currentIndex = j; updateVisibleCards()"
-          class="dot">
-        </span>
-      </div>
-      <img class="arrows right-arrow" src="./assets/img/slider-arrow-right.png" (click)="nextCard()"/>
+        <div class="slide-arrows">
+            <img class="arrows left-arrow" src="./assets/img/slider-arrow-left.png" (click)="prevCard()"/>
+            <div class="dots-container">
+                <span *ngFor="let comment of comments; let j = index"
+                    [class.active]="j == currentIndex" (click)="currentIndex = j; updateVisibleCards()" class="dot">
+                </span>
+            </div>
+            <img class="arrows right-arrow" src="./assets/img/slider-arrow-right.png" (click)="nextCard()"/>
+        </div>
     </div>
-  </div>
 </section>
