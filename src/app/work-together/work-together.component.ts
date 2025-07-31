@@ -13,10 +13,9 @@ import Swal from 'sweetalert2';
 
 @Component({
     selector: 'app-work-together',
-    standalone: true,
     imports: [CommonModule, TranslateModule, RouterLink, ReactiveFormsModule],
     templateUrl: './work-together.component.html',
-    styleUrls: ['./work-together.component.scss'],
+    styleUrls: ['./work-together.component.scss']
 })
 export class WorkTogetherComponent {
     workTogetherForm: FormGroup;

@@ -9,19 +9,18 @@ import { Router } from '@angular/router';
 import { TranslateService, TranslateModule } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-root',
-  standalone: true,
-  imports: [
-    RouterLink,
-    RouterOutlet,
-    HeaderComponent,
-    FooterComponent,
-    WelcomeAreaComponent,
-    CommonModule,
-    TranslateModule,
-  ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss',
+    selector: 'app-root',
+    imports: [
+        RouterLink,
+        RouterOutlet,
+        HeaderComponent,
+        FooterComponent,
+        WelcomeAreaComponent,
+        CommonModule,
+        TranslateModule,
+    ],
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'portfolio';

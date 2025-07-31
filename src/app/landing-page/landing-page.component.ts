@@ -9,7 +9,6 @@ import { WorkTogetherComponent } from '../work-together/work-together.component'
 
 @Component({
     selector: 'app-landing-page',
-    standalone: true,
     imports: [
         CommonModule,
         WelcomeAreaComponent,
@@ -20,6 +19,6 @@ import { WorkTogetherComponent } from '../work-together/work-together.component'
         WorkTogetherComponent,
     ],
     templateUrl: './landing-page.component.html',
-    styleUrl: './landing-page.component.scss',
+    styleUrl: './landing-page.component.scss'
 })
 export class LandingPageComponent {}

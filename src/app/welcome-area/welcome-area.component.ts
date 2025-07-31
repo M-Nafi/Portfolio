@@ -4,10 +4,9 @@ import { TranslateModule } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-welcome-area',
-    standalone: true,
     imports: [CommonModule, TranslateModule],
     templateUrl: './welcome-area.component.html',
-    styleUrl: './welcome-area.component.scss',
+    styleUrl: './welcome-area.component.scss'
 })
 export class WelcomeAreaComponent {
     items = [
