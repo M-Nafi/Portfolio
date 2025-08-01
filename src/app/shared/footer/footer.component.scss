@@ -1,4 +1,4 @@
-@import './../../../styles.scss';
+@use './../../../styles.scss' as *;
 
 body {
     overflow-x: hidden !important;

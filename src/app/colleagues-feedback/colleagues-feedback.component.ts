@@ -4,10 +4,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-colleagues-feedback',
-    standalone: true,
     imports: [CommonModule, TranslateModule],
     templateUrl: './colleagues-feedback.component.html',
-    styleUrls: ['./colleagues-feedback.component.scss'],
+    styleUrls: ['./colleagues-feedback.component.scss']
 })
 export class ColleaguesFeedbackComponent {
     comments: { name: string; description: string }[] = [

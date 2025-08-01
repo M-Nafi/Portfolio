@@ -4,10 +4,9 @@ import { TranslateModule, TranslateService } from '@ngx-translate/core';
 
 @Component({
     selector: 'app-featured-projects',
-    standalone: true,
     imports: [CommonModule, TranslateModule],
     templateUrl: './featured-projects.component.html',
-    styleUrls: ['./featured-projects.component.scss'],
+    styleUrls: ['./featured-projects.component.scss']
 })
 export class FeaturedProjectsComponent {
     imageSource: string = './assets/img/close-icon-white.png';
